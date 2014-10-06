@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="yui-overrride">
 <head>
     <meta charset="utf-8">
     <title>WallComponent2D - WanaPlan</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
-    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
     <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
 </head>
 <body class="yui3-skin-sam">
 
 <div id="doc">
     <div id="hd" class="yui3-g header">
         <div class="yui3-u-3-4">
-            
-                <h1><img src="../assets/css/logo.png" title="WanaPlan"></h1>
-            
+            <h1 class="blue-main-title">WanaPlan</h1>
         </div>
-        <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.0.1</em>
+        <div class="yui3-u-1-4 version project-version">
+            API Docs for: 2.2.1
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -41,11 +40,7 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="../classes/AnimationCancelor.html">AnimationCancelor</a></li>
-            
                 <li><a href="../classes/API.html">API</a></li>
-            
-                <li><a href="../classes/ApiOvertureComponent.html">ApiOvertureComponent</a></li>
             
                 <li><a href="../classes/AvatarComponent3D.html">AvatarComponent3D</a></li>
             
@@ -53,27 +48,21 @@
             
                 <li><a href="../classes/BaseComponent3D.html">BaseComponent3D</a></li>
             
-                <li><a href="../classes/BaseEditionComponent.html">BaseEditionComponent</a></li>
-            
                 <li><a href="../classes/BaseStructure.html">BaseStructure</a></li>
             
                 <li><a href="../classes/BaseTopMenuComponent2D.html">BaseTopMenuComponent2D</a></li>
             
-                <li><a href="../classes/CameraFeatures.html">CameraFeatures</a></li>
-            
-                <li><a href="../classes/CurvedWall.html">CurvedWall</a></li>
-            
-                <li><a href="../classes/DataBundleComponent.html">DataBundleComponent</a></li>
+                <li><a href="../classes/ConfiguratorModComponent3D.html">ConfiguratorModComponent3D</a></li>
             
                 <li><a href="../classes/DecorationComponent.html">DecorationComponent</a></li>
             
                 <li><a href="../classes/DragComponent3D.html">DragComponent3D</a></li>
             
+                <li><a href="../classes/Dummy.html">Dummy</a></li>
+            
                 <li><a href="../classes/EditionComponent3D.html">EditionComponent3D</a></li>
             
                 <li><a href="../classes/ExitComponent.html">ExitComponent</a></li>
-            
-                <li><a href="../classes/FirstPersonCamera.html">FirstPersonCamera</a></li>
             
                 <li><a href="../classes/FloorComponent3D.html">FloorComponent3D</a></li>
             
@@ -83,11 +72,13 @@
             
                 <li><a href="../classes/FullscreenComponent.html">FullscreenComponent</a></li>
             
-                <li><a href="../classes/Graph.html">Graph</a></li>
+                <li><a href="../classes/GlassMaterial.html">GlassMaterial</a></li>
             
-                <li><a href="../classes/GraphComponent2D.html">GraphComponent2D</a></li>
+                <li><a href="../classes/GlobalHelper.html">GlobalHelper</a></li>
             
-                <li><a href="../classes/GraphComponent3D.html">GraphComponent3D</a></li>
+                <li><a href="../classes/GridComponent2D.html">GridComponent2D</a></li>
+            
+                <li><a href="../classes/GridComponent3D.html">GridComponent3D</a></li>
             
                 <li><a href="../classes/HardwareScalingComponent3D.html">HardwareScalingComponent3D</a></li>
             
@@ -99,17 +90,25 @@
             
                 <li><a href="../classes/HopperStructure.html">HopperStructure</a></li>
             
+                <li><a href="../classes/LeatherMaterial.html">LeatherMaterial</a></li>
+            
                 <li><a href="../classes/LockComponent.html">LockComponent</a></li>
             
                 <li><a href="../classes/Logger.html">Logger</a></li>
             
-                <li><a href="../classes/LoopTimer.html">LoopTimer</a></li>
+                <li><a href="../classes/MagnetismComponent2D.html">MagnetismComponent2D</a></li>
             
                 <li><a href="../classes/MagnetismComponent3D.html">MagnetismComponent3D</a></li>
             
+                <li><a href="../classes/MattMaterial.html">MattMaterial</a></li>
+            
                 <li><a href="../classes/MeasureComponent.html">MeasureComponent</a></li>
             
+                <li><a href="../classes/MeasureStructure.html">MeasureStructure</a></li>
+            
                 <li><a href="../classes/Menu.html">Menu</a></li>
+            
+                <li><a href="../classes/MetalMaterial.html">MetalMaterial</a></li>
             
                 <li><a href="../classes/MobileComponent.html">MobileComponent</a></li>
             
@@ -117,29 +116,41 @@
             
                 <li><a href="../classes/NewComponent.html">NewComponent</a></li>
             
-                <li><a href="../classes/Object.html">Object</a></li>
-            
                 <li><a href="../classes/ObjectComponent3D.html">ObjectComponent3D</a></li>
+            
+                <li><a href="../classes/ObjectHelper.html">ObjectHelper</a></li>
+            
+                <li><a href="../classes/ObjectHelper.AABB.html">ObjectHelper.AABB</a></li>
+            
+                <li><a href="../classes/ObjectHelper.collision.html">ObjectHelper.collision</a></li>
+            
+                <li><a href="../classes/ObjectHelper.Interval.html">ObjectHelper.Interval</a></li>
+            
+                <li><a href="../classes/ObjectHelper.OBB.html">ObjectHelper.OBB</a></li>
+            
+                <li><a href="../classes/ObjectHelper.OyBB.html">ObjectHelper.OyBB</a></li>
+            
+                <li><a href="../classes/ObjectStructure.html">ObjectStructure</a></li>
             
                 <li><a href="../classes/OptionsComponent.html">OptionsComponent</a></li>
             
                 <li><a href="../classes/OrbitCamera.html">OrbitCamera</a></li>
             
+                <li><a href="../classes/OvertureComponent2D.html">OvertureComponent2D</a></li>
+            
+                <li><a href="../classes/OvertureComponent3D.html">OvertureComponent3D</a></li>
+            
+                <li><a href="../classes/OvertureStructure.html">OvertureStructure</a></li>
+            
                 <li><a href="../classes/Path.html">Path</a></li>
             
                 <li><a href="../classes/PedagoComponent.html">PedagoComponent</a></li>
             
-                <li><a href="../classes/PerformanceComponent2D.html">PerformanceComponent2D</a></li>
-            
-                <li><a href="../classes/photonui.Base.html">photonui.Base</a></li>
-            
-                <li><a href="../classes/photonui.FileManager.html">photonui.FileManager</a></li>
-            
-                <li><a href="../classes/photonui.Helpers.html">photonui.Helpers</a></li>
-            
-                <li><a href="../classes/photonui.Widget.html">photonui.Widget</a></li>
+                <li><a href="../classes/PlasticMaterial.html">PlasticMaterial</a></li>
             
                 <li><a href="../classes/PointComponent2D.html">PointComponent2D</a></li>
+            
+                <li><a href="../classes/PointerManager.html">PointerManager</a></li>
             
                 <li><a href="../classes/PointStructure.html">PointStructure</a></li>
             
@@ -149,275 +160,69 @@
             
                 <li><a href="../classes/RoomComponent3D.html">RoomComponent3D</a></li>
             
-                <li><a href="../classes/RoomEditorComponent.html">RoomEditorComponent</a></li>
-            
-                <li><a href="../classes/RoomExampleComponent.html">RoomExampleComponent</a></li>
-            
                 <li><a href="../classes/RoomHierarchy.html">RoomHierarchy</a></li>
             
                 <li><a href="../classes/RoomStructure.html">RoomStructure</a></li>
             
                 <li><a href="../classes/ScreenshotMenuComponent.html">ScreenshotMenuComponent</a></li>
             
+                <li><a href="../classes/SpiralStairwayStructure.html">SpiralStairwayStructure</a></li>
+            
                 <li><a href="../classes/StairwayComponent2D.html">StairwayComponent2D</a></li>
             
-                <li><a href="../classes/subSlopeComponent2D.html">subSlopeComponent2D</a></li>
+                <li><a href="../classes/StairwayComponent3D.html">StairwayComponent3D</a></li>
             
-                <li><a href="../classes/subSlopeComponent3D.html">subSlopeComponent3D</a></li>
+                <li><a href="../classes/StairwayStructure.html">StairwayStructure</a></li>
+            
+                <li><a href="../classes/StandardMaterial.html">StandardMaterial</a></li>
+            
+                <li><a href="../classes/StraightStairwayStructure.html">StraightStairwayStructure</a></li>
+            
+                <li><a href="../classes/SubSlopeComponent2D.html">SubSlopeComponent2D</a></li>
+            
+                <li><a href="../classes/SubSlopeComponent3D.html">SubSlopeComponent3D</a></li>
+            
+                <li><a href="../classes/subSlopeOvertureComponent2D.html">subSlopeOvertureComponent2D</a></li>
+            
+                <li><a href="../classes/SubSlopeOvertureStructure.html">SubSlopeOvertureStructure</a></li>
+            
+                <li><a href="../classes/SubSlopeStructure.html">SubSlopeStructure</a></li>
             
                 <li><a href="../classes/TestManager.html">TestManager</a></li>
+            
+                <li><a href="../classes/TexturedMaterial.html">TexturedMaterial</a></li>
+            
+                <li><a href="../classes/TileMaterial.html">TileMaterial</a></li>
+            
+                <li><a href="../classes/TouchManager.html">TouchManager</a></li>
+            
+                <li><a href="../classes/TransformObjectComponent3D.html">TransformObjectComponent3D</a></li>
             
                 <li><a href="../classes/WallComponent2D.html">WallComponent2D</a></li>
             
                 <li><a href="../classes/WallComponent3D.html">WallComponent3D</a></li>
             
+                <li><a href="../classes/WallPane3D.html">WallPane3D</a></li>
+            
                 <li><a href="../classes/WallStructure.html">WallStructure</a></li>
             
-                <li><a href="../classes/wnp.AABB.html">wnp.AABB</a></li>
+                <li><a href="../classes/WhiteMaterial.html">WhiteMaterial</a></li>
             
-                <li><a href="../classes/wnp.Action.html">wnp.Action</a></li>
+                <li><a href="../classes/wnp.CameraFeatures.html">wnp.CameraFeatures</a></li>
             
-                <li><a href="../classes/wnp.Advanced.html">wnp.Advanced</a></li>
-            
-                <li><a href="../classes/wnp.Angle.html">wnp.Angle</a></li>
-            
-                <li><a href="../classes/wnp.Assets.html">wnp.Assets</a></li>
-            
-                <li><a href="../classes/wnp.Asymetric.html">wnp.Asymetric</a></li>
-            
-                <li><a href="../classes/wnp.BabyBed.html">wnp.BabyBed</a></li>
-            
-                <li><a href="../classes/wnp.BabylonImporter.html">wnp.BabylonImporter</a></li>
-            
-                <li><a href="../classes/wnp.Bar.html">wnp.Bar</a></li>
-            
-                <li><a href="../classes/wnp.Base.html">wnp.Base</a></li>
-            
-                <li><a href="../classes/wnp.BaseBox.html">wnp.BaseBox</a></li>
-            
-                <li><a href="../classes/wnp.Basic.html">wnp.Basic</a></li>
-            
-                <li><a href="../classes/wnp.Bath.html">wnp.Bath</a></li>
-            
-                <li><a href="../classes/wnp.BathTub.html">wnp.BathTub</a></li>
-            
-                <li><a href="../classes/wnp.Bed.html">wnp.Bed</a></li>
-            
-                <li><a href="../classes/wnp.bedstora.html">wnp.bedstora</a></li>
-            
-                <li><a href="../classes/wnp.BenchIkea.html">wnp.BenchIkea</a></li>
-            
-                <li><a href="../classes/wnp.BetsideTable.html">wnp.BetsideTable</a></li>
-            
-                <li><a href="../classes/wnp.BureauTest.html">wnp.BureauTest</a></li>
-            
-                <li><a href="../classes/wnp.BureauTestLarge.html">wnp.BureauTestLarge</a></li>
-            
-                <li><a href="../classes/wnp.chair.html">wnp.chair</a></li>
-            
-                <li><a href="../classes/wnp.Chair.html">wnp.Chair</a></li>
-            
-                <li><a href="../classes/wnp.ChairHenriksdal.html">wnp.ChairHenriksdal</a></li>
-            
-                <li><a href="../classes/wnp.chairiva.html">wnp.chairiva</a></li>
-            
-                <li><a href="../classes/wnp.ChairKritter.html">wnp.ChairKritter</a></li>
-            
-                <li><a href="../classes/wnp.CheneStoique.html">wnp.CheneStoique</a></li>
-            
-                <li><a href="../classes/wnp.CoffeeTableIkea.html">wnp.CoffeeTableIkea</a></li>
-            
-                <li><a href="../classes/wnp.ComponentCollection.html">wnp.ComponentCollection</a></li>
-            
-                <li><a href="../classes/wnp.Configuration.html">wnp.Configuration</a></li>
-            
-                <li><a href="../classes/wnp.Constants.html">wnp.Constants</a></li>
-            
-                <li><a href="../classes/wnp.Core.html">wnp.Core</a></li>
-            
-                <li><a href="../classes/wnp.Corner.html">wnp.Corner</a></li>
-            
-                <li><a href="../classes/wnp.cube.html">wnp.cube</a></li>
-            
-                <li><a href="../classes/wnp.Curtains.html">wnp.Curtains</a></li>
-            
-                <li><a href="../classes/wnp.Cushion.html">wnp.Cushion</a></li>
-            
-                <li><a href="../classes/wnp.cylinder.html">wnp.cylinder</a></li>
-            
-                <li><a href="../classes/wnp.Dishes.html">wnp.Dishes</a></li>
-            
-                <li><a href="../classes/wnp.Dishwasher.html">wnp.Dishwasher</a></li>
-            
-                <li><a href="../classes/wnp.Door.html">wnp.Door</a></li>
-            
-                <li><a href="../classes/wnp.Dressing.html">wnp.Dressing</a></li>
-            
-                <li><a href="../classes/wnp.Dummy.html">wnp.Dummy</a></li>
-            
-                <li><a href="../classes/wnp.Engine2D.html">wnp.Engine2D</a></li>
-            
-                <li><a href="../classes/wnp.Engine3D.html">wnp.Engine3D</a></li>
-            
-                <li><a href="../classes/wnp.Fence.html">wnp.Fence</a></li>
-            
-                <li><a href="../classes/wnp.FirePlace.html">wnp.FirePlace</a></li>
-            
-                <li><a href="../classes/wnp.Furniture.html">wnp.Furniture</a></li>
-            
-                <li><a href="../classes/wnp.Garage.html">wnp.Garage</a></li>
-            
-                <li><a href="../classes/wnp.GlassMaterial.html">wnp.GlassMaterial</a></li>
-            
-                <li><a href="../classes/wnp.GridComponent2D.html">wnp.GridComponent2D</a></li>
-            
-                <li><a href="../classes/wnp.GridComponent3D.html">wnp.GridComponent3D</a></li>
-            
-                <li><a href="../classes/wnp.HistoryEditionComponent.html">wnp.HistoryEditionComponent</a></li>
-            
-                <li><a href="../classes/wnp.Hob.html">wnp.Hob</a></li>
-            
-                <li><a href="../classes/wnp.hood.html">wnp.hood</a></li>
-            
-                <li><a href="../classes/wnp.Ilot.html">wnp.Ilot</a></li>
-            
-                <li><a href="../classes/wnp.Interval.html">wnp.Interval</a></li>
+                <li><a href="../classes/wnp.CameraFeatures.AnimationCancelor.html">wnp.CameraFeatures.AnimationCancelor</a></li>
             
                 <li><a href="../classes/wnp.KeyboardManager.html">wnp.KeyboardManager</a></li>
             
-                <li><a href="../classes/wnp.Keys.html">wnp.Keys</a></li>
-            
-                <li><a href="../classes/wnp.Kitchen.html">wnp.Kitchen</a></li>
-            
-                <li><a href="../classes/wnp.LeatherMaterial.html">wnp.LeatherMaterial</a></li>
-            
-                <li><a href="../classes/wnp.Light.html">wnp.Light</a></li>
-            
-                <li><a href="../classes/wnp.LuxensMaterial.html">wnp.LuxensMaterial</a></li>
-            
-                <li><a href="../classes/wnp.MagnetismComponent2D.html">wnp.MagnetismComponent2D</a></li>
-            
-                <li><a href="../classes/wnp.MattMaterial.html">wnp.MattMaterial</a></li>
-            
-                <li><a href="../classes/wnp.MetalConsole.html">wnp.MetalConsole</a></li>
-            
-                <li><a href="../classes/wnp.MetalMaterial.html">wnp.MetalMaterial</a></li>
-            
-                <li><a href="../classes/wnp.OBB.html">wnp.OBB</a></li>
-            
-                <li><a href="../classes/wnp.OBJImporter.html">wnp.OBJImporter</a></li>
-            
-                <li><a href="../classes/wnp.Oven.html">wnp.Oven</a></li>
-            
-                <li><a href="../classes/wnp.Overture.html">wnp.Overture</a></li>
-            
-                <li><a href="../classes/wnp.overtureComponent2D.html">wnp.overtureComponent2D</a></li>
-            
-                <li><a href="../classes/wnp.overtureComponent3D.html">wnp.overtureComponent3D</a></li>
-            
-                <li><a href="../classes/wnp.OvertureStructure.html">wnp.OvertureStructure</a></li>
-            
-                <li><a href="../classes/wnp.Ovoide.html">wnp.Ovoide</a></li>
-            
-                <li><a href="../classes/wnp.OyBB.html">wnp.OyBB</a></li>
-            
-                <li><a href="../classes/wnp.PhotoFrame.html">wnp.PhotoFrame</a></li>
-            
-                <li><a href="../classes/wnp.plane.html">wnp.plane</a></li>
-            
-                <li><a href="../classes/wnp.PlasticMaterial.html">wnp.PlasticMaterial</a></li>
-            
-                <li><a href="../classes/wnp.PointerManager.html">wnp.PointerManager</a></li>
+                <li><a href="../classes/wnp.LoopTimer.html">wnp.LoopTimer</a></li>
             
                 <li><a href="../classes/wnp.Programmable.html">wnp.Programmable</a></li>
             
-                <li><a href="../classes/wnp.RoundedTable.html">wnp.RoundedTable</a></li>
-            
-                <li><a href="../classes/wnp.RoundedTableFourFoot.html">wnp.RoundedTableFourFoot</a></li>
-            
-                <li><a href="../classes/wnp.Shower.html">wnp.Shower</a></li>
-            
-                <li><a href="../classes/wnp.Sink.html">wnp.Sink</a></li>
-            
-                <li><a href="../classes/wnp.SinkBox.html">wnp.SinkBox</a></li>
-            
-                <li><a href="../classes/wnp.Sofa.html">wnp.Sofa</a></li>
-            
-                <li><a href="../classes/wnp.sofacromwell.html">wnp.sofacromwell</a></li>
-            
-                <li><a href="../classes/wnp.spiralStairwayStructure.html">wnp.spiralStairwayStructure</a></li>
-            
-                <li><a href="../classes/wnp.SpotLamp.html">wnp.SpotLamp</a></li>
-            
-                <li><a href="../classes/wnp.spotMultiple.html">wnp.spotMultiple</a></li>
-            
-                <li><a href="../classes/wnp.Square.html">wnp.Square</a></li>
-            
-                <li><a href="../classes/wnp.Stairs.html">wnp.Stairs</a></li>
-            
-                <li><a href="../classes/wnp.stairwayComponent3D.html">wnp.stairwayComponent3D</a></li>
-            
-                <li><a href="../classes/wnp.stairwayStructure.html">wnp.stairwayStructure</a></li>
-            
-                <li><a href="../classes/wnp.straightStairwayStructure.html">wnp.straightStairwayStructure</a></li>
-            
-                <li><a href="../classes/wnp.Structure.html">wnp.Structure</a></li>
-            
-                <li><a href="../classes/wnp.subSlopeOvertureComponent2D.html">wnp.subSlopeOvertureComponent2D</a></li>
-            
-                <li><a href="../classes/wnp.SubSlopeOvertureStructure.html">wnp.SubSlopeOvertureStructure</a></li>
-            
-                <li><a href="../classes/wnp.subSlopeStructure.html">wnp.subSlopeStructure</a></li>
-            
                 <li><a href="../classes/wnp.Symbols2D.html">wnp.Symbols2D</a></li>
-            
-                <li><a href="../classes/wnp.Symetric.html">wnp.Symetric</a></li>
-            
-                <li><a href="../classes/wnp.Table.html">wnp.Table</a></li>
-            
-                <li><a href="../classes/wnp.TableBoconcept.html">wnp.TableBoconcept</a></li>
-            
-                <li><a href="../classes/wnp.TableGeneric.html">wnp.TableGeneric</a></li>
-            
-                <li><a href="../classes/wnp.TableModer.html">wnp.TableModer</a></li>
-            
-                <li><a href="../classes/wnp.TableOvale.html">wnp.TableOvale</a></li>
-            
-                <li><a href="../classes/wnp.TexturedMaterial.html">wnp.TexturedMaterial</a></li>
-            
-                <li><a href="../classes/wnp.TileMaterial.html">wnp.TileMaterial</a></li>
-            
-                <li><a href="../classes/wnp.TouchManager.html">wnp.TouchManager</a></li>
-            
-                <li><a href="../classes/wnp.TowelDry.html">wnp.TowelDry</a></li>
-            
-                <li><a href="../classes/wnp.Tv.html">wnp.Tv</a></li>
-            
-                <li><a href="../classes/wnp.UI.AboutWindow.html">wnp.UI.AboutWindow</a></li>
-            
-                <li><a href="../classes/wnp.UI.ContextMenu.html">wnp.UI.ContextMenu</a></li>
-            
-                <li><a href="../classes/wnp.UI.FormBuilder.html">wnp.UI.FormBuilder</a></li>
-            
-                <li><a href="../classes/wnp.UI.Frame.html">wnp.UI.Frame</a></li>
-            
-                <li><a href="../classes/wnp.UI.HelpBubble.html">wnp.UI.HelpBubble</a></li>
-            
-                <li><a href="../classes/wnp.UI.HelpBubbleManager.html">wnp.UI.HelpBubbleManager</a></li>
-            
-                <li><a href="../classes/wnp.UI.MessageBox.html">wnp.UI.MessageBox</a></li>
-            
-                <li><a href="../classes/wnp.UI.Popup.html">wnp.UI.Popup</a></li>
-            
-                <li><a href="../classes/wnp.UI.RemoteController.html">wnp.UI.RemoteController</a></li>
             
                 <li><a href="../classes/wnp.uuid.html">wnp.uuid</a></li>
             
-                <li><a href="../classes/wnp.WhiteMaterial.html">wnp.WhiteMaterial</a></li>
-            
-                <li><a href="../classes/wnp.Window.html">wnp.Window</a></li>
-            
-                <li><a href="../classes/wnp.WoodMaterial.html">wnp.WoodMaterial</a></li>
+                <li><a href="../classes/WoodMaterial.html">WoodMaterial</a></li>
             
             </ul>
 
@@ -431,15 +236,11 @@
             
                 <li><a href="../modules/Input.html">Input</a></li>
             
-                <li><a href="../modules/Misc.html">Misc</a></li>
-            
-                <li><a href="../modules/PhotonUI.html">PhotonUI</a></li>
-            
                 <li><a href="../modules/Programmable.html">Programmable</a></li>
             
-                <li><a href="../modules/UI.html">UI</a></li>
-            
                 <li><a href="../modules/Wanaplan.html">Wanaplan</a></li>
+            
+                <li><a href="../modules/Widget.html">Widget</a></li>
             
             </ul>
         </div>
@@ -476,8 +277,8 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>WallComponent2D Class</h1>
-<div class="box meta">
+                        <h1>WallComponent2D</h1>
+<div class="meta">
     
 
     
@@ -496,12 +297,14 @@
     
 
     
+    
 </div>
 
 
 
-<div class="box intro">
-    <p>Murs 2D.</p>
+<h3>Summary</h3>
+<div class="intro">
+    <p>2D Wall management.</p>
 
 </div>
 
@@ -509,7 +312,28 @@
     <div class="constructor">
         <h2>Constructor</h2>
         <div id="method_WallComponent2D" class="method item">
-    <h3 class="name"><code>WallComponent2D</code></h3>
+  <h3 class="blue-method-name">WallComponent2D</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>WallComponent2D</code></h3>
 
     
         <span class="paren">()</span>
@@ -529,24 +353,9 @@
 
     
 
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
+      <h3>Summary</h3>
         
     </div>
 
@@ -555,6 +364,9 @@
     
 
     
+
+    
+
 </div>
 
     </div>
@@ -568,8 +380,8 @@
             <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
         
         
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
         
-            <li class="api-class-tab attrs"><a href="#attrs">Attributes</a></li>
         
         
     </ul>
@@ -612,15 +424,6 @@
                                 
                             </li>
                         
-                            <li class="index-item method deprecated inherited">
-                                <a href="#method_compute">compute</a>
-
-                                
-                                
-                                    <span class="flag deprecated">deprecated</span>
-                                
-                            </li>
-                        
                             <li class="index-item method inherited">
                                 <a href="#method_destroy">destroy</a>
 
@@ -628,8 +431,22 @@
                                 
                             </li>
                         
-                            <li class="index-item method inherited inherited">
+                            <li class="index-item method inherited">
                                 <a href="#method_disable">disable</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_drawWall">drawWall</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_enable">enable</a>
 
                                 
                                 
@@ -656,7 +473,7 @@
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method private">
                                 <a href="#method_simplifyWalls">simplifyWalls</a>
 
                                 
@@ -689,35 +506,84 @@
             
 
             
+                <div class="index-section properties">
+                    <h3>Properties</h3>
 
-            
-                <div class="index-section attrs">
-                    <h3>Attributes</h3>
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property private">
+                                <a href="#property__COLORS">_COLORS</a>
 
-                    <ul class="index-list attrs extends">
-                        
-                            <li class="index-item attr inherited">
-                                <a href="#attr_core">core</a>
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
                             </li>
                         
-                            <li class="index-item attr inherited">
-                                <a href="#attr_keyboard">keyboard</a>
+                            <li class="index-item property">
+                                <a href="#property__PATTERN_IMGS">_PATTERN_IMGS</a>
+
+                                
+                                
                             </li>
                         
-                            <li class="index-item attr inherited">
-                                <a href="#attr_name">name</a>
+                            <li class="index-item property">
+                                <a href="#property__PATTERNS">_PATTERNS</a>
+
+                                
+                                
                             </li>
                         
-                            <li class="index-item attr inherited">
-                                <a href="#attr_priority">priority</a>
+                            <li class="index-item property">
+                                <a href="#property_displayMesure">displayMesure</a>
+
+                                
+                                
                             </li>
                         
-                            <li class="index-item attr inherited">
-                                <a href="#attr_structure">structure</a>
+                            <li class="index-item property inherited">
+                                <a href="#property_name">name</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property private inherited">
+                                <a href="#property_priority">priority</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_structure">structure</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_TYPE_NORMAL">TYPE_NORMAL</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_TYPE_SEPARATOR">TYPE_SEPARATOR</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
                             </li>
                         
                     </ul>
                 </div>
+            
+
             
 
             
@@ -729,7 +595,28 @@
 
                 
                     <div id="method__addWallFirstPoint" class="method item private">
-    <h3 class="name"><code>_addWallFirstPoint</code></h3>
+  <h3 class="blue-method-name">_addWallFirstPoint</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>_addWallFirstPoint</code></h3>
 
     
         <div class="args">
@@ -743,7 +630,7 @@
             
                 <li class="arg">
                     
-                        <code>point</code>
+                        <code class="optional">[point]</code>
                     
                 </li>
             
@@ -767,25 +654,10 @@
 
     
 
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
-        <p>Ajout du premier point d&#39;un mur.</p>
+      <h3>Summary</h3>
+        <p>Adds a the first point in the wall.</p>
 
     </div>
 
@@ -804,7 +676,7 @@
                     
 
                     <div class="param-description">
-                        <p>L&#39;état de la souris.</p>
+                        <p>State of the mouse.</p>
 
                     </div>
 
@@ -813,14 +685,15 @@
             
                 <li class="param">
                     
-                        <code class="param-name">point</code>
+                        <code class="param-name optional">[point]</code>
                         <span class="type"><a href="../classes/PointStructure.html" class="crosslink">PointStructure</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>Point 0 du mur (optionnel)</p>
+                        <p>point 0 of the wall.</p>
 
                     </div>
 
@@ -834,11 +707,35 @@
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method__addWallUpdate." class="method item private">
-    <h3 class="name"><code>_addWallUpdate.</code></h3>
+  <h3 class="blue-method-name">_addWallUpdate.</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>_addWallUpdate.</code></h3>
 
     
         <div class="args">
@@ -870,25 +767,10 @@
 
     
 
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
-        <p>Ajoutes le second point d&#39;un mur et insert le mur dans la struct.</p>
+      <h3>Summary</h3>
+        <p>Add the second point and insert the wall in the structure.</p>
 
     </div>
 
@@ -907,7 +789,7 @@
                     
 
                     <div class="param-description">
-                        <p>L&#39;état de la souris.</p>
+                        <p>State of the mouse.</p>
 
                     </div>
 
@@ -921,11 +803,35 @@
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method__addWallUpdate." class="method item private">
-    <h3 class="name"><code>_addWallUpdate.</code></h3>
+  <h3 class="blue-method-name">_addWallUpdate.</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>_addWallUpdate.</code></h3>
 
     
         <div class="args">
@@ -957,25 +863,10 @@
 
     
 
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
-        <p>Met à jour le mur temporaire.</p>
+      <h3>Summary</h3>
+        <p>Updates the wall temporary.</p>
 
     </div>
 
@@ -994,7 +885,7 @@
                     
 
                     <div class="param-description">
-                        <p>L&#39;état de la souris.</p>
+                        <p>The state of the mouse.</p>
 
                     </div>
 
@@ -1008,11 +899,35 @@
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method__drawMeasures" class="method item private">
-    <h3 class="name"><code>_drawMeasures</code></h3>
+  <h3 class="blue-method-name">_drawMeasures</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>_drawMeasures</code></h3>
 
     
         <div class="args">
@@ -1026,13 +941,13 @@
             
                 <li class="arg">
                     
-                        <code>la</code>
+                        <code>translation</code>
                     
                 </li>
             
                 <li class="arg">
                     
-                        <code>le</code>
+                        <code>zoom</code>
                     
                 </li>
             
@@ -1056,25 +971,10 @@
 
     
 
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
-        <p>Dessine toutes les côtes</p>
+      <h3>Summary</h3>
+        <p>Draws all measures.</p>
 
     </div>
 
@@ -1087,13 +987,13 @@
                 <li class="param">
                     
                         <code class="param-name">ctx</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type">CanvasRenderingContext2D</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>Contexte 2D du canvas.</p>
+                        <p>Canvas 2D context.</p>
 
                     </div>
 
@@ -1102,14 +1002,14 @@
             
                 <li class="param">
                     
-                        <code class="param-name">la</code>
-                        <span class="type">Translation</span>
+                        <code class="param-name">translation</code>
+                        <span class="type">BABYLON.Vector2</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>translation</p>
+                        <p>Canvas 2D translation.</p>
 
                     </div>
 
@@ -1118,14 +1018,14 @@
             
                 <li class="param">
                     
-                        <code class="param-name">le</code>
-                        <span class="type">Zoom</span>
+                        <code class="param-name">zoom</code>
+                        <span class="type">BABYLON.Vector2</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>zoom</p>
+                        <p>Canvas 2D zoom.</p>
 
                     </div>
 
@@ -1139,64 +1039,34 @@
     
 
     
-</div>
-
-                
-                    <div id="method_compute" class="method item deprecated inherited">
-    <h3 class="name"><code>compute</code></h3>
-
-    
-        <span class="paren">()</span>
-    
 
     
 
-    
-        <span class="flag deprecated">deprecated</span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#method_compute">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>Generic compute method, called when a &quot;requestCompute&quot; has been triggered
-Warning : deprecated, use &quot;update&quot; instead</p>
-
-    </div>
-
-    
-
-    
-
-    
 </div>
 
                 
                     <div id="method_destroy" class="method item inherited">
-    <h3 class="name"><code>destroy</code></h3>
+  <h3 class="blue-method-name">destroy</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_destroy">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>destroy</code></h3>
 
     
         <span class="paren">()</span>
@@ -1216,23 +1086,9 @@ Warning : deprecated, use &quot;update&quot; instead</p>
 
     
 
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#method_destroy">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
+      <h3>Summary</h3>
         <p>Method called when the component is destroyed</p>
 
     </div>
@@ -1242,11 +1098,34 @@ Warning : deprecated, use &quot;update&quot; instead</p>
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method_disable" class="method item inherited">
-    <h3 class="name"><code>disable</code></h3>
+  <h3 class="blue-method-name">disable</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_disable">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>disable</code></h3>
 
     
         <span class="paren">()</span>
@@ -1266,24 +1145,9 @@ Warning : deprecated, use &quot;update&quot; instead</p>
 
     
 
-    <div class="meta">
-        
-            <p>Inherited from
-            <a href="../classes/BaseComponent2D.html#method_disable">
-                BaseComponent2D
-            </a>
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
+      <h3>Summary</h3>
         <p>Disables the component</p>
 
     </div>
@@ -1293,11 +1157,280 @@ Warning : deprecated, use &quot;update&quot; instead</p>
     
 
     
+
+    
+
 </div>
 
                 
-                    <div id="method_getTargeted" class="method item">
-    <h3 class="name"><code>getTargeted</code></h3>
+                    <div id="method_drawWall" class="method item">
+  <h3 class="blue-method-name">drawWall</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>drawWall</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>ctx</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>translation</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>zoom</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>wall</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[options]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Draws a wall.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">ctx</code>
+                        <span class="type">CanvasRenderingContext2D</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Canvas 2D context.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">translation</code>
+                        <span class="type">BABYLON.Vector2</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Canvas 2D translation.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">zoom</code>
+                        <span class="type">BABYLON.Vector2</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Canvas 2D zoom.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">wall</code>
+                        <span class="type"><a href="../classes/WallStructure.html" class="crosslink">WallStructure</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Involved wall.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[options]</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Drawing options, such as :</p>
+<ul>
+<li><code>options.measureDisplayed</code> shows or hides the measure</li>
+<li><code>options.styleId</code> changes the drawing style.</li>
+</ul>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_enable" class="method item inherited">
+  <h3 class="blue-method-name">enable</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_enable">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>enable</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Enables the component</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getTargeted" class="method item inherited">
+  <h3 class="blue-method-name">getTargeted</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_getTargeted">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getTargeted</code></h3>
 
     
         <div class="args">
@@ -1331,26 +1464,10 @@ Warning : deprecated, use &quot;update&quot; instead</p>
 
     
 
-    <div class="meta">
-        
-            <p>Inherited from
-            <a href="../classes/BaseComponent2D.html#method_getTargeted">
-                BaseComponent2D
-            </a>
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
-        <p>Détermine si le curseur se trouve au dessus de l&#39;un des éléments
-gérés par le composant et le retourne.</p>
+      <h3>Summary</h3>
+        <p>This methods tells if the given position is over an element handled by the component</p>
 
     </div>
 
@@ -1363,13 +1480,13 @@ gérés par le composant et le retourne.</p>
                 <li class="param">
                     
                         <code class="param-name">vector</code>
-                        <span class="type">BABYLON.Vector3</span>
+                        <span class="type">Vector</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>Vecteur représentant les coordonées du curseur.</p>
+                        <p>A position, usually the cursor&#39;s one.</p>
 
                     </div>
 
@@ -1385,24 +1502,50 @@ gérés par le composant et le retourne.</p>
             <h4>Returns:</h4>
 
             <div class="returns-description">
-                
-                    
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
-                    
-                    <p>L&#39;élément ciblé par le curseur ou null si rien ne
-                 se trouve sous le curseur.</p>
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The targeted element, or null if nothing is found.</p>
 
-                
+                </div>
+              
+
+
             </div>
         </div>
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method_initialize" class="method item inherited">
-    <h3 class="name"><code>initialize</code></h3>
+  <h3 class="blue-method-name">initialize</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_initialize">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>initialize</code></h3>
 
     
         <span class="paren">()</span>
@@ -1422,23 +1565,9 @@ gérés par le composant et le retourne.</p>
 
     
 
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#method_initialize">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
+      <h3>Summary</h3>
         <p>Method called when Wanaplan is initialized.
 You don&#39;t need to call this method manually.</p>
 
@@ -1449,11 +1578,34 @@ You don&#39;t need to call this method manually.</p>
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method_onContextChanged" class="method item inherited">
-    <h3 class="name"><code>onContextChanged</code></h3>
+  <h3 class="blue-method-name">onContextChanged</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_onContextChanged">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>onContextChanged</code></h3>
 
     
         <div class="args">
@@ -1483,23 +1635,9 @@ You don&#39;t need to call this method manually.</p>
 
     
 
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#method_onContextChanged">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
+      <h3>Summary</h3>
         <p>Method called when the context is switched (2D -&gt; 3D or 3D -&gt; 2D)</p>
 
     </div>
@@ -1533,11 +1671,35 @@ You don&#39;t need to call this method manually.</p>
     
 
     
+
+    
+
 </div>
 
                 
-                    <div id="method_simplifyWalls" class="method item">
-    <h3 class="name"><code>simplifyWalls</code></h3>
+                    <div id="method_simplifyWalls" class="method item private">
+  <h3 class="blue-method-name">simplifyWalls</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>simplifyWalls</code></h3>
 
     
         <span class="paren">()</span>
@@ -1548,7 +1710,7 @@ You don&#39;t need to call this method manually.</p>
     
 
     
-
+        <span class="flag private">private</span>
     
 
     
@@ -1557,25 +1719,12 @@ You don&#39;t need to call this method manually.</p>
 
     
 
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-            
-        
-        
-        </p>
+    
 
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
-        <p>Simplification des murs trop petits</p>
+      <h3>Summary</h3>
+        <p>Deletes small walls.</p>
 
     </div>
 
@@ -1584,11 +1733,34 @@ You don&#39;t need to call this method manually.</p>
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method_startListening" class="method item inherited">
-    <h3 class="name"><code>startListening</code></h3>
+  <h3 class="blue-method-name">startListening</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_startListening">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>startListening</code></h3>
 
     
         <span class="paren">()</span>
@@ -1608,23 +1780,9 @@ You don&#39;t need to call this method manually.</p>
 
     
 
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#method_startListening">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
+      <h3>Summary</h3>
         <p>Calls all the event listeners.</p>
 
     </div>
@@ -1634,11 +1792,34 @@ You don&#39;t need to call this method manually.</p>
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method_stopListening" class="method item inherited">
-    <h3 class="name"><code>stopListening</code></h3>
+  <h3 class="blue-method-name">stopListening</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_stopListening">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>stopListening</code></h3>
 
     
         <span class="paren">()</span>
@@ -1658,23 +1839,9 @@ You don&#39;t need to call this method manually.</p>
 
     
 
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#method_stopListening">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
+      <h3>Summary</h3>
         <p>Removes all the event listeners.</p>
 
     </div>
@@ -1684,11 +1851,34 @@ You don&#39;t need to call this method manually.</p>
     
 
     
+
+    
+
 </div>
 
                 
                     <div id="method_update" class="method item inherited">
-    <h3 class="name"><code>update</code></h3>
+  <h3 class="blue-method-name">update</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_update">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>update</code></h3>
 
     
         <span class="paren">()</span>
@@ -1708,23 +1898,9 @@ You don&#39;t need to call this method manually.</p>
 
     
 
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#method_update">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
+  </div>
     <div class="description">
+      <h3>Summary</h3>
         <p>Generic update method, called on every frame</p>
 
     </div>
@@ -1734,6 +1910,9 @@ You don&#39;t need to call this method manually.</p>
     
 
     
+
+    
+
 </div>
 
                 
@@ -1741,210 +1920,254 @@ You don&#39;t need to call this method manually.</p>
         
 
         
-
-        
-            <div id="attrs" class="api-class-tabpanel">
-                <h2 class="off-left">Attributes</h2>
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
 
                 
-                    <div id="attr_core" class="attr item inherited">
-    <a name="config_core"></a> 
-    <h3 class="name"><code>core</code></h3>
-    <span class="type"><a href="../classes/wnp.Core.html" class="crosslink">wnp.Core</a></span>
+                    <div id="property__COLORS" class="property item private">
 
+  <h3 class="blue-method-name">_COLORS</h3>
+  <div class="meta method-meta">
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
+      
         
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#attr_core">BaseComponent2D</a>:
-            
+      <p>
         
-        
-        </p>
+      
+    
+    
+  </p>
 
-        
+    
 
-        
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>_COLORS</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+        <span class="flag final">final</span>
+    
+
+    
+        <span class="flag static">static</span>
+    
+
     </div>
 
     <div class="description">
-        <p>Core instance</p>
+      <h3>Summary</h3>
+        <p>Constant for the color of the wall.</p>
 
     </div>
 
     
 
     
-        <div class="emits box">
-            <h4>Fires event <code>coreChange</code></h4>
 
-            <p>
-            Fires when the value for the configuration attribute <code>core</code> is
-            changed. You can listen for the event using the <code>on</code> method if you
-            wish to be notified before the attribute's value has changed, or
-            using the <code>after</code> method if you wish to be notified after the
-            attribute's value has changed.
-            </p>
+  
 
-            <div class="params">
-                <h4>Parameters:</h4>
+  
 
-                <ul class="params-list">
-                    <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">EventFacade</span>
-
-                        <div class="param-description">
-                            An Event Facade object with the following
-                            attribute-specific properties added:
-                        </div>
-
-                        <ul class="params-list">
-                            <li class="param">
-                                <code class="param-name">prevVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value of the attribute, prior to it being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">newVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value the attribute is to be set to.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">attrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">The name of the attribute being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">subAttrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">If setting a property within the attribute's value, the name of the sub-attribute property being set.</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    
-
-    
 </div>
 
                 
-                    <div id="attr_keyboard" class="attr item inherited">
-    <a name="config_keyboard"></a> 
-    <h3 class="name"><code>keyboard</code></h3>
-    <span class="type"><a href="../classes/wnp.KeyboardManager.html" class="crosslink">wnp.KeyboardManager</a></span>
+                    <div id="property__PATTERN_IMGS" class="property item">
 
+  <h3 class="blue-method-name">_PATTERN_IMGS</h3>
+  <div class="meta method-meta">
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
+      
         
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#attr_keyboard">BaseComponent2D</a>:
-            
+      <p>
         
-        
-        </p>
+      
+    
+    
+  </p>
 
-        
+    
 
-        
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>_PATTERN_IMGS</code></h3>
+    <span class="type">Image</span>
+
+    
+
+    
+
+    
+
+    
+
     </div>
 
     <div class="description">
-        <p>Kerboard Manager instance (shortcut to core.keyboardManager)</p>
+      <h3>Summary</h3>
+        <p>Images for drawing style of the walls.
+This is an array of Image.
+You can then change the style of the wall in the function <code>drawWall</code> using
+<code>options.styleId</code> where styleId is the index of the style in this Array.</p>
 
     </div>
 
     
 
     
-        <div class="emits box">
-            <h4>Fires event <code>keyboardChange</code></h4>
 
-            <p>
-            Fires when the value for the configuration attribute <code>keyboard</code> is
-            changed. You can listen for the event using the <code>on</code> method if you
-            wish to be notified before the attribute's value has changed, or
-            using the <code>after</code> method if you wish to be notified after the
-            attribute's value has changed.
-            </p>
+  
 
-            <div class="params">
-                <h4>Parameters:</h4>
+  
 
-                <ul class="params-list">
-                    <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">EventFacade</span>
-
-                        <div class="param-description">
-                            An Event Facade object with the following
-                            attribute-specific properties added:
-                        </div>
-
-                        <ul class="params-list">
-                            <li class="param">
-                                <code class="param-name">prevVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value of the attribute, prior to it being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">newVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value the attribute is to be set to.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">attrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">The name of the attribute being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">subAttrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">If setting a property within the attribute's value, the name of the sub-attribute property being set.</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    
-
-    
 </div>
 
                 
-                    <div id="attr_name" class="attr item inherited">
-    <a name="config_name"></a> 
+                    <div id="property__PATTERNS" class="property item">
+
+  <h3 class="blue-method-name">_PATTERNS</h3>
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>_PATTERNS</code></h3>
+    <span class="type">CtxPattern</span>
+
+    
+
+    
+
+    
+
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Drawing patterns for drawing style of the walls.
+This is an array of drawing patterns (see canvas patterns).
+You can then change the style of the wall in the function <code>drawWall</code> using
+<code>options.styleId</code> where styleId is the index of the style in this Array.</p>
+<blockquote>
+<p>NB : use function <code>createPattern</code> of a 2D context. For the <code>Image</code> parameter,
+use the image in <code>PATTERN_IMGS</code> at the same index.</p>
+</blockquote>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> &quot;repeat&quot;</p>
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+                    <div id="property_displayMesure" class="property item">
+
+  <h3 class="blue-method-name">displayMesure</h3>
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>displayMesure</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Flag that enables/disables the displaying of measures.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> true</p>
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+                    <div id="property_name" class="property item inherited">
+
+  <h3 class="blue-method-name">name</h3>
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#property_name">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
     <h3 class="name"><code>name</code></h3>
     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
 
@@ -1956,28 +2179,10 @@ You don&#39;t need to call this method manually.</p>
 
     
 
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#attr_name">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-        
-
-        
     </div>
 
     <div class="description">
+      <h3>Summary</h3>
         <p>Component name</p>
 
     </div>
@@ -1985,164 +2190,91 @@ You don&#39;t need to call this method manually.</p>
     
 
     
-        <div class="emits box">
-            <h4>Fires event <code>nameChange</code></h4>
 
-            <p>
-            Fires when the value for the configuration attribute <code>name</code> is
-            changed. You can listen for the event using the <code>on</code> method if you
-            wish to be notified before the attribute's value has changed, or
-            using the <code>after</code> method if you wish to be notified after the
-            attribute's value has changed.
-            </p>
+  
 
-            <div class="params">
-                <h4>Parameters:</h4>
+  
 
-                <ul class="params-list">
-                    <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">EventFacade</span>
-
-                        <div class="param-description">
-                            An Event Facade object with the following
-                            attribute-specific properties added:
-                        </div>
-
-                        <ul class="params-list">
-                            <li class="param">
-                                <code class="param-name">prevVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value of the attribute, prior to it being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">newVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value the attribute is to be set to.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">attrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">The name of the attribute being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">subAttrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">If setting a property within the attribute's value, the name of the sub-attribute property being set.</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    
-
-    
 </div>
 
                 
-                    <div id="attr_priority" class="attr item inherited">
-    <a name="config_priority"></a> 
+                    <div id="property_priority" class="property item private">
+
+  <h3 class="blue-method-name">priority</h3>
+  <div class="meta method-meta">
+    
+    <p>Inherited from
+      <a href="../classes/BaseComponent2D.html#property_priority">
+        BaseComponent2D
+      </a>
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
     <h3 class="name"><code>priority</code></h3>
     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
 
     
 
     
-
+        <span class="flag private">private</span>
     
 
     
 
     
 
-    
-
-    
-
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#attr_priority">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-        
-
-        
     </div>
 
     <div class="description">
-        <p>Priority of the component in the &quot;update&quot; and &quot;draw&quot; routines</p>
+      <h3>Summary</h3>
+        <p>Priority of the component for update callbacks.</p>
 
     </div>
 
     
-
-    
-        <div class="emits box">
-            <h4>Fires event <code>priorityChange</code></h4>
-
-            <p>
-            Fires when the value for the configuration attribute <code>priority</code> is
-            changed. You can listen for the event using the <code>on</code> method if you
-            wish to be notified before the attribute's value has changed, or
-            using the <code>after</code> method if you wish to be notified after the
-            attribute's value has changed.
-            </p>
-
-            <div class="params">
-                <h4>Parameters:</h4>
-
-                <ul class="params-list">
-                    <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">EventFacade</span>
-
-                        <div class="param-description">
-                            An Event Facade object with the following
-                            attribute-specific properties added:
-                        </div>
-
-                        <ul class="params-list">
-                            <li class="param">
-                                <code class="param-name">prevVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value of the attribute, prior to it being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">newVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value the attribute is to be set to.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">attrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">The name of the attribute being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">subAttrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">If setting a property within the attribute's value, the name of the sub-attribute property being set.</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <p><strong>Default:</strong> 10</p>
     
 
     
+
+  
+
+  
+
 </div>
 
                 
-                    <div id="attr_structure" class="attr item inherited">
-    <a name="config_structure"></a> 
+                    <div id="property_structure" class="property item inherited">
+
+  <h3 class="blue-method-name">structure</h3>
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#property_structure">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
     <h3 class="name"><code>structure</code></h3>
-    <span class="type"><a href="../classes/wnp.Structure.html" class="crosslink">wnp.Structure</a></span>
+    <span class="type">wnp.Structure</span>
 
     
 
@@ -2152,29 +2284,11 @@ You don&#39;t need to call this method manually.</p>
 
     
 
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/BaseComponent2D.html#attr_structure">BaseComponent2D</a>:
-            
-        
-        
-        </p>
-
-        
-
-        
     </div>
 
     <div class="description">
-        <p>Structure file instance (shortcut to core.structure)
+      <h3>Summary</h3>
+        <p>Structure file instance (shortcut to wanaplan.structure)
 This is the base object where the whole plan is saved</p>
 
     </div>
@@ -2182,59 +2296,125 @@ This is the base object where the whole plan is saved</p>
     
 
     
-        <div class="emits box">
-            <h4>Fires event <code>structureChange</code></h4>
 
-            <p>
-            Fires when the value for the configuration attribute <code>structure</code> is
-            changed. You can listen for the event using the <code>on</code> method if you
-            wish to be notified before the attribute's value has changed, or
-            using the <code>after</code> method if you wish to be notified after the
-            attribute's value has changed.
-            </p>
+  
 
-            <div class="params">
-                <h4>Parameters:</h4>
+  
 
-                <ul class="params-list">
-                    <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">EventFacade</span>
+</div>
 
-                        <div class="param-description">
-                            An Event Facade object with the following
-                            attribute-specific properties added:
-                        </div>
+                
+                    <div id="property_TYPE_NORMAL" class="property item">
 
-                        <ul class="params-list">
-                            <li class="param">
-                                <code class="param-name">prevVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value of the attribute, prior to it being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">newVal</code>
-                                <span class="type">Any</span>
-                                <div class="param-description">The value the attribute is to be set to.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">attrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">The name of the attribute being set.</div>
-                            </li>
-                            <li class="param">
-                                <code class="param-name">subAttrName</code>
-                                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                                <div class="param-description">If setting a property within the attribute's value, the name of the sub-attribute property being set.</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <h3 class="blue-method-name">TYPE_NORMAL</h3>
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
     
 
     
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>TYPE_NORMAL</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+        <span class="flag final">final</span>
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Constant for normal wall.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 1</p>
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+                    <div id="property_TYPE_SEPARATOR" class="property item">
+
+  <h3 class="blue-method-name">TYPE_SEPARATOR</h3>
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>TYPE_SEPARATOR</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+        <span class="flag final">final</span>
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Constant for separator walls.</p>
+
+    </div>
+
+    
+        <p><strong>Default:</strong> 2</p>
+    
+
+    
+
+  
+
+  
+
 </div>
 
                 
@@ -2242,8 +2422,14 @@ This is the base object where the whole plan is saved</p>
         
 
         
+
+        
     </div>
 </div>
+
+
+
+
 
                     </div>
                 </div>
