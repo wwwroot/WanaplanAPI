@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<html lang="en" class="yui-overrride">
+<head>
+    <meta charset="utf-8">
+    <title>wnp.Programmable - WanaPlan</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            <h1 class="blue-main-title">WanaPlan</h1>
+        </div>
+        <div class="yui3-u-1-4 version project-version">
+            API Docs for: 2.2.1
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/AnalyticsComponent.html">AnalyticsComponent</a></li>
+            
+                <li><a href="../classes/API.html">API</a></li>
+            
+                <li><a href="../classes/API.e2D.html">API.e2D</a></li>
+            
+                <li><a href="../classes/API.e3D.html">API.e3D</a></li>
+            
+                <li><a href="../classes/API.html.html">API.html</a></li>
+            
+                <li><a href="../classes/API.material.html">API.material</a></li>
+            
+                <li><a href="../classes/API.Menu.html">API.Menu</a></li>
+            
+                <li><a href="../classes/API.ui.html">API.ui</a></li>
+            
+                <li><a href="../classes/API.utils.html">API.utils</a></li>
+            
+                <li><a href="../classes/AvatarComponent3D.html">AvatarComponent3D</a></li>
+            
+                <li><a href="../classes/BaseComponent2D.html">BaseComponent2D</a></li>
+            
+                <li><a href="../classes/BaseComponent3D.html">BaseComponent3D</a></li>
+            
+                <li><a href="../classes/BaseStructure.html">BaseStructure</a></li>
+            
+                <li><a href="../classes/BaseTopMenuComponent2D.html">BaseTopMenuComponent2D</a></li>
+            
+                <li><a href="../classes/CameraComponent.html">CameraComponent</a></li>
+            
+                <li><a href="../classes/ConfiguratorModComponent3D.html">ConfiguratorModComponent3D</a></li>
+            
+                <li><a href="../classes/Constants.html">Constants</a></li>
+            
+                <li><a href="../classes/DecorationComponent.html">DecorationComponent</a></li>
+            
+                <li><a href="../classes/DragComponent3D.html">DragComponent3D</a></li>
+            
+                <li><a href="../classes/Dummy.html">Dummy</a></li>
+            
+                <li><a href="../classes/EditionComponent3D.html">EditionComponent3D</a></li>
+            
+                <li><a href="../classes/ExitComponent.html">ExitComponent</a></li>
+            
+                <li><a href="../classes/FloorComponent3D.html">FloorComponent3D</a></li>
+            
+                <li><a href="../classes/FloorController.html">FloorController</a></li>
+            
+                <li><a href="../classes/FloorStructure.html">FloorStructure</a></li>
+            
+                <li><a href="../classes/FullscreenComponent.html">FullscreenComponent</a></li>
+            
+                <li><a href="../classes/GlassMaterial.html">GlassMaterial</a></li>
+            
+                <li><a href="../classes/GlobalHelper.html">GlobalHelper</a></li>
+            
+                <li><a href="../classes/GridComponent2D.html">GridComponent2D</a></li>
+            
+                <li><a href="../classes/GridComponent3D.html">GridComponent3D</a></li>
+            
+                <li><a href="../classes/HardwareScalingComponent3D.html">HardwareScalingComponent3D</a></li>
+            
+                <li><a href="../classes/HistoryComponent.html">HistoryComponent</a></li>
+            
+                <li><a href="../classes/HopperComponent2D.html">HopperComponent2D</a></li>
+            
+                <li><a href="../classes/HopperComponent3D.html">HopperComponent3D</a></li>
+            
+                <li><a href="../classes/HopperStructure.html">HopperStructure</a></li>
+            
+                <li><a href="../classes/LeatherMaterial.html">LeatherMaterial</a></li>
+            
+                <li><a href="../classes/LockComponent.html">LockComponent</a></li>
+            
+                <li><a href="../classes/Logger.html">Logger</a></li>
+            
+                <li><a href="../classes/MagnetismComponent2D.html">MagnetismComponent2D</a></li>
+            
+                <li><a href="../classes/MagnetismComponent3D.html">MagnetismComponent3D</a></li>
+            
+                <li><a href="../classes/MattMaterial.html">MattMaterial</a></li>
+            
+                <li><a href="../classes/MeasureComponent.html">MeasureComponent</a></li>
+            
+                <li><a href="../classes/MeasureStructure.html">MeasureStructure</a></li>
+            
+                <li><a href="../classes/MetalMaterial.html">MetalMaterial</a></li>
+            
+                <li><a href="../classes/MobileComponent.html">MobileComponent</a></li>
+            
+                <li><a href="../classes/MobileInputComponent.html">MobileInputComponent</a></li>
+            
+                <li><a href="../classes/NewComponent.html">NewComponent</a></li>
+            
+                <li><a href="../classes/ObjectComponent3D.html">ObjectComponent3D</a></li>
+            
+                <li><a href="../classes/ObjectHelper.html">ObjectHelper</a></li>
+            
+                <li><a href="../classes/ObjectHelper.AABB.html">ObjectHelper.AABB</a></li>
+            
+                <li><a href="../classes/ObjectHelper.collision.html">ObjectHelper.collision</a></li>
+            
+                <li><a href="../classes/ObjectHelper.Interval.html">ObjectHelper.Interval</a></li>
+            
+                <li><a href="../classes/ObjectHelper.OBB.html">ObjectHelper.OBB</a></li>
+            
+                <li><a href="../classes/ObjectHelper.OyBB.html">ObjectHelper.OyBB</a></li>
+            
+                <li><a href="../classes/ObjectStructure.html">ObjectStructure</a></li>
+            
+                <li><a href="../classes/OptionsComponent.html">OptionsComponent</a></li>
+            
+                <li><a href="../classes/OvertureComponent2D.html">OvertureComponent2D</a></li>
+            
+                <li><a href="../classes/OvertureComponent3D.html">OvertureComponent3D</a></li>
+            
+                <li><a href="../classes/OvertureStructure.html">OvertureStructure</a></li>
+            
+                <li><a href="../classes/PedagoComponent.html">PedagoComponent</a></li>
+            
+                <li><a href="../classes/PlasticMaterial.html">PlasticMaterial</a></li>
+            
+                <li><a href="../classes/PointComponent2D.html">PointComponent2D</a></li>
+            
+                <li><a href="../classes/PointerManager.html">PointerManager</a></li>
+            
+                <li><a href="../classes/PointStructure.html">PointStructure</a></li>
+            
+                <li><a href="../classes/PolygonWall.html">PolygonWall</a></li>
+            
+                <li><a href="../classes/RoomComponent2D.html">RoomComponent2D</a></li>
+            
+                <li><a href="../classes/RoomComponent3D.html">RoomComponent3D</a></li>
+            
+                <li><a href="../classes/RoomHierarchy.html">RoomHierarchy</a></li>
+            
+                <li><a href="../classes/RoomStructure.html">RoomStructure</a></li>
+            
+                <li><a href="../classes/ScreenshotMenuComponent.html">ScreenshotMenuComponent</a></li>
+            
+                <li><a href="../classes/SpiralStairwayStructure.html">SpiralStairwayStructure</a></li>
+            
+                <li><a href="../classes/StairwayComponent2D.html">StairwayComponent2D</a></li>
+            
+                <li><a href="../classes/StairwayComponent3D.html">StairwayComponent3D</a></li>
+            
+                <li><a href="../classes/StairwayStructure.html">StairwayStructure</a></li>
+            
+                <li><a href="../classes/StandardMaterial.html">StandardMaterial</a></li>
+            
+                <li><a href="../classes/StraightStairwayStructure.html">StraightStairwayStructure</a></li>
+            
+                <li><a href="../classes/SubSlopeComponent2D.html">SubSlopeComponent2D</a></li>
+            
+                <li><a href="../classes/SubSlopeComponent3D.html">SubSlopeComponent3D</a></li>
+            
+                <li><a href="../classes/subSlopeOvertureComponent2D.html">subSlopeOvertureComponent2D</a></li>
+            
+                <li><a href="../classes/SubSlopeOvertureStructure.html">SubSlopeOvertureStructure</a></li>
+            
+                <li><a href="../classes/SubSlopeStructure.html">SubSlopeStructure</a></li>
+            
+                <li><a href="../classes/TestManager.html">TestManager</a></li>
+            
+                <li><a href="../classes/TexturedMaterial.html">TexturedMaterial</a></li>
+            
+                <li><a href="../classes/TileMaterial.html">TileMaterial</a></li>
+            
+                <li><a href="../classes/TouchManager.html">TouchManager</a></li>
+            
+                <li><a href="../classes/TransformObjectComponent3D.html">TransformObjectComponent3D</a></li>
+            
+                <li><a href="../classes/WallComponent2D.html">WallComponent2D</a></li>
+            
+                <li><a href="../classes/WallComponent3D.html">WallComponent3D</a></li>
+            
+                <li><a href="../classes/WallPane3D.html">WallPane3D</a></li>
+            
+                <li><a href="../classes/WallStructure.html">WallStructure</a></li>
+            
+                <li><a href="../classes/WhiteMaterial.html">WhiteMaterial</a></li>
+            
+                <li><a href="../classes/wnp.CameraFeatures.html">wnp.CameraFeatures</a></li>
+            
+                <li><a href="../classes/wnp.CameraFeatures.AnimationCancelor.html">wnp.CameraFeatures.AnimationCancelor</a></li>
+            
+                <li><a href="../classes/wnp.Grid.html">wnp.Grid</a></li>
+            
+                <li><a href="../classes/wnp.KeyboardManager.html">wnp.KeyboardManager</a></li>
+            
+                <li><a href="../classes/wnp.LoopTimer.html">wnp.LoopTimer</a></li>
+            
+                <li><a href="../classes/wnp.PhotoFrame.html">wnp.PhotoFrame</a></li>
+            
+                <li><a href="../classes/wnp.Programmable.html">wnp.Programmable</a></li>
+            
+                <li><a href="../classes/wnp.Symbols2D.html">wnp.Symbols2D</a></li>
+            
+                <li><a href="../classes/wnp.uuid.html">wnp.uuid</a></li>
+            
+                <li><a href="../classes/WoodMaterial.html">WoodMaterial</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/API.html">API</a></li>
+            
+                <li><a href="../modules/Component.html">Component</a></li>
+            
+                <li><a href="../modules/Core.html">Core</a></li>
+            
+                <li><a href="../modules/Helpers.html">Helpers</a></li>
+            
+                <li><a href="../modules/Input.html">Input</a></li>
+            
+                <li><a href="../modules/Programmable.html">Programmable</a></li>
+            
+                <li><a href="../modules/Wanaplan.html">Wanaplan</a></li>
+            
+                <li><a href="../modules/Widget.html">Widget</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1>wnp.Programmable</h1>
+<div class="meta">
+    
+
+    
+
+    
+
+    
+        
+            Module: <a href="../modules/Wanaplan.html">Wanaplan</a>
+        
+    
+
+    
+    
+</div>
+
+
+
+<h3>Summary</h3>
+<div class="intro">
+    <p>Abstract class from which all the programmables inherit.
+ A programmable is responsible for exposing the parameters of an object and building the associated mesh.
+ A programmable life cycle follows a strict process. See the wiki for more informations (github.com/wanadev/WanaplanAPI/wiki/Object).</p>
+
+</div>
+
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_wnp.Programmable" class="method item">
+  <h3 class="blue-method-name">wnp.Programmable</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>wnp.Programmable</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+    </div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+        
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+        
+        
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
+        
+        
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+            
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                        
+                            <li class="index-item method">
+                                <a href="#method_animate">animate</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_createInstance">createInstance</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_decorate">decorate</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_Deserialize">Deserialize</a>
+
+                                
+                                    <span class="flag static">static</span>
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_deserialize">deserialize</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method private">
+                                <a href="#method_generateFormForObject">generateFormForObject</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method private">
+                                <a href="#method_getAvailableProperties">getAvailableProperties</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getDefaultMaterials">getDefaultMaterials</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getDefaultParams">getDefaultParams</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getDepthParam">getDepthParam</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getHeightParam">getHeightParam</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getParamType">getParamType</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getWidthParam">getWidthParam</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_importBabylon">importBabylon</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method private">
+                                <a href="#method_mergeParams">mergeParams</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_serialize">serialize</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                        
+                            <li class="index-item property">
+                                <a href="#property_id">id</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property">
+                                <a href="#property_structure">structure</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+
+            
+
+            
+        </div>
+
+        
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+                
+                    <div id="method_animate" class="method item">
+  <h3 class="blue-method-name">animate</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>animate</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>object3d</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Is called when the object receives a click with the animate tool.
+This method should apply the animation of the object.</p>
+<p>/!\ This function in meant to be use in the context of the BABYLON.Mesh and will be used in a strict flow.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">object3d</code>
+                        <span class="type">BABYLON.Mesh</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The mesh of the global object</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_createInstance" class="method item">
+  <h3 class="blue-method-name">createInstance</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>createInstance</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>filename</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>params</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>materials</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>structure</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>callback</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>customPath</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>engine</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Creation of a programmable instance with the preloaded.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">filename</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The name of the file to load like Folder.Object.js.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">params</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The params to apply to the object building.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">materials</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The materials of the object.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">structure</code>
+                        <span class="type"><a href="../classes/ObjectStructure.html" class="crosslink">ObjectStructure</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The object instance.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">callback</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The callback to build the object.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">customPath</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The path of the object.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">engine</code>
+                        <span class="type">BABYLON.Engine</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The engine.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_decorate" class="method item">
+  <h3 class="blue-method-name">decorate</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>decorate</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>material</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>collisionInfo</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Material</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Is called when the object receives a click with the decorable tool.
+This method should apply the texture to the pointed part of the object.</p>
+<p>/!\ This function in meant to be use in the context of the BABYLON.Mesh and will be used in a strict flow.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">material</code>
+                        <span class="type">Material</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The material of the decoration.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">collisionInfo</code>
+                        <span class="type">BABYLON.CollisionInfo</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The informations about the collided mesh.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type">Material</span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The previous material.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_Deserialize" class="method item">
+  <h3 class="blue-method-name">Deserialize</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>Deserialize</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>hybrid</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Deserializes the object (from JSON).</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">hybrid</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>JSON describing the object, built with the method serialize.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The Structure object built from the deserialization</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_deserialize" class="method item">
+  <h3 class="blue-method-name">deserialize</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>deserialize</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>hybrid</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Deserializes the object (from JSON).</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">hybrid</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>JSON describing the object, built with the method serialize.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The Structure object built from the deserialization</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_generateFormForObject" class="method item private">
+  <h3 class="blue-method-name">generateFormForObject</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>generateFormForObject</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>param</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>instance</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>menu</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>parent</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>level</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Get the menu form for the programmable.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">param</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The param of the programmable.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">instance</code>
+                        <span class="type"><a href="../classes/ObjectStructure.html" class="crosslink">ObjectStructure</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The instance of the programmmable.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">menu</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The menu.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">parent</code>
+                        <span class="type">BABYLON.Mesh</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">level</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getAvailableProperties" class="method item private">
+  <h3 class="blue-method-name">getAvailableProperties</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getAvailableProperties</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Get the available property.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The menu.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getDefaultMaterials" class="method item">
+  <h3 class="blue-method-name">getDefaultMaterials</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getDefaultMaterials</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>scene</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Return a list which associate a default material for each part.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">scene</code>
+                        <span class="type">BABYLON.Scene</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The scene.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Set of labeled material, one for each part of the programmable.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getDefaultParams" class="method item">
+  <h3 class="blue-method-name">getDefaultParams</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getDefaultParams</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Should return all the params availables for the object.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Can be a nested structure.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getDepthParam" class="method item">
+  <h3 class="blue-method-name">getDepthParam</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getDepthParam</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Get the depth parameter.</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getHeightParam" class="method item">
+  <h3 class="blue-method-name">getHeightParam</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getHeightParam</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Get the height parameter.</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getParamType" class="method item">
+  <h3 class="blue-method-name">getParamType</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getParamType</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>name</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Should return the type of the params.
+This is used to custom the input of the params panel. 
+Default is : all params are strings.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">name</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>the parameter&#39;s name.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The type.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getWidthParam" class="method item">
+  <h3 class="blue-method-name">getWidthParam</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getWidthParam</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Get the width parameter.</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_importBabylon" class="method item">
+  <h3 class="blue-method-name">importBabylon</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>importBabylon</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>filePath</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>callback</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">Babylon.Mesh</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Import a mesh to the babylon format in a programmable. The file babylon must have the extension .babylon. 
+Import a mesh in .babylon format.
+This method is asynchronous.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">filePath</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The path to the .babylon file.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">callback</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A function called when the file is loaded, this function will receive the mesh as parameter.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type">Babylon.Mesh</span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The mesh which will contains the mesh once the file is loaded.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_mergeParams" class="method item private">
+  <h3 class="blue-method-name">mergeParams</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>mergeParams</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>params</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Merge the parameter of the default parameter.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">params</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The params to merge with the current instance.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_serialize" class="method item">
+  <h3 class="blue-method-name">serialize</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>serialize</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Serializes the object (to JSON).</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The serialization result, null if nothing is serialized.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+            </div>
+        
+
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_id" class="property item">
+
+  <h3 class="blue-method-name">id</h3>
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>id</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>The id of the object.</p>
+
+    </div>
+
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+                    <div id="property_structure" class="property item">
+
+  <h3 class="blue-method-name">structure</h3>
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>structure</code></h3>
+    <span class="type"><a href="../classes/ObjectStructure.html" class="crosslink">ObjectStructure</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>The associated structure of the programmable.</p>
+
+    </div>
+
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+            </div>
+        
+
+        
+
+        
+    </div>
+</div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
