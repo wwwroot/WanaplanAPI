@@ -52,13 +52,21 @@
             
                 <li><a href="../classes/BaseTopMenuComponent2D.html">BaseTopMenuComponent2D</a></li>
             
+                <li><a href="../classes/CameraComponent.html">CameraComponent</a></li>
+            
                 <li><a href="../classes/ConfiguratorModComponent3D.html">ConfiguratorModComponent3D</a></li>
+            
+                <li><a href="../classes/Constants.html">Constants</a></li>
             
                 <li><a href="../classes/DecorationComponent.html">DecorationComponent</a></li>
             
                 <li><a href="../classes/DragComponent3D.html">DragComponent3D</a></li>
             
                 <li><a href="../classes/Dummy.html">Dummy</a></li>
+            
+                <li><a href="../classes/e2D.html">e2D</a></li>
+            
+                <li><a href="../classes/e3D.html">e3D</a></li>
             
                 <li><a href="../classes/EditionComponent3D.html">EditionComponent3D</a></li>
             
@@ -90,6 +98,8 @@
             
                 <li><a href="../classes/HopperStructure.html">HopperStructure</a></li>
             
+                <li><a href="../classes/html.html">html</a></li>
+            
                 <li><a href="../classes/LeatherMaterial.html">LeatherMaterial</a></li>
             
                 <li><a href="../classes/LockComponent.html">LockComponent</a></li>
@@ -99,6 +109,8 @@
                 <li><a href="../classes/MagnetismComponent2D.html">MagnetismComponent2D</a></li>
             
                 <li><a href="../classes/MagnetismComponent3D.html">MagnetismComponent3D</a></li>
+            
+                <li><a href="../classes/material.html">material</a></li>
             
                 <li><a href="../classes/MattMaterial.html">MattMaterial</a></li>
             
@@ -142,9 +154,9 @@
             
                 <li><a href="../classes/OvertureStructure.html">OvertureStructure</a></li>
             
-                <li><a href="../classes/Path.html">Path</a></li>
-            
                 <li><a href="../classes/PedagoComponent.html">PedagoComponent</a></li>
+            
+                <li><a href="../classes/PerformanceComponent2D.html">PerformanceComponent2D</a></li>
             
                 <li><a href="../classes/PlasticMaterial.html">PlasticMaterial</a></li>
             
@@ -198,6 +210,10 @@
             
                 <li><a href="../classes/TransformObjectComponent3D.html">TransformObjectComponent3D</a></li>
             
+                <li><a href="../classes/ui.html">ui</a></li>
+            
+                <li><a href="../classes/utils.html">utils</a></li>
+            
                 <li><a href="../classes/WallComponent2D.html">WallComponent2D</a></li>
             
                 <li><a href="../classes/WallComponent3D.html">WallComponent3D</a></li>
@@ -212,9 +228,13 @@
             
                 <li><a href="../classes/wnp.CameraFeatures.AnimationCancelor.html">wnp.CameraFeatures.AnimationCancelor</a></li>
             
+                <li><a href="../classes/wnp.Grid.html">wnp.Grid</a></li>
+            
                 <li><a href="../classes/wnp.KeyboardManager.html">wnp.KeyboardManager</a></li>
             
                 <li><a href="../classes/wnp.LoopTimer.html">wnp.LoopTimer</a></li>
+            
+                <li><a href="../classes/wnp.PhotoFrame.html">wnp.PhotoFrame</a></li>
             
                 <li><a href="../classes/wnp.Programmable.html">wnp.Programmable</a></li>
             
@@ -229,6 +249,10 @@
             <ul id="api-modules" class="apis modules">
             
                 <li><a href="../modules/Component.html">Component</a></li>
+            
+                <li><a href="../modules/Component
+ga(&#x27;send&#x27;, &#x27;event&#x27;, &#x27;test&#x27;, &#x27;wanaplan_open&#x27;, &#x27;wanaplan_open_up&#x27;, 14);.html">Component
+ga(&#x27;send&#x27;, &#x27;event&#x27;, &#x27;test&#x27;, &#x27;wanaplan_open&#x27;, &#x27;wanaplan_open_up&#x27;, 14);</a></li>
             
                 <li><a href="../modules/Core.html">Core</a></li>
             
@@ -282,6 +306,10 @@
     
 
     
+        <div class="extends">
+            Extends <a href="../classes/BaseComponent2D.html" class="crosslink">BaseComponent2D</a>
+        </div>
+    
 
     
 
@@ -300,9 +328,7 @@
 
 <h3>Summary</h3>
 <div class="intro">
-    <p>2D Measures.
-WARNING : DESPITE THE NAME, THIS IS NOT EXTENDING BASECOMPONENT2D.
-this is a mistake, it will be done soon enough.</p>
+    <p>2D Measures.</p>
 
 </div>
 
@@ -378,6 +404,8 @@ this is a mistake, it will be done soon enough.</p>
             <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
         
         
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+        
         
         
     </ul>
@@ -390,7 +418,7 @@ this is a mistake, it will be done soon enough.</p>
                 <div class="index-section methods">
                     <h3>Methods</h3>
 
-                    <ul class="index-list methods">
+                    <ul class="index-list methods extends">
                         
                             <li class="index-item method private">
                                 <a href="#method__addOvertureIntersections">_addOvertureIntersections</a>
@@ -401,6 +429,20 @@ this is a mistake, it will be done soon enough.</p>
                         
                             <li class="index-item method private">
                                 <a href="#method__drawMeasureSlice">_drawMeasureSlice</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_destroy">destroy</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_disable">disable</a>
 
                                 
                                 
@@ -420,8 +462,57 @@ this is a mistake, it will be done soon enough.</p>
                                 
                             </li>
                         
+                            <li class="index-item method inherited">
+                                <a href="#method_enable">enable</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_getTargeted">getTargeted</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_initialize">initialize</a>
+
+                                
+                                
+                            </li>
+                        
                             <li class="index-item method">
                                 <a href="#method_mergeMeasures">mergeMeasures</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_onContextChanged">onContextChanged</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_startListening">startListening</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_stopListening">stopListening</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
+                                <a href="#method_update">update</a>
 
                                 
                                 
@@ -431,6 +522,35 @@ this is a mistake, it will be done soon enough.</p>
                 </div>
             
 
+            
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_name">name</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_priority">priority</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_structure">structure</a>
+
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                </div>
             
 
             
@@ -767,6 +887,124 @@ this is a mistake, it will be done soon enough.</p>
 </div>
 
                 
+                    <div id="method_destroy" class="method item inherited">
+  <h3 class="blue-method-name">destroy</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_destroy">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>destroy</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Method called when the component is destroyed</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_disable" class="method item inherited">
+  <h3 class="blue-method-name">disable</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_disable">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>disable</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Disables the component</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
                     <div id="method_draw" class="method item">
   <h3 class="blue-method-name">draw</h3>
 
@@ -1045,6 +1283,240 @@ this is a mistake, it will be done soon enough.</p>
 </div>
 
                 
+                    <div id="method_enable" class="method item inherited">
+  <h3 class="blue-method-name">enable</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_enable">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>enable</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Enables the component</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getTargeted" class="method item inherited">
+  <h3 class="blue-method-name">getTargeted</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_getTargeted">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getTargeted</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>vector</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>This methods tells if the given position is over an element handled by the component</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">vector</code>
+                        <span class="type">Vector</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A position, usually the cursor&#39;s one.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The targeted element, or null if nothing is found.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_initialize" class="method item inherited">
+  <h3 class="blue-method-name">initialize</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_initialize">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>initialize</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Method called when Wanaplan is initialized.
+You don&#39;t need to call this method manually.</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
                     <div id="method_mergeMeasures" class="method item">
   <h3 class="blue-method-name">mergeMeasures</h3>
 
@@ -1139,9 +1611,436 @@ this is a mistake, it will be done soon enough.</p>
 </div>
 
                 
+                    <div id="method_onContextChanged" class="method item inherited">
+  <h3 class="blue-method-name">onContextChanged</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_onContextChanged">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>onContextChanged</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>context</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Method called when the context is switched (2D -&gt; 3D or 3D -&gt; 2D)</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">context</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The new context</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_startListening" class="method item inherited">
+  <h3 class="blue-method-name">startListening</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_startListening">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>startListening</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Calls all the event listeners.</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_stopListening" class="method item inherited">
+  <h3 class="blue-method-name">stopListening</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_stopListening">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>stopListening</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Removes all the event listeners.</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_update" class="method item inherited">
+  <h3 class="blue-method-name">update</h3>
+
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#method_update">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>update</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Generic update method, called on every frame</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
             </div>
         
 
+        
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_name" class="property item inherited">
+
+  <h3 class="blue-method-name">name</h3>
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#property_name">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>name</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Component name</p>
+
+    </div>
+
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+                    <div id="property_priority" class="property item inherited">
+
+  <h3 class="blue-method-name">priority</h3>
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#property_priority">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>priority</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Priority of the component in the &quot;update&quot; and &quot;draw&quot; routines</p>
+
+    </div>
+
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+                    <div id="property_structure" class="property item inherited">
+
+  <h3 class="blue-method-name">structure</h3>
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#property_structure">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>structure</code></h3>
+    <span class="type">wnp.Structure</span>
+
+    
+
+    
+
+    
+
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Structure file instance (shortcut to wanaplan.structure)
+This is the base object where the whole plan is saved</p>
+
+    </div>
+
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+            </div>
         
 
         
