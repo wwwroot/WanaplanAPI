@@ -9,19 +9,17 @@
         "js\\Components\\AnalyticsComponent\\AnalyticsComponent.js": {
             "name": "js\\Components\\AnalyticsComponent\\AnalyticsComponent.js",
             "modules": {
-                "Component\nga('send', 'event', 'test', 'wanaplan_open', 'wanaplan_open_up', 14);": 1
+                "Component": 1
             },
             "classes": {
-                "PerformanceComponent2D": 1
+                "AnalyticsComponent": 1
             },
             "fors": {},
             "namespaces": {}
         },
         "js\\Components\\AvatarComponent\\AvatarComponent3D.js": {
             "name": "js\\Components\\AvatarComponent\\AvatarComponent3D.js",
-            "modules": {
-                "Component": 1
-            },
+            "modules": {},
             "classes": {
                 "AvatarComponent3D": 1
             },
@@ -787,39 +785,49 @@
         },
         "js\\Core\\Api\\Api.Menu.js": {
             "name": "js\\Core\\Api\\Api.Menu.js",
-            "modules": {},
+            "modules": {
+                "API": 1
+            },
             "classes": {
-                "Menu": 1
+                "API.Menu": 1
             },
             "fors": {},
-            "namespaces": {}
+            "namespaces": {
+                "API": 1
+            }
         },
         "js\\Core\\Api\\Api.e2D.js": {
             "name": "js\\Core\\Api\\Api.e2D.js",
             "modules": {},
             "classes": {
-                "e2D": 1
+                "API.e2D": 1
             },
             "fors": {},
-            "namespaces": {}
+            "namespaces": {
+                "API": 1
+            }
         },
         "js\\Core\\Api\\Api.e3D.js": {
             "name": "js\\Core\\Api\\Api.e3D.js",
             "modules": {},
             "classes": {
-                "e3D": 1
+                "API.e3D": 1
             },
             "fors": {},
-            "namespaces": {}
+            "namespaces": {
+                "API": 1
+            }
         },
         "js\\Core\\Api\\Api.html.js": {
             "name": "js\\Core\\Api\\Api.html.js",
             "modules": {},
             "classes": {
-                "html": 1
+                "API.html": 1
             },
             "fors": {},
-            "namespaces": {}
+            "namespaces": {
+                "API": 1
+            }
         },
         "js\\Core\\Api\\Api.js": {
             "name": "js\\Core\\Api\\Api.js",
@@ -834,35 +842,39 @@
             "name": "js\\Core\\Api\\Api.material.js",
             "modules": {},
             "classes": {
-                "material": 1
+                "API.material": 1
             },
             "fors": {},
-            "namespaces": {}
+            "namespaces": {
+                "API": 1
+            }
         },
         "js\\Core\\Api\\Api.ui.js": {
             "name": "js\\Core\\Api\\Api.ui.js",
             "modules": {},
             "classes": {
-                "ui": 1
+                "API.ui": 1
             },
             "fors": {},
-            "namespaces": {}
+            "namespaces": {
+                "API": 1
+            }
         },
         "js\\Core\\Api\\Api.utils.js": {
             "name": "js\\Core\\Api\\Api.utils.js",
             "modules": {},
             "classes": {
-                "utils": 1
+                "API.utils": 1
             },
             "fors": {},
-            "namespaces": {}
+            "namespaces": {
+                "API": 1
+            }
         },
         "js\\Core\\Cameras\\OrbitCamera.js": {
             "name": "js\\Core\\Cameras\\OrbitCamera.js",
             "modules": {},
-            "classes": {
-                "OrbitCamera": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
@@ -1212,16 +1224,16 @@
         "Wanaplan": {
             "name": "Wanaplan",
             "submodules": {
-                "Component\nga('send', 'event', 'test', 'wanaplan_open', 'wanaplan_open_up', 14);": 1,
                 "Component": 1,
                 "Programmable": 1,
+                "API": 1,
                 "Input": 1,
                 "Widget": 1,
                 "Core": 1,
                 "Helpers": 1
             },
             "classes": {
-                "PerformanceComponent2D": 1,
+                "AnalyticsComponent": 1,
                 "AvatarComponent3D": 1,
                 "CameraComponent": 1,
                 "ConfiguratorModComponent3D": 1,
@@ -1285,15 +1297,14 @@
                 "BaseComponent2D": 1,
                 "BaseComponent3D": 1,
                 "BaseStructure": 1,
-                "Menu": 1,
-                "e2D": 1,
-                "e3D": 1,
-                "html": 1,
+                "API.Menu": 1,
+                "API.e2D": 1,
+                "API.e3D": 1,
+                "API.html": 1,
                 "API": 1,
-                "material": 1,
-                "ui": 1,
-                "utils": 1,
-                "OrbitCamera": 1,
+                "API.material": 1,
+                "API.ui": 1,
+                "API.utils": 1,
                 "wnp.KeyboardManager": 1,
                 "PointerManager": 1,
                 "TouchManager": 1,
@@ -1329,6 +1340,7 @@
             },
             "namespaces": {
                 "wnp": 1,
+                "API": 1,
                 "wnp.CameraFeatures": 1,
                 "ObjectHelper": 1
             },
@@ -1337,26 +1349,13 @@
             "line": 5,
             "extends": "BaseComponent3D\n\nComponent which handle the transformation of object on the scene\nEvery object's transformation should be executed here\n\nHandle historization and magnetism\n\nHas a special behavior for on-dragging objects :\n  Instead of notifying every little step, merge togeter the transformation that occurs inside a beginTransformObject - endTransformObject period"
         },
-        "Component\nga('send', 'event', 'test', 'wanaplan_open', 'wanaplan_open_up', 14);": {
-            "name": "Component\nga('send', 'event', 'test', 'wanaplan_open', 'wanaplan_open_up', 14);",
-            "submodules": {},
-            "classes": {
-                "PerformanceComponent2D": 1
-            },
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Wanaplan",
-            "namespace": "",
-            "file": "js\\Components\\AnalyticsComponent\\AnalyticsComponent.js",
-            "line": 28,
-            "description": "Performance 2D."
-        },
         "Component": {
             "name": "Component",
             "submodules": {},
             "classes": {
+                "AnalyticsComponent": 1,
                 "AvatarComponent3D": 1,
+                "CameraComponent": 1,
                 "ConfiguratorModComponent3D": 1,
                 "FloorComponent3D": 1,
                 "FloorController": 1,
@@ -1443,6 +1442,30 @@
             "line": 10,
             "description": "Programmable 3D meshes."
         },
+        "API": {
+            "name": "API",
+            "submodules": {},
+            "classes": {
+                "API.Menu": 1,
+                "API.e2D": 1,
+                "API.e3D": 1,
+                "API.html": 1,
+                "API": 1,
+                "API.material": 1,
+                "API.ui": 1,
+                "API.utils": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {
+                "API": 1
+            },
+            "module": "Wanaplan",
+            "namespace": "",
+            "file": "js\\Core\\Api\\Api.utils.js",
+            "line": 7,
+            "description": "Wanaplan API for developers."
+        },
         "Input": {
             "name": "Input",
             "submodules": {},
@@ -1522,20 +1545,20 @@
         }
     },
     "classes": {
-        "PerformanceComponent2D": {
-            "name": "PerformanceComponent2D",
-            "shortname": "PerformanceComponent2D",
+        "AnalyticsComponent": {
+            "name": "AnalyticsComponent",
+            "shortname": "AnalyticsComponent",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
-            "submodule": "Component\nga('send', 'event', 'test', 'wanaplan_open', 'wanaplan_open_up', 14);",
+            "submodule": "Component",
             "namespace": "",
             "file": "js\\Components\\AnalyticsComponent\\AnalyticsComponent.js",
-            "line": 28,
-            "description": "Performance 2D.",
+            "line": 27,
+            "description": "Analytics Component to enable stat tracking with Google Analytics.",
             "is_constructor": 1,
             "extends": "BaseComponent2D"
         },
@@ -1572,9 +1595,10 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
+            "submodule": "Component",
             "namespace": "",
             "file": "js\\Components\\CameraComponent\\CameraComponent.js",
-            "line": 3,
+            "line": 8,
             "description": "Camera Component.",
             "is_constructor": 1,
             "extends": "BaseComponent3D"
@@ -2760,64 +2784,68 @@
                 }
             ]
         },
-        "Menu": {
-            "name": "Menu",
-            "shortname": "Menu",
+        "API.Menu": {
+            "name": "API.Menu",
+            "shortname": "API.Menu",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
-            "namespace": "",
+            "submodule": "API",
+            "namespace": "API",
             "file": "js\\Core\\Api\\Api.Menu.js",
-            "line": 3,
-            "description": "Wanaplan menu.\n\nMenuItem format :  \n   {\n     title : _(\"title\"),\n     icon : \"pathToIcon\",\n     action : \"eventName\",\n     index: 100,\n     items : [subitem1, subitem2]\n   }",
+            "line": 7,
+            "description": "API for Wanaplan menus.",
             "is_constructor": 1
         },
-        "e2D": {
-            "name": "e2D",
-            "shortname": "e2D",
+        "API.e2D": {
+            "name": "API.e2D",
+            "shortname": "API.e2D",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
-            "namespace": "",
+            "submodule": "API",
+            "namespace": "API",
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 3,
-            "description": "Wanaplan engine 2D.",
+            "line": 7,
+            "description": "API for wanaplan's engine 2D.",
             "is_constructor": 1
         },
-        "e3D": {
-            "name": "e3D",
-            "shortname": "e3D",
+        "API.e3D": {
+            "name": "API.e3D",
+            "shortname": "API.e3D",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
-            "namespace": "",
+            "submodule": "API",
+            "namespace": "API",
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 3,
-            "description": "Wanaplan engine 3D.",
+            "line": 7,
+            "description": "API for wanaplan's engine 3D.",
             "is_constructor": 1
         },
-        "html": {
-            "name": "html",
-            "shortname": "html",
+        "API.html": {
+            "name": "API.html",
+            "shortname": "API.html",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
-            "namespace": "",
+            "submodule": "API",
+            "namespace": "API",
             "file": "js\\Core\\Api\\Api.html.js",
-            "line": 3,
-            "description": "Wanaplan html helpers.",
+            "line": 7,
+            "description": "API for Wanaplan html helpers.",
             "is_constructor": 1
         },
         "API": {
@@ -2829,103 +2857,60 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
+            "submodule": "API",
             "namespace": "",
             "file": "js\\Core\\Api\\Api.js",
-            "line": 6,
+            "line": 11,
             "description": "API wanaplan",
             "is_constructor": 1
         },
-        "material": {
-            "name": "material",
-            "shortname": "material",
+        "API.material": {
+            "name": "API.material",
+            "shortname": "API.material",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
-            "namespace": "",
+            "submodule": "API",
+            "namespace": "API",
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 3,
-            "description": "Wanaplan materials.",
+            "line": 7,
+            "description": "API for Wanaplan materials.",
             "is_constructor": 1
         },
-        "ui": {
-            "name": "ui",
-            "shortname": "ui",
+        "API.ui": {
+            "name": "API.ui",
+            "shortname": "API.ui",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
-            "namespace": "",
+            "submodule": "API",
+            "namespace": "API",
             "file": "js\\Core\\Api\\Api.ui.js",
-            "line": 3,
-            "description": "Wanaplan ui.",
+            "line": 7,
+            "description": "API for Wanaplan User Interface.",
             "is_constructor": 1
         },
-        "utils": {
-            "name": "utils",
-            "shortname": "utils",
+        "API.utils": {
+            "name": "API.utils",
+            "shortname": "API.utils",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "Wanaplan",
-            "namespace": "",
+            "submodule": "API",
+            "namespace": "API",
             "file": "js\\Core\\Api\\Api.utils.js",
-            "line": 3,
-            "description": "Wanaplan utilities.",
+            "line": 7,
+            "description": "API utilities.",
             "is_constructor": 1
-        },
-        "OrbitCamera": {
-            "name": "OrbitCamera",
-            "shortname": "OrbitCamera",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Wanaplan",
-            "namespace": "",
-            "file": "js\\Core\\Cameras\\OrbitCamera.js",
-            "line": 9,
-            "description": "An orbit camera controller which can be used with mouse or touch. See Babylon.js docs.",
-            "is_constructor": 1,
-            "params": [
-                {
-                    "name": "name",
-                    "description": "The name for the camera.",
-                    "type": "String"
-                },
-                {
-                    "name": "alpha",
-                    "description": "Position on X/Z axis.",
-                    "type": "Number"
-                },
-                {
-                    "name": "beta",
-                    "description": "Position on Y axis.",
-                    "type": "Number"
-                },
-                {
-                    "name": "radius",
-                    "description": "The radius of the sphere.",
-                    "type": "Number"
-                },
-                {
-                    "name": "target",
-                    "description": "The target..",
-                    "type": "BABYLON.Vector3"
-                },
-                {
-                    "name": "scene",
-                    "description": "The scene where the camera will be attached.",
-                    "type": "BABYLON.Scene"
-                }
-            ]
         },
         "wnp.KeyboardManager": {
             "name": "wnp.KeyboardManager",
@@ -3524,23 +3509,25 @@
         },
         {
             "file": "js\\Components\\CameraComponent\\CameraComponent.js",
-            "line": 29,
+            "line": 34,
             "description": "A mesh bound to the lookAt position, that will move with the camera.\nBy default, it is the avatar mesh.",
             "itemtype": "property",
             "name": "lookAt",
             "type": "{BABYLON.Mesh}",
             "class": "CameraComponent",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "Component"
         },
         {
             "file": "js\\Components\\CameraComponent\\CameraComponent.js",
-            "line": 49,
+            "line": 54,
             "description": "The cameras.\nThe element of index 0 is a BABYLON.ArcRotateCamera, for orbit mode.\nThe element of index 1 is a BABYLON.FreeCamera, for FPS mode.",
             "itemtype": "property",
             "name": "camera",
             "type": "{BABYLON.Camera[]}",
             "class": "CameraComponent",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "Component"
         },
         {
             "file": "js\\Components\\ConfiguratorComponent\\Reshaper\\Dimension\\Decorator\\BoundingLimitDisplayer.js",
@@ -18274,13 +18261,13 @@
         {
             "file": "js\\Components\\GeneralOptionComponent2D.js",
             "line": 1,
-            "class": "Menu",
+            "class": "API.Menu",
             "module": "Wanaplan"
         },
         {
             "file": "js\\Core\\Api\\Api.Menu.js",
-            "line": 28,
-            "description": "Add element in a menu",
+            "line": 21,
+            "description": "Add element in a menu\n\nMenuItem format :  \n   {\n     title : _(\"title\"),\n     icon : \"pathToIcon\",\n     action : \"eventName\",\n     index: 100,\n     items : [subitem1, subitem2]\n   }",
             "itemtype": "method",
             "name": "add",
             "params": [
@@ -18300,12 +18287,14 @@
                     "type": "String"
                 }
             ],
-            "class": "Menu",
-            "module": "Wanaplan"
+            "class": "API.Menu",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 13,
+            "line": 17,
             "description": "Register a callback for a specific event.",
             "itemtype": "method",
             "name": "registerEventCb",
@@ -18346,12 +18335,14 @@
                     "type": "Object"
                 }
             ],
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 28,
+            "line": 32,
             "description": "Unregister a callback for a specific event.",
             "itemtype": "method",
             "name": "unregisterEventCb",
@@ -18362,12 +18353,14 @@
                     "type": "String"
                 }
             ],
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 37,
+            "line": 41,
             "description": "Returns the symbols 2D class for drawing stuff on the canvas.",
             "itemtype": "method",
             "name": "getSymbols2D",
@@ -18375,12 +18368,14 @@
                 "description": "The symbols2D class",
                 "type": "Object"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 47,
+            "line": 51,
             "description": "Returns the zoom applied on the canvas.",
             "itemtype": "method",
             "name": "getZoom",
@@ -18388,12 +18383,14 @@
                 "description": "The zoom, also called scale.",
                 "type": "Number"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 57,
+            "line": 61,
             "description": "Returns the translation applied on the canvas.",
             "itemtype": "method",
             "name": "getTranslation",
@@ -18401,12 +18398,14 @@
                 "description": "The translation (x, y).",
                 "type": "BABYLON.Vector2"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 67,
+            "line": 71,
             "description": "Sets the zoom applied on the canvas.",
             "itemtype": "method",
             "name": "setZoom",
@@ -18417,12 +18416,14 @@
                     "type": "Number"
                 }
             ],
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 77,
+            "line": 81,
             "description": "Sets the translation applied on the canvas.",
             "itemtype": "method",
             "name": "setTranslation",
@@ -18433,12 +18434,14 @@
                     "type": "BABYLON.Vector2"
                 }
             ],
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 87,
+            "line": 91,
             "description": "Gets a transformed vector from plan coordinates to canvas coordinates.",
             "itemtype": "method",
             "name": "toRealCoord",
@@ -18465,12 +18468,14 @@
                 "description": "Returns a transformed vector to canvas coordinates.",
                 "type": "BABYLON.Vector2"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 99,
+            "line": 103,
             "description": "Returns the mouse position, regarding to the 2D planner\nIt will give you unexploitable results in 3D",
             "itemtype": "method",
             "name": "getMousePos",
@@ -18478,12 +18483,14 @@
                 "description": "The mouse position",
                 "type": "BABYLON.Vector2"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 110,
+            "line": 114,
             "description": "Returns the nearest wall from the mouse position.",
             "itemtype": "method",
             "name": "getNearestWallFromMousePos",
@@ -18498,30 +18505,36 @@
                 "description": "The nearest wall.",
                 "type": "BABYLON.Vector2"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 123,
+            "line": 127,
             "description": "Request a redraw of the bottom \"static\" canvas on the next frame\nThe bottom canvas is used to draw things that don't usually need a redraw\nwhen the mouse moves, like the walls, the rooms, the grid etc...\nNB : The top \"dynamic\" canvas will also be redrawn",
             "itemtype": "method",
             "name": "requestStaticDraw",
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 135,
+            "line": 139,
             "description": "Request a redraw of the top \"dynamic\" canvas on the next frame\nThe top canvas is used to draw things that may need a refresh when the mouse moves\nTypically, it is the symbols displayed when the mouse hovers something",
             "itemtype": "method",
             "name": "requestDynamicDraw",
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 146,
+            "line": 150,
             "description": "Change the precision angle of the magnetism.",
             "itemtype": "method",
             "name": "setMagnetismAnglePrecision",
@@ -18532,12 +18545,14 @@
                     "type": "Float"
                 }
             ],
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 156,
+            "line": 160,
             "description": "Return a set of colors used in 2D in several context.",
             "itemtype": "method",
             "name": "getColorConstants",
@@ -18545,12 +18560,14 @@
                 "description": "set of labeled colors",
                 "type": "Object"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 166,
+            "line": 170,
             "description": "Gets the 2D static `canvas`.",
             "itemtype": "method",
             "name": "getStaticCanvas",
@@ -18558,12 +18575,14 @@
                 "description": "Returns the static canvas.",
                 "type": "HTMLCanvasElement"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e2D.js",
-            "line": 176,
+            "line": 180,
             "description": "Gets the 2D dynamic `canvas`.",
             "itemtype": "method",
             "name": "getDynamicCanvas",
@@ -18571,12 +18590,14 @@
                 "description": "Returns the dynamic canvas.",
                 "type": "HTMLCanvasElement"
             },
-            "class": "e2D",
-            "module": "Wanaplan"
+            "class": "API.e2D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 19,
+            "line": 23,
             "description": "Gets the 3D render `canvas` used by the 3D view.",
             "itemtype": "method",
             "name": "getCanvas",
@@ -18584,12 +18605,14 @@
                 "description": "Returns the render canvas.",
                 "type": "HTMLCanvasElement"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 29,
+            "line": 33,
             "description": "Returns the current scene",
             "itemtype": "method",
             "name": "getScene",
@@ -18597,12 +18620,14 @@
                 "description": "The current 3D scene",
                 "type": "BABYLON.Scene"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 39,
+            "line": 43,
             "description": "Returns the active camera for the 3D scene",
             "itemtype": "method",
             "name": "getCamera",
@@ -18610,21 +18635,25 @@
                 "description": "The active camera",
                 "type": "BABYLON.Camera"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 49,
+            "line": 53,
             "description": "Switch the camera",
             "itemtype": "method",
             "name": "switchCamera",
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 61,
+            "line": 65,
             "description": "This function returns a container of some cool features to interact with the camera.\nSee CameraFeatures documentation for a detailed review of all features.",
             "itemtype": "method",
             "name": "getCameraFeatures",
@@ -18632,12 +18661,14 @@
                 "description": "The cameraFeatures object",
                 "type": "Object"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 73,
+            "line": 77,
             "description": "Get all meshes on the scene",
             "itemtype": "method",
             "name": "getMeshes",
@@ -18645,12 +18676,14 @@
                 "description": "An array of all meshes.",
                 "type": "BABYLON.Mesh[]"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 83,
+            "line": 87,
             "description": "Get the mesh of the room for the active floor.",
             "itemtype": "method",
             "name": "getRoomMesh",
@@ -18658,12 +18691,14 @@
                 "description": "The room as a 3D mesh.",
                 "type": "BABYLON.Mesh"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 93,
+            "line": 97,
             "description": "Set the default material for the floor of the room",
             "itemtype": "method",
             "name": "setRoomFloorMaterial",
@@ -18674,12 +18709,14 @@
                     "type": "Api.material"
                 }
             ],
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 104,
+            "line": 108,
             "description": "Set the default material for the ceiling of the room",
             "itemtype": "method",
             "name": "setRoomCeilingMaterial",
@@ -18690,12 +18727,14 @@
                     "type": "Api.material"
                 }
             ],
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 115,
+            "line": 119,
             "description": "Get all top-level meshes on the scene (meshes whose parent are directly the floor, or a group)",
             "itemtype": "method",
             "name": "getTopLevelMeshes",
@@ -18703,12 +18742,14 @@
                 "description": "An array of all 3D top-level meshes.",
                 "type": "BABYLON.Mesh[]"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 135,
+            "line": 139,
             "description": "Get the picking informations with the mouse position.\nThe picking information contain :\n    - bu, bv : informations on the uv of the picked mesh\n    - distance : the distance from the camera to the picked point\n    - faceId : The face id of the mesh\n    - hit : hit or not a mesh\n    - pickedMesh : the mesh collided\n    - pickedPoint : The point on the mesh collided\n    - pickedSubMeshIndex : The index of the submesh",
             "itemtype": "method",
             "name": "getPickingInfo",
@@ -18723,12 +18764,14 @@
                 "description": "The collided informations.",
                 "type": "wnp.BaseStructure"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 154,
+            "line": 158,
             "description": "Get the instance of an object in function of the mouse position in 3D.",
             "itemtype": "method",
             "name": "getInstance",
@@ -18743,12 +18786,14 @@
                 "description": "The structure of the mesh.",
                 "type": "wnp.BaseStructure"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 168,
+            "line": 172,
             "description": "Get the material of an object in function of the mouse position in 3D.",
             "itemtype": "method",
             "name": "getMaterialFromMousePosition",
@@ -18763,12 +18808,14 @@
                 "description": "The material of the selected mesh.",
                 "type": "wnp.Material"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 180,
+            "line": 184,
             "description": "Set the material of an object in function of the mouse position in 3D.",
             "itemtype": "method",
             "name": "setMaterialFromMousePosition",
@@ -18784,12 +18831,14 @@
                     "type": "wnp.Material"
                 }
             ],
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 210,
+            "line": 214,
             "description": "Get all Handable objects on the scene",
             "itemtype": "method",
             "name": "getObjects",
@@ -18797,12 +18846,14 @@
                 "description": "An array of all 3D handable meshes.",
                 "type": "BABYLON.Mesh[]"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 229,
+            "line": 233,
             "description": "Searches for a mesh by its name.",
             "itemtype": "method",
             "name": "getMeshByName",
@@ -18810,12 +18861,14 @@
                 "description": "The mesh if found, null if not.",
                 "type": "BABYLON.Mesh"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 239,
+            "line": 243,
             "description": "Returns the directional light acting as the sun",
             "itemtype": "method",
             "name": "getSunlight",
@@ -18823,12 +18876,14 @@
                 "description": "The sun",
                 "type": "BABYLON.DirectionalLight"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 249,
+            "line": 253,
             "description": "Returns the spheric mesh acting as the sky",
             "itemtype": "method",
             "name": "getSkySphere",
@@ -18836,12 +18891,14 @@
                 "description": "The sky",
                 "type": "BABYLON.Mesh"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 259,
+            "line": 263,
             "description": "Returns the cubic mesh acting as the ground.",
             "itemtype": "method",
             "name": "getGround",
@@ -18849,12 +18906,14 @@
                 "description": "The ground",
                 "type": "BABYLON.Mesh"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 269,
+            "line": 273,
             "description": "Projects a screen position (or the mouse position) on a 3D plane.",
             "itemtype": "method",
             "name": "projectOnPlane",
@@ -18881,12 +18940,14 @@
                 "description": "The projected point",
                 "type": "BABYLON.Vector3"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 283,
+            "line": 287,
             "description": "Allow the mesh to cast a shadow\nBeware, this is an expensive feature, performance may be altered",
             "params": [
                 {
@@ -18897,12 +18958,14 @@
             ],
             "itemtype": "method",
             "name": "castShadows",
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 295,
+            "line": 299,
             "description": "Disable the casting of shadow on a mesh",
             "params": [
                 {
@@ -18913,12 +18976,14 @@
             ],
             "itemtype": "method",
             "name": "uncastShadows",
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 321,
+            "line": 325,
             "description": "Important widget function.\nIt allows you to add a widget with the url and the name of the widget.",
             "itemtype": "method",
             "name": "addWidgetEvent",
@@ -18934,12 +18999,14 @@
                     "type": "String"
                 }
             ],
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 344,
+            "line": 348,
             "description": "Adds a object to a group.",
             "itemtype": "method",
             "name": "addToGroup",
@@ -18961,21 +19028,25 @@
                     "optional": true
                 }
             ],
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 356,
+            "line": 360,
             "description": "Deselect an object and set the current selected object at null.",
             "itemtype": "method",
             "name": "deselectedObject",
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 365,
+            "line": 369,
             "description": "Get the selected object",
             "itemtype": "method",
             "name": "getSelectedObject",
@@ -18983,12 +19054,14 @@
                 "description": "The current selected object.",
                 "type": "BABYLON.Mesh"
             },
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 375,
+            "line": 379,
             "description": "Select an object and set it at the current selected object.",
             "itemtype": "method",
             "name": "selectedObject",
@@ -18999,12 +19072,14 @@
                     "type": "BABYLON.Mesh"
                 }
             ],
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 385,
+            "line": 389,
             "description": "Center a group.",
             "itemtype": "method",
             "name": "centerGroup",
@@ -19015,12 +19090,14 @@
                     "type": "BABYLON.Mesh"
                 }
             ],
-            "class": "e3D",
-            "module": "Wanaplan"
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.html.js",
-            "line": 13,
+            "line": 17,
             "description": "Load and add a `HTMLElement` on the document.",
             "itemtype": "method",
             "name": "addHTML",
@@ -19046,12 +19123,14 @@
                     "type": "Function"
                 }
             ],
-            "class": "html",
-            "module": "Wanaplan"
+            "class": "API.html",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.html.js",
-            "line": 26,
+            "line": 30,
             "itemtype": "method",
             "name": "addScript",
             "params": [
@@ -19071,12 +19150,14 @@
                     "type": "Function"
                 }
             ],
-            "class": "html",
-            "module": "Wanaplan"
+            "class": "API.html",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.html.js",
-            "line": 38,
+            "line": 42,
             "description": "Load a collection of scripts. Here are two methods to load scripts.\n1. A simple array with urls [ \"script.js\", \"script2.js\" ]\n2. An array of dictionary [ { MyObject: \"myObjectScript.js\" } ]. In this case the function will test if the script is already loaded\n   by using the key of the dictionary as object name.",
             "itemtype": "method",
             "name": "addScripts",
@@ -19107,12 +19188,14 @@
                     "type": "Number"
                 }
             ],
-            "class": "html",
-            "module": "Wanaplan"
+            "class": "API.html",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.html.js",
-            "line": 54,
+            "line": 58,
             "itemtype": "method",
             "name": "addCSS",
             "params": [
@@ -19132,24 +19215,28 @@
                     "type": "Function"
                 }
             ],
-            "class": "html",
-            "module": "Wanaplan"
+            "class": "API.html",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 30,
+            "line": 35,
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 32,
+            "line": 37,
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 34,
+            "line": 39,
             "description": "Send a event to all listeners.",
             "itemtype": "method",
             "name": "notify",
@@ -19167,11 +19254,12 @@
                 }
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 45,
+            "line": 50,
             "description": "Indicate whether wanaplan is running in viewer mode.",
             "itemtype": "method",
             "name": "isViewer",
@@ -19180,11 +19268,12 @@
                 "type": "Boolean"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 54,
+            "line": 59,
             "description": "Sets the context, 2D or 3D",
             "itemtype": "method",
             "name": "setContext",
@@ -19196,20 +19285,22 @@
                 }
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 64,
+            "line": 69,
             "description": "Gets the context, 2D or 3D",
             "itemtype": "method",
             "name": "getContext",
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 73,
+            "line": 78,
             "description": "Gets the mode for a given context",
             "itemtype": "method",
             "name": "getMode",
@@ -19224,11 +19315,12 @@
                 ""
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 89,
+            "line": 94,
             "description": "Returns the version of the current opened plan.",
             "itemtype": "method",
             "name": "getVersion",
@@ -19237,11 +19329,12 @@
                 "type": "String"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 99,
+            "line": 104,
             "description": "Compares two stringified versions.",
             "itemtype": "method",
             "name": "compareVersion",
@@ -19262,11 +19355,12 @@
                 "type": "Number"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 113,
+            "line": 118,
             "description": "Returns a loaded component",
             "itemtype": "method",
             "name": "getComponent",
@@ -19287,11 +19381,12 @@
                 "type": "Object"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 139,
+            "line": 144,
             "description": "Sets the mode for a given context",
             "itemtype": "method",
             "name": "setMode",
@@ -19311,11 +19406,12 @@
                 ""
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 158,
+            "line": 163,
             "description": "Resizes the display window.",
             "itemtype": "method",
             "name": "resize",
@@ -19332,21 +19428,23 @@
                 }
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 169,
+            "line": 174,
             "description": "Gets the camera Id.",
             "itemtype": "method",
             "name": "getCameraId",
             "cameraid": "cameraId Must be API.ORBITCAMERA or API.FPSCAMERA.\nTODO : déplacer dans l'engine 3D (spécifique 3D)\nFIXME: WAT ??",
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 187,
+            "line": 192,
             "description": "Gets the cameraId.",
             "itemtype": "method",
             "name": "getCameraId",
@@ -19354,11 +19452,12 @@
                 "description": "api.ORBITCAMERA or api.FPSCAMERA, depend on the actual camera\nTODO : déplacer dans l'engine 3D (spécifique 3D)"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 199,
+            "line": 204,
             "description": "Returns custom data from the storage\nThis data is serialized along with the plan",
             "itemtype": "method",
             "name": "getData",
@@ -19374,11 +19473,12 @@
                 "type": "Object"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 211,
+            "line": 216,
             "description": "Sets custom data to the storage\nThis data is serialized along with the plan",
             "itemtype": "method",
             "name": "setData",
@@ -19395,11 +19495,12 @@
                 }
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 223,
+            "line": 228,
             "description": "Returns the current working floor",
             "itemtype": "method",
             "name": "getCurrentFloor",
@@ -19408,11 +19509,12 @@
                 "type": "FloorStructure"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 233,
+            "line": 238,
             "description": "Returns the floor matching the given id (0 is ground, 1 is first floor etc)",
             "itemtype": "method",
             "name": "getFloorById",
@@ -19428,11 +19530,12 @@
                 "type": "FloorStructure"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 249,
+            "line": 254,
             "description": "Returns all the floors",
             "itemtype": "method",
             "name": "getFloors",
@@ -19441,11 +19544,12 @@
                 "type": "FloorStructure[]"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 259,
+            "line": 264,
             "description": "Returns the wall points for a given floor",
             "itemtype": "method",
             "name": "getPoints",
@@ -19461,11 +19565,12 @@
                 "type": "PointStructure[]"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 272,
+            "line": 277,
             "description": "Returns the walls for a given floor.",
             "itemtype": "method",
             "name": "getWalls",
@@ -19482,11 +19587,12 @@
                 "type": "WallStructure[]"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 285,
+            "line": 290,
             "description": "Returns the subslopes for a given floor.",
             "itemtype": "method",
             "name": "getSubSlopes",
@@ -19503,11 +19609,12 @@
                 "type": "SubSlopeStructure[]"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 298,
+            "line": 303,
             "description": "Returns the rooms for a given floor",
             "itemtype": "method",
             "name": "getRooms",
@@ -19530,11 +19637,12 @@
                 "type": "RoomStructure[]"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 312,
+            "line": 317,
             "description": "Returns the stariways for a given floor",
             "itemtype": "method",
             "name": "getStairways",
@@ -19551,11 +19659,12 @@
                 "type": "StairwayStructure[]"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 325,
+            "line": 330,
             "description": "Get all object structures on the scene",
             "itemtype": "method",
             "name": "getObjects",
@@ -19572,23 +19681,26 @@
                 "type": "ObjectStructure[]"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 338,
+            "line": 343,
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 340,
+            "line": 345,
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 342,
+            "line": 347,
             "description": "Save an action which can be undo from a component.",
             "itemtype": "method",
             "name": "registerAction",
@@ -19615,11 +19727,12 @@
                 }
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 355,
+            "line": 360,
             "description": "Add an history action.",
             "itemtype": "method",
             "name": "addHistory",
@@ -19646,11 +19759,12 @@
                 }
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 368,
+            "line": 373,
             "description": "Recursively serializes an object",
             "itemtype": "method",
             "name": "serializeObject",
@@ -19681,11 +19795,12 @@
                 "type": "Object"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 381,
+            "line": 386,
             "description": "Recursively deserializes an object",
             "itemtype": "method",
             "name": "deserializeObject",
@@ -19716,23 +19831,26 @@
                 "type": "Object"
             },
             "class": "API",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Core\\Api\\Api.js",
-            "line": 394,
-            "class": "API",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Core\\Api\\Api.js",
-            "line": 396,
-            "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
             "line": 399,
+            "class": "API",
+            "module": "Wanaplan",
+            "submodule": "API"
+        },
+        {
+            "file": "js\\Core\\Api\\Api.js",
+            "line": 401,
+            "class": "API",
+            "module": "Wanaplan",
+            "submodule": "API"
+        },
+        {
+            "file": "js\\Core\\Api\\Api.js",
+            "line": 404,
             "description": "Adds a listener for an event",
             "itemtype": "method",
             "name": "listen",
@@ -19749,11 +19867,12 @@
                 }
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 419,
+            "line": 424,
             "description": "Removes a listener for an event",
             "itemtype": "method",
             "name": "unListen",
@@ -19770,11 +19889,12 @@
                 }
             ],
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 440,
+            "line": 445,
             "description": "Returns all API-triggered listeners for events",
             "itemtype": "method",
             "name": "getListeners",
@@ -19783,11 +19903,12 @@
                 "type": "Object"
             },
             "class": "API",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 14,
+            "line": 18,
             "description": "Returns textured material with or without custom params",
             "itemtype": "method",
             "name": "TexturedMaterial",
@@ -19807,12 +19928,14 @@
                 "description": "A textured wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 26,
+            "line": 30,
             "description": "Returns white material with or without custom params",
             "itemtype": "method",
             "name": "WhiteMaterial",
@@ -19832,12 +19955,14 @@
                 "description": "A white wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 38,
+            "line": 42,
             "description": "Returns Leather material with or without custom params",
             "itemtype": "method",
             "name": "LeatherMaterial",
@@ -19857,12 +19982,14 @@
                 "description": "A leather wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 50,
+            "line": 54,
             "description": "Returns Metal material with or without custom params",
             "itemtype": "method",
             "name": "MetalMaterial",
@@ -19882,12 +20009,14 @@
                 "description": "A metal wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 62,
+            "line": 66,
             "description": "Returns Wood material with or without custom params",
             "itemtype": "method",
             "name": "WoodMaterial",
@@ -19907,12 +20036,14 @@
                 "description": "A wood wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 74,
+            "line": 78,
             "description": "Returns Matt material with or without custom params",
             "itemtype": "method",
             "name": "MattMaterial",
@@ -19932,12 +20063,14 @@
                 "description": "A matt wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 86,
+            "line": 90,
             "description": "Returns Glass material with or without custom params",
             "itemtype": "method",
             "name": "GlassMaterial",
@@ -19957,12 +20090,14 @@
                 "description": "A Glass wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 98,
+            "line": 102,
             "description": "Returns Plastic material with or without custom params",
             "itemtype": "method",
             "name": "PlasticMaterial",
@@ -19982,12 +20117,14 @@
                 "description": "A Plastic wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.material.js",
-            "line": 110,
+            "line": 114,
             "description": "Returns Tile material with or without custom params",
             "itemtype": "method",
             "name": "TileMaterial",
@@ -20007,12 +20144,14 @@
                 "description": "A Tile wanaplan material.",
                 "type": "Object"
             },
-            "class": "material",
-            "module": "Wanaplan"
+            "class": "API.material",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.ui.js",
-            "line": 13,
+            "line": 17,
             "description": "Returns a DOM element containing the UI widgets, that you can manipulate",
             "itemtype": "method",
             "name": "setData",
@@ -20020,12 +20159,14 @@
                 "description": "The DOM Element containing widgets",
                 "type": "Object"
             },
-            "class": "ui",
-            "module": "Wanaplan"
+            "class": "API.ui",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.ui.js",
-            "line": 23,
+            "line": 27,
             "description": "Add an item in the main menu.",
             "itemtype": "method",
             "name": "addMainMenuItem",
@@ -20041,12 +20182,14 @@
                     "type": "String"
                 }
             ],
-            "class": "ui",
-            "module": "Wanaplan"
+            "class": "API.ui",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.ui.js",
-            "line": 33,
+            "line": 37,
             "description": "Add an item in the top menu.",
             "itemtype": "method",
             "name": "addTopMenuItem",
@@ -20062,12 +20205,14 @@
                     "type": "String"
                 }
             ],
-            "class": "ui",
-            "module": "Wanaplan"
+            "class": "API.ui",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.ui.js",
-            "line": 43,
+            "line": 47,
             "description": "Add an item in the sub menu.",
             "itemtype": "method",
             "name": "addSubMenuItem",
@@ -20083,12 +20228,14 @@
                     "type": "String"
                 }
             ],
-            "class": "ui",
-            "module": "Wanaplan"
+            "class": "API.ui",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.ui.js",
-            "line": 53,
+            "line": 57,
             "description": "Remove an item from the main menu.",
             "itemtype": "method",
             "name": "removeMainMenuItem",
@@ -20104,12 +20251,14 @@
                     "type": "String"
                 }
             ],
-            "class": "ui",
-            "module": "Wanaplan"
+            "class": "API.ui",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.ui.js",
-            "line": 63,
+            "line": 67,
             "description": "Remove an item from the top menu.",
             "itemtype": "method",
             "name": "removeTopMenuItem",
@@ -20125,12 +20274,14 @@
                     "type": "String"
                 }
             ],
-            "class": "ui",
-            "module": "Wanaplan"
+            "class": "API.ui",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.ui.js",
-            "line": 73,
+            "line": 77,
             "description": "Remove an item from the sub menu.",
             "itemtype": "method",
             "name": "removeSubMenuItem",
@@ -20146,12 +20297,14 @@
                     "type": "String"
                 }
             ],
-            "class": "ui",
-            "module": "Wanaplan"
+            "class": "API.ui",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.utils.js",
-            "line": 13,
+            "line": 17,
             "description": "Ajax method to get or post data.",
             "itemtype": "method",
             "name": "ajax",
@@ -20162,12 +20315,14 @@
                     "type": "Object"
                 }
             ],
-            "class": "utils",
-            "module": "Wanaplan"
+            "class": "API.utils",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Cameras\\OrbitCamera.js",
-            "line": 113,
+            "line": 118,
             "description": "Attach the camera to the scene and select the correct input mode.",
             "itemtype": "method",
             "name": "attachControl",
@@ -20188,12 +20343,13 @@
                     "type": "Object"
                 }
             ],
-            "class": "OrbitCamera",
-            "module": "Wanaplan"
+            "class": "wnp.KeyboardManager",
+            "module": "Wanaplan",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Cameras\\OrbitCamera.js",
-            "line": 128,
+            "line": 133,
             "description": "Attach the camera to the scene with touch support.",
             "itemtype": "method",
             "name": "attachControlForMobile",
@@ -20214,12 +20370,13 @@
                     "type": "Object"
                 }
             ],
-            "class": "OrbitCamera",
-            "module": "Wanaplan"
+            "class": "wnp.KeyboardManager",
+            "module": "Wanaplan",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Cameras\\OrbitCamera.js",
-            "line": 267,
+            "line": 272,
             "description": "Attach the camera to the scene with mouse and pointer event support.",
             "itemtype": "method",
             "name": "attachControlForDesktop",
@@ -20240,8 +20397,9 @@
                     "type": "Object"
                 }
             ],
-            "class": "OrbitCamera",
-            "module": "Wanaplan"
+            "class": "wnp.KeyboardManager",
+            "module": "Wanaplan",
+            "namespace": "API"
         },
         {
             "file": "js\\Core\\Input\\KeyboardManager.js",
@@ -21214,7 +21372,7 @@
         },
         {
             "file": "js\\Core\\Core.js",
-            "line": 311,
+            "line": 317,
             "description": "Fired when the engine is initialized.",
             "itemtype": "event",
             "name": "wnp.core.initialized",
@@ -21224,7 +21382,7 @@
         },
         {
             "file": "js\\Core\\Core.js",
-            "line": 412,
+            "line": 418,
             "description": "Fired for request the popup to close.",
             "itemtype": "event",
             "name": "wnp.request.closePopup",
@@ -23662,19 +23820,19 @@
         },
         {
             "message": "param name missing: {wnp.floorStructure}",
-            "line": " js\\Core\\Api\\Api.e2D.js:110"
+            "line": " js\\Core\\Api\\Api.e2D.js:114"
         },
         {
             "message": "replacing incorrect tag: params with param",
-            "line": " js\\Core\\Api\\Api.e3D.js:93"
+            "line": " js\\Core\\Api\\Api.e3D.js:97"
         },
         {
             "message": "replacing incorrect tag: params with param",
-            "line": " js\\Core\\Api\\Api.e3D.js:104"
+            "line": " js\\Core\\Api\\Api.e3D.js:108"
         },
         {
             "message": "unknown tag: cameraid",
-            "line": " js\\Core\\Api\\Api.js:169"
+            "line": " js\\Core\\Api\\Api.js:174"
         },
         {
             "message": "Missing item type",
@@ -23850,27 +24008,27 @@
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:30"
+            "line": " js\\Core\\Api\\Api.js:35"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:32"
+            "line": " js\\Core\\Api\\Api.js:37"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:338"
+            "line": " js\\Core\\Api\\Api.js:343"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:340"
+            "line": " js\\Core\\Api\\Api.js:345"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:394"
+            "line": " js\\Core\\Api\\Api.js:399"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:396"
+            "line": " js\\Core\\Api\\Api.js:401"
         },
         {
             "message": "Missing item type",

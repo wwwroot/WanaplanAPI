@@ -2,6 +2,14 @@ YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
         "API",
+        "API.Menu",
+        "API.e2D",
+        "API.e3D",
+        "API.html",
+        "API.material",
+        "API.ui",
+        "API.utils",
+        "AnalyticsComponent",
         "AvatarComponent3D",
         "BaseComponent2D",
         "BaseComponent3D",
@@ -36,7 +44,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "MattMaterial",
         "MeasureComponent",
         "MeasureStructure",
-        "Menu",
         "MetalMaterial",
         "MobileComponent",
         "MobileInputComponent",
@@ -50,12 +57,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "ObjectHelper.collision",
         "ObjectStructure",
         "OptionsComponent",
-        "OrbitCamera",
         "OvertureComponent2D",
         "OvertureComponent3D",
         "OvertureStructure",
         "PedagoComponent",
-        "PerformanceComponent2D",
         "PlasticMaterial",
         "PointComponent2D",
         "PointStructure",
@@ -87,13 +92,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "WallStructure",
         "WhiteMaterial",
         "WoodMaterial",
-        "e2D",
-        "e3D",
-        "html",
-        "material",
         "subSlopeOvertureComponent2D",
-        "ui",
-        "utils",
         "wnp.CameraFeatures",
         "wnp.CameraFeatures.AnimationCancelor",
         "wnp.Grid",
@@ -105,8 +104,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "wnp.uuid"
     ],
     "modules": [
+        "API",
         "Component",
-        "Component\nga('send', 'event', 'test', 'wanaplan_open', 'wanaplan_open_up', 14);",
         "Core",
         "Helpers",
         "Input",
@@ -116,14 +115,14 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "allModules": [
         {
+            "displayName": "API",
+            "name": "API",
+            "description": "Wanaplan API for developers."
+        },
+        {
             "displayName": "Component",
             "name": "Component",
             "description": "Wanaplan components."
-        },
-        {
-            "displayName": "Component\nga('send', 'event', 'test', 'wanaplan_open', 'wanaplan_open_up', 14);",
-            "name": "Component\nga('send', 'event', 'test', 'wanaplan_open', 'wanaplan_open_up', 14);",
-            "description": "Performance 2D."
         },
         {
             "displayName": "Core",
