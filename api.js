@@ -22,7 +22,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "Dummy",
         "EditMeasureComponent",
         "EditionComponent3D",
-        "Events",
         "ExitComponent",
         "FloorComponent3D",
         "FloorController",

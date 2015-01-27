@@ -813,13 +813,6 @@
             "fors": {},
             "namespaces": {}
         },
-        "js\\Components\\extra_docs.js": {
-            "name": "js\\Components\\extra_docs.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
         "js\\Core\\Api\\Api.e2D.js": {
             "name": "js\\Core\\Api\\Api.e2D.js",
             "modules": {
@@ -1165,9 +1158,7 @@
             "modules": {
                 "Events": 1
             },
-            "classes": {
-                "Events": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
@@ -1370,7 +1361,6 @@
                 "BaseComponent2D": 1,
                 "BaseComponent3D": 1,
                 "BaseStructure": 1,
-                "Events": 1,
                 "API.e2D": 1,
                 "API.e3D": 1,
                 "API.html": 1,
@@ -1651,16 +1641,14 @@
         "Events": {
             "name": "Events",
             "submodules": {},
-            "classes": {
-                "Events": 1
-            },
+            "classes": {},
             "fors": {},
             "is_submodule": 1,
             "namespaces": {},
             "module": "Wanaplan",
             "namespace": "",
             "file": "js\\Core\\_extra_docs.js",
-            "line": 67,
+            "line": 53,
             "description": "Events",
             "tag": "main",
             "itemtype": "main"
@@ -3220,21 +3208,6 @@
                     "optional": true
                 }
             ]
-        },
-        "Events": {
-            "name": "Events",
-            "shortname": "Events",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Wanaplan",
-            "namespace": "",
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 67,
-            "description": "Events description (not a real class)",
-            "submodule": "Events"
         },
         "API.e2D": {
             "name": "API.e2D",
@@ -19368,613 +19341,7 @@
         {
             "file": "js\\Components\\GeneralOptionComponent2D.js",
             "line": 1,
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 6,
-            "description": "*\n\t\tEVENTS DECLARATION\t\t*\n*",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 11,
-            "description": "[in] Fired by the engine when the user starts dragging the cursor, /!\\ it's just about the cursor, it's not necessary an object which dragged.\nWhen received, test if an object is below the cursor, and if so start moving it.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.drag-start",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 19,
-            "description": "[in] Fired by the engine when the user is dragging the cursor, /!\\ it's just about the cursor, it's not necessary an object which dragged.\nWhen received, if an object was below the cursor when the user started dragging, determine the new position of the object and apply it with TransformComponent3D.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.dragging",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 27,
-            "description": "[in] Fired by the engine when the user stops dragging the cursor.\nWhen received, if an object was dragged, stop dragging it, and notify that the transformation is over.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.drag-end",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 38,
-            "description": "Fired to zoom the camera.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.camera.zoom",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 44,
-            "description": "Fired to change the camera.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.cameraChanged",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 54,
-            "description": "Fired by the configurator component when an 'Animation-In' begins.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.configurator.animationIn.begin",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 60,
-            "description": "Fired by the configurator component when an 'Animation-Out' begins.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.configurator.animationOut.begin",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 66,
-            "description": "Fired by the configurator component when an 'Animation-In' is done.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.configurator.animationIn.end",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 72,
-            "description": "Fired by the configurator component when an 'Animation-Out' is done.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.configurator.animationOut.end",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 82,
-            "description": "Fired by the configurator component when an animation is canceled.",
-            "itemtype": "event",
-            "name": "wnp.request.configurator.animation.cancel",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 88,
-            "description": "Fired by the configurator component to start the component.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.configurator.start",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 94,
-            "description": "Fired by the configurator component to stop the component.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.configurator.stop",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 104,
-            "description": "Fired when an object is refreshed and if the history is needed.",
-            "itemtype": "event",
-            "name": "wnp.request.historyAction",
-            "params": [
-                {
-                    "name": "component",
-                    "description": "The component of the action",
-                    "type": "BaseComponent3D"
-                },
-                {
-                    "name": "object",
-                    "description": "The target.",
-                    "type": "BABYLON.Mesh"
-                },
-                {
-                    "name": "params",
-                    "description": "Params of the history.",
-                    "type": "Object"
-                },
-                {
-                    "name": "action",
-                    "description": "The type of action done.",
-                    "type": "String"
-                }
-            ],
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 114,
-            "description": "Fired by the configurator panel to update the translation of the selected object.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.object.translate",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 120,
-            "description": "Fired by the configurator panel to update the rotation of the selected object.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.object.rotate",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 132,
-            "description": "Fired by the FloorComponent3D when a floor is ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.floorReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 138,
-            "description": "Fired by the FloorComponent3D when all floors are ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.allFloorsReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 144,
-            "description": "Fired by the FloorController when a floor is selected.",
-            "itemtype": "event",
-            "name": "wnp.request.floorSelected",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 150,
-            "description": "Fired by the FloorController when a floor is deleted.",
-            "itemtype": "event",
-            "name": "wnp.request.floorDeleted",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 156,
-            "description": "Fired by the FloorController when a floor is added.",
-            "itemtype": "event",
-            "name": "wnp.request.floorAdded",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 164,
-            "description": "Fired by DecorationComponent3D when the brush is ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.brushReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 170,
-            "description": "Fired by DecorationComponent3D to decorate an object.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.decorate",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 178,
-            "description": "Fired",
-            "itemtype": "event",
-            "name": "wnp.request.object.remove",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 186,
-            "description": "Fired to remove an object from the scene.",
-            "itemtype": "event",
-            "name": "wnp.request.object.remove",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 192,
-            "description": "Fired to clone an object.",
-            "itemtype": "event",
-            "name": "wnp.request.object.clone",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 198,
-            "description": "Fired to create an object.",
-            "itemtype": "event",
-            "name": "wnp.request.object.create",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 204,
-            "description": "Fired to dispose of an object.",
-            "itemtype": "event",
-            "name": "wnp.request.object.dispose",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 212,
-            "description": "Fired to refresh an object's data.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.object.refresh",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 220,
-            "description": "Fired by TransformComponent3D when changes to the transform of an object start.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.object.start-transform",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 226,
-            "description": "Fired by TransformComponent3D when changes to the transform of an object end.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.object.end-transform",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 232,
-            "description": "Fired by TransformComponent3D to change the translation of an object.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.object.translation",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 238,
-            "description": "Fired by TransformComponent3D to change the rotation of an object.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.object.rotated",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 246,
-            "description": "Fired by OvertureComponent3D when overtures are ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.overturesReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 252,
-            "description": "Fired by OvertureComponent3D when subslopes' overtures are ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.subslopeOverturesReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 260,
-            "description": "Fired by RoomComponent3D when rooms are ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.roomsReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 268,
-            "description": "Fired when the dragging of a subslope stops.",
-            "itemtype": "event",
-            "name": "wnp.subslope.drag-end",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 274,
-            "description": "Fired when subslopes are ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.subslopesReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 282,
-            "description": "Fired when walls are ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.wallsReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 293,
-            "description": "Fired to add a menu item into the main menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.main.add",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 303,
-            "description": "Fired to start the group configurator component.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.groupConfigurator.start",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 309,
-            "description": "Fired to stop the group configurator component.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.groupConfigurator.stop",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 315,
-            "description": "Fired to cancel the group configurator component.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.groupConfigurator.cancel",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 325,
-            "description": "Fired to add a menu item into the top menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.add",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 331,
-            "description": "Fired to delete a menu item from the top menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.delete",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 337,
-            "description": "Fired to add a menu item into the sub menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.sub.add",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 343,
-            "description": "Fired to delete a menu item from the sub menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.sub.delete",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 353,
-            "description": "Fired to quit Wanaplan.",
-            "itemtype": "event",
-            "name": "wnp.request.exited",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 363,
-            "description": "Fired when the user clicks on the fullscreen toggle button.",
-            "itemtype": "event",
-            "name": "wnp.request.toggleFullscreen",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 373,
-            "description": "Fired to close a popup.",
-            "itemtype": "event",
-            "name": "wnp.request.closePopup",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 379,
-            "description": "Fired when a new plan is ready.",
-            "itemtype": "event",
-            "name": "wnp.request.newPlanReady",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 385,
-            "description": "Fired to request a structure save.",
-            "itemtype": "event",
-            "name": "wnp.request.saveStructure",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 395,
-            "description": "Fired to enable wall transparency.",
-            "itemtype": "event",
-            "name": "wnp.engine3d.wallTransparency.on",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 401,
-            "description": "Fired to disable wall transparency.",
-            "itemtype": "event",
-            "name": "wnp.engine3d.wallTransparency.off",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 407,
-            "description": "Fired to replace a sub menu item.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.sub.replace",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 413,
-            "description": "Fired to replace a top menu item.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.replace",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 423,
-            "description": "Fired to close the context menu.",
-            "itemtype": "event",
-            "name": "wnp.engine2D.contextMenu.close",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 429,
-            "description": "Fired to refresh the 3D renderer.",
-            "deprecated": true,
-            "itemtype": "event",
-            "name": "wnp.engine3D.refreshGL",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 439,
-            "description": "Fired to start printing the plan.",
-            "itemtype": "event",
-            "name": "wnp.request.print",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 449,
-            "description": "Fired by the programmable loader to add a new programmable.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.addProgrammable",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 459,
-            "description": "Fired to change the material of the ground",
-            "itemtype": "event",
-            "name": "wnp.engine3D.changeGround",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 465,
-            "description": "Fired to change the material of the sky",
-            "itemtype": "event",
-            "name": "wnp.engine3D.changeSky",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 475,
-            "description": "Fired to change the language on wanaplan",
-            "itemtype": "event",
-            "name": "wnp.request.changeLang",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 481,
-            "description": "Fired to show the 'About' window",
-            "itemtype": "event",
-            "name": "wnp.ui.showAboutWindow",
-            "class": "Events",
-            "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Components\\extra_docs.js",
-            "line": 491,
-            "description": "Fired to request a screenshot.",
-            "itemtype": "event",
-            "name": "wnp.request.takeScreenshot",
-            "class": "Events",
+            "class": "API.e2D",
             "module": "Wanaplan"
         },
         {
@@ -24829,430 +24196,10 @@
         },
         {
             "file": "js\\Core\\_extra_docs.js",
-            "line": 3,
+            "line": 1,
             "description": "*\n\t SUBMODULES DECLARATION\t   *\n \t\t\t\t\t\t\t   *",
-            "class": "Events",
+            "class": "Dummy",
             "module": "Wanaplan"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 62,
-            "description": "*\n\t\tEVENTS DECLARATION\t\t*\n*",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 76,
-            "description": "Fired to change the background.",
-            "itemtype": "event",
-            "name": "wnp.engine2d.backgroundChange",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 88,
-            "description": "Fired when the 3D camera has been moved.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.camera.move",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 98,
-            "description": "Fired when a color has been selected.",
-            "itemtype": "event",
-            "name": "wnp.core.colorSelected",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 108,
-            "description": "Fired when a context menu has been opened.",
-            "itemtype": "event",
-            "name": "wnp.widget.contextMenu.opened",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 114,
-            "description": "Fired when a context menu has been opened.",
-            "itemtype": "event",
-            "name": "wnp.widget.contextMenu..opened",
-            "type": "MENU_NAME",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 120,
-            "description": "Fired when a context menu has been closed.",
-            "itemtype": "event",
-            "name": "wnp.widget.contextMenu.closed",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 126,
-            "description": "Fired when a context menu has been closed.",
-            "itemtype": "event",
-            "name": "wnp.widget.contextMenu..closed",
-            "type": "MENU_NAME",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 138,
-            "description": "Fired when the engine is initialized.",
-            "itemtype": "event",
-            "name": "wnp.core.initialized",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 144,
-            "description": "Fired to request the popup to close.",
-            "itemtype": "event",
-            "name": "wnp.request.closePopup",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 150,
-            "description": "Fired to unselect the selected item in the top menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.deselect",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 156,
-            "description": "Fired in the initialization process when the structure is ready.",
-            "itemtype": "event",
-            "name": "wnp.core.initialized",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 162,
-            "description": "Fired to unselect the currently selected main menu item.",
-            "itemtype": "event",
-            "name": "wnp.menu.main.deselect",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 168,
-            "description": "Fired when the graphics context has changed.",
-            "itemtype": "event",
-            "name": "wnp.contextChanged",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 174,
-            "description": "Fired when a local structure has been successfully loaded.",
-            "itemtype": "event",
-            "name": "wnp.structure.locale.loaded",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 184,
-            "description": "Fired to hide the main loader which appears during the start process.",
-            "itemtype": "event",
-            "name": "wnp.core.hideLoader",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 190,
-            "description": "Fired after an update of the zoom value of the 2D canvas.",
-            "itemtype": "event",
-            "name": "wnp.request.zoomUpdated",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 200,
-            "description": "Fired when a click is made on the scene.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.click.collided",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 206,
-            "description": "Fired by the Mouse/Pointer handler when a click is detected.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.click",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 212,
-            "description": "Fired by the Mouse/Pointer handler when a double click is detected.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.double-click",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 218,
-            "description": "Fired by the Mouse/Pointer handler when a drag starts.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.drag-start",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 224,
-            "description": "Fired by the Mouse/Pointer handler when a drag occurred (aka move).",
-            "itemtype": "event",
-            "name": "wnp.engine3D.dragging",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 230,
-            "description": "Fired by the Mouse/Pointer handler when a drag is done.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.drag-end",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 236,
-            "description": "Fired by the Mouse/Pointer handler when zoom-in is detected.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.zoom-in",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 242,
-            "description": "Fired by the Mouse/Pointer handler when zoom-out is detected.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.zoom-out",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 248,
-            "description": "Fired by the Mouse/Pointer handler when the pointer/mouse is moving.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.mouse-move",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 254,
-            "description": "Fired by the Mouse/Pointer handler when the pointer/mouse is clicked/pressed down.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.mousedown",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 264,
-            "description": "Fired to hide the configurator window.",
-            "itemtype": "event",
-            "name": "wnp.request.configurator.cancel",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 274,
-            "description": "Fired to close a Frame Window.",
-            "itemtype": "event",
-            "name": "wnp.ui.frame.close",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 284,
-            "description": "Fired by the Info widget when the user clicks on it.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.info",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 290,
-            "description": "Fired when the transform of an object is modified by a 3D Widget.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.UIobject.transform",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 296,
-            "description": "Fired when a 3D widget is created.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.UIobject.create",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 302,
-            "description": "Fired when a 3D widget is no longer used and is disposed of.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.UIobject.dispose",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 312,
-            "description": "Fired on key down.",
-            "itemtype": "event",
-            "name": "wnp.keyboardManager.keyDown",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 318,
-            "description": "Fired on key up.",
-            "itemtype": "event",
-            "name": "wnp.keyboardManager.keyUp",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 328,
-            "description": "Fired when the message box is opened.",
-            "itemtype": "event",
-            "name": "wnp.ui.messagebox.opened",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 334,
-            "description": "Fired when the message box is closed.",
-            "itemtype": "event",
-            "name": "wnp.ui.messagebox.closed",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 344,
-            "description": "Fired when a click is made on an instance of `Menu`.",
-            "itemtype": "event",
-            "name": "wnp.menu.click",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 354,
-            "description": "Fired when an input has been detected (click, touch, pointer, etc.).",
-            "itemtype": "event",
-            "name": "wnp.input.pointerchanged",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 364,
-            "description": "Fired to disable the orbit camera.",
-            "itemtype": "event",
-            "name": "wnp.request.disable-orbit-camera",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 370,
-            "description": "Fired to enable the orbit camera.",
-            "itemtype": "event",
-            "name": "wnp.request.enable-orbit-camera",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
-        },
-        {
-            "file": "js\\Core\\_extra_docs.js",
-            "line": 376,
-            "description": "Fired to request a save of the history.",
-            "itemtype": "event",
-            "name": "wnp.request.saveHistory",
-            "class": "Events",
-            "module": "Wanaplan",
-            "submodule": "Events"
         },
         {
             "file": "js\\Helpers\\GeometryHelper.js",
@@ -26841,125 +25788,6 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 44,
-            "description": "Fired to decorate an object with a material.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.decorate",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 50,
-            "description": "Fired to refresh the 3D renderer.",
-            "deprecated": true,
-            "itemtype": "event",
-            "name": "wnp.engine3D.refreshGL",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 56,
-            "description": "Fired when the configurator is needed for an object.",
-            "itemtype": "event",
-            "name": "wnp.request.configurator.start",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 62,
-            "description": "Fired when a new plan is ready.",
-            "itemtype": "event",
-            "name": "wnp.request.newPlanReady",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 68,
-            "description": "Fired when rooms are ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.roomsReady",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 74,
-            "description": "Fired when the user requests a change in wall transparency",
-            "itemtype": "event",
-            "name": "wnp.request.switch-transparency",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 79,
-            "description": "Fired to stop the group configurator component.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.groupConfigurator.stop",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 85,
-            "description": "Fired by the Mouse/Pointer handler when zoom-out is detected.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.zoom-out",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 91,
-            "description": "Fired to add a menu item into the top menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.add",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 97,
-            "description": "Fired in the initialization process when the structure is ready.",
-            "itemtype": "event",
-            "name": "wnp.core.initialized",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 103,
-            "description": "Fired when a context menu has been opened.",
-            "itemtype": "event",
-            "name": "wnp.widget.contextMenu..opened",
-            "type": "MENU_NAME",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 109,
-            "description": "Fired to remove a menu item from the main menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.main.remove",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 115,
-            "description": "Fired to show the 'About' window",
-            "itemtype": "event",
-            "name": "wnp.ui.showAboutWindow",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 121,
             "description": "Fired when the subslope are ready and drawn.",
             "itemtype": "event",
             "name": "wnp.engine3D.subslopesReady",
@@ -26980,6 +25808,125 @@
                     "type": "BABYLON.Mesh"
                 }
             ],
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 53,
+            "description": "Fired to refresh the 3D renderer.",
+            "deprecated": true,
+            "itemtype": "event",
+            "name": "wnp.engine3D.refreshGL",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 59,
+            "description": "Fired when the configurator is needed for an object.",
+            "itemtype": "event",
+            "name": "wnp.request.configurator.start",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 65,
+            "description": "Fired when a new plan is ready.",
+            "itemtype": "event",
+            "name": "wnp.request.newPlanReady",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 71,
+            "description": "Fired when rooms are ready.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.roomsReady",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 77,
+            "description": "Fired when the user requests a change in wall transparency",
+            "itemtype": "event",
+            "name": "wnp.request.switch-transparency",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 82,
+            "description": "Fired to cancel the group configurator component.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.groupConfigurator.cancel",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 88,
+            "description": "Fired by the Mouse/Pointer handler when zoom-out is detected.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.zoom-out",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 94,
+            "description": "Fired to add a menu item into the top menu.",
+            "itemtype": "event",
+            "name": "wnp.menu.top.add",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 100,
+            "description": "Fired in the initialization process when the structure is ready.",
+            "itemtype": "event",
+            "name": "wnp.core.initialized",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 106,
+            "description": "Fired when a context menu has been opened.",
+            "itemtype": "event",
+            "name": "wnp.widget.contextMenu..opened",
+            "type": "MENU_NAME",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 112,
+            "description": "Fired to remove a menu item from the main menu.",
+            "itemtype": "event",
+            "name": "wnp.menu.main.remove",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 118,
+            "description": "Fired to clone an object",
+            "itemtype": "event",
+            "name": "wnp.engine3D.object.clone",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 124,
+            "description": "Fired to decorate an object with a material.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.decorate",
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
@@ -27044,7 +25991,7 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 158,
-            "description": "Fired to hide the configurator window.",
+            "description": "Fired when the configurator needs to be hidden.",
             "itemtype": "event",
             "name": "wnp.request.configurator.cancel",
             "class": "_EVENTS",
@@ -27053,9 +26000,9 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 164,
-            "description": "Fired to clone an object.",
+            "description": "Fired when a context menu has been closed.",
             "itemtype": "event",
-            "name": "wnp.request.object.clone",
+            "name": "wnp.widget.contextMenu.closed",
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
@@ -27071,15 +26018,22 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 176,
-            "description": "Fired when a floor needs to be deleted.",
+            "description": "Fired when the TransformComponent begins to transform the position/rotation of an object.  \nThis will be followed by a `wnp.engine3D.object.end-transform` event.",
             "itemtype": "event",
-            "name": "wnp.request.floorDeleted",
+            "name": "wnp.engine3D.object.start-transform",
+            "params": [
+                {
+                    "name": "object",
+                    "description": "The involved object.",
+                    "type": "BABYLON.Mesh"
+                }
+            ],
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 182,
+            "line": 184,
             "description": "Fired to remove a menu item from the main menu.",
             "itemtype": "event",
             "name": "\"wnp.menu.main.remove",
@@ -27088,7 +26042,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 188,
+            "line": 190,
             "description": "Fired when the user quits the subslope edit mode.",
             "itemtype": "event",
             "name": "wnp.engine2d.onModeSubSlopeEnd",
@@ -27097,7 +26051,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 194,
+            "line": 196,
             "description": "Fired to request the save of a structure.",
             "itemtype": "event",
             "name": "wnp.request.saveStructure",
@@ -27106,7 +26060,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 200,
+            "line": 202,
             "description": "Fired to unselect the selected item in the top menu.",
             "itemtype": "event",
             "name": "wnp.menu.top.deselect",
@@ -27115,7 +26069,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 206,
+            "line": 208,
             "description": "Fired when enabling wall transparency.",
             "itemtype": "event",
             "name": "wnp.engine3d.wallTransparency.on",
@@ -27124,7 +26078,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 211,
+            "line": 213,
             "description": "Fired once the subslope overtures are created.",
             "itemtype": "event",
             "name": "wnp.engine3D.subslopeOverturesReady",
@@ -27152,7 +26106,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 221,
+            "line": 223,
             "description": "Fired when the user requests the add of a stairway in the menu.",
             "itemtype": "event",
             "name": "wnp.engine2d.onAddStairway",
@@ -27173,7 +26127,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 228,
+            "line": 230,
             "description": "Fired when an object is rebuilt.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.refresh",
@@ -27189,7 +26143,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 235,
+            "line": 237,
             "description": "Fired when a click is made on the scene.",
             "itemtype": "event",
             "name": "wnp.engine3D.click.collided",
@@ -27198,7 +26152,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 241,
+            "line": 243,
             "description": "Fired by the Info widget when the user clicks on it.",
             "itemtype": "event",
             "name": "wnp.engine3D.info",
@@ -27207,7 +26161,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 247,
+            "line": 249,
             "description": "Fired by the Mouse/Pointer handler when a double click is detected.",
             "itemtype": "event",
             "name": "wnp.engine3D.double-click",
@@ -27216,7 +26170,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 253,
+            "line": 255,
             "description": "Fired to close a Frame Window.",
             "itemtype": "event",
             "name": "wnp.ui.frame.close",
@@ -27225,17 +26179,17 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 259,
-            "description": "Fired to cancel the group configurator component.",
+            "line": 261,
+            "description": "Fired to stop the group configurator component.",
             "itemtype": "event",
-            "name": "wnp.engine3D.groupConfigurator.cancel",
+            "name": "wnp.engine3D.groupConfigurator.stop",
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 265,
-            "description": "Fired when the 3D camera has been moved.",
+            "line": 267,
+            "description": "Fired when the 3D camera has moved.",
             "itemtype": "event",
             "name": "wnp.engine3D.camera.move",
             "class": "_EVENTS",
@@ -27243,7 +26197,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 271,
+            "line": 273,
             "description": "Fired to start the group configurator component.",
             "itemtype": "event",
             "name": "wnp.engine3D.groupConfigurator.start",
@@ -27252,7 +26206,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 277,
+            "line": 279,
             "description": "Fired by the programmable loader to add a new programmable.",
             "itemtype": "event",
             "name": "wnp.engine3D.addProgrammable",
@@ -27261,16 +26215,16 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 283,
-            "description": "Fired when a context menu has been closed.",
+            "line": 285,
+            "description": "Fired to clone an object.",
             "itemtype": "event",
-            "name": "wnp.widget.contextMenu.closed",
+            "name": "wnp.request.object.clone",
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 289,
+            "line": 291,
             "description": "Fired to replace a sub menu item.",
             "itemtype": "event",
             "name": "wnp.menu.top.sub.replace",
@@ -27279,7 +26233,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 295,
+            "line": 297,
             "description": "Fired to change the background.",
             "itemtype": "event",
             "name": "wnp.engine2d.backgroundChange",
@@ -27288,7 +26242,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 301,
+            "line": 303,
             "description": "Fired when an input has been detected (click, touch, etc.).",
             "itemtype": "event",
             "name": "wnp.input.pointerchanged",
@@ -27304,7 +26258,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 308,
+            "line": 310,
             "description": "Fired when a context menu has been opened.",
             "itemtype": "event",
             "name": "wnp.widget.contextMenu.opened",
@@ -27313,7 +26267,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 314,
+            "line": 316,
             "description": "Fired when the decoration brush is ready.",
             "itemtype": "event",
             "name": "wnp.engine3D.brushReady",
@@ -27322,8 +26276,8 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 320,
-            "description": "Fired to request the popup to close.",
+            "line": 322,
+            "description": "Fired to close a popup.",
             "itemtype": "event",
             "name": "wnp.request.closePopup",
             "class": "_EVENTS",
@@ -27331,7 +26285,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 326,
+            "line": 328,
             "description": "Fired to create an object.",
             "itemtype": "event",
             "name": "wnp.request.object.create",
@@ -27340,7 +26294,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 332,
+            "line": 334,
             "description": "Fired when a click is made on an instance of `Menu`.",
             "itemtype": "event",
             "name": "wnp.menu.click",
@@ -27349,7 +26303,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 338,
+            "line": 340,
             "description": "Fired when the user stops dragging the subslope.",
             "itemtype": "event",
             "name": "wnp.subslope.drag-end",
@@ -27358,17 +26312,10 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 344,
-            "description": "Fired when the TransformComponent begins to transform the position/rotation of an object.  \nThis will be followed by a `wnp.engine3D.object.end-transform` event.",
+            "line": 346,
+            "description": "Fired when a floor needs to be deleted.",
             "itemtype": "event",
-            "name": "wnp.engine3D.object.start-transform",
-            "params": [
-                {
-                    "name": "object",
-                    "description": "The involved object.",
-                    "type": "BABYLON.Mesh"
-                }
-            ],
+            "name": "wnp.request.floorDeleted",
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
@@ -27466,6 +26413,15 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 402,
+            "description": "Fired to change the language on wanaplan",
+            "itemtype": "event",
+            "name": "wnp.request.changeLang",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 408,
             "description": "Fired when the delete button is pushed while a mesh is selected.",
             "itemtype": "event",
             "name": "wnp.request.object.remove",
@@ -27486,7 +26442,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 410,
+            "line": 416,
             "description": "Fired when the TransformComponent just rotated an object on the scene.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.rotated",
@@ -27512,7 +26468,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 418,
+            "line": 424,
             "description": "Fired to start the configurator.",
             "itemtype": "event",
             "name": "wnp.engine3D.configurator.start",
@@ -27521,33 +26477,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 424,
-            "description": "Fired once the wall overtures are created.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.overturesReady",
-            "params": [
-                {
-                    "name": "floor",
-                    "description": "The mesh of the floor.",
-                    "type": "BABYLON.Mesh"
-                },
-                {
-                    "name": "structure",
-                    "description": "The current floor structure.",
-                    "type": "FloorStructure"
-                },
-                {
-                    "name": "walls",
-                    "description": "The mesh of the walls.",
-                    "type": "BABYLON.Mesh"
-                }
-            ],
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 433,
+            "line": 430,
             "description": "Fired when a floor is ready.",
             "itemtype": "event",
             "name": "wnp.engine3D.floorReady",
@@ -27556,7 +26486,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 439,
+            "line": 436,
             "description": "Fired when a new plan needs to be created.",
             "itemtype": "event",
             "name": "wnp.request.newPlan",
@@ -27565,7 +26495,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 445,
+            "line": 442,
             "description": "Fired when the message box is opened.",
             "itemtype": "event",
             "name": "wnp.ui.messagebox.opened",
@@ -27574,7 +26504,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 451,
+            "line": 448,
             "description": "Fired when the user clicks on the fullscreen toggle button.",
             "itemtype": "event",
             "name": "wnp.request.toggleFullscreen",
@@ -27583,7 +26513,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 457,
+            "line": 454,
             "description": "Fired when a floor needs to be selected.",
             "itemtype": "event",
             "name": "wnp.request.floorSelected",
@@ -27592,7 +26522,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 463,
+            "line": 460,
             "description": "Fired by the configurator component when an 'Animation-In' begins.",
             "itemtype": "event",
             "name": "wnp.engine3D.configurator.animationIn.begin",
@@ -27601,8 +26531,17 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 469,
-            "description": "Fired when the transform of an object is modified by a 3D Widget.",
+            "line": 466,
+            "description": "Fired when a 3D widget is created.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.UIobject.create",
+            "class": "_EVENTS",
+            "module": "_EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 472,
+            "description": "Fired when the transform of an object is modified.",
             "itemtype": "event",
             "name": "wnp.engine3D.UIobject.transform",
             "class": "_EVENTS",
@@ -27610,7 +26549,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 475,
+            "line": 478,
             "description": "Fired by the configurator panel to update the rotation of the selected object.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.rotate",
@@ -27619,7 +26558,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 481,
+            "line": 484,
             "description": "Fired by the Mouse/Pointer handler when the pointer/mouse is clicked/pressed down.",
             "itemtype": "event",
             "name": "wnp.engine3D.mousedown",
@@ -27628,7 +26567,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 487,
+            "line": 490,
             "description": "Fired when a 3D widget is no longer used and is disposed of.",
             "itemtype": "event",
             "name": "wnp.engine3D.UIobject.dispose",
@@ -27637,7 +26576,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 493,
+            "line": 496,
             "description": "Fired when a floor needs to be added.",
             "itemtype": "event",
             "name": "wnp.request.floorAdded",
@@ -27646,7 +26585,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 499,
+            "line": 502,
             "description": "Fired to request a save of the history.",
             "itemtype": "event",
             "name": "wnp.request.saveHistory",
@@ -27655,7 +26594,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 505,
+            "line": 508,
             "description": "Fired by the Mouse/Pointer handler when a drag occurred (aka move).",
             "itemtype": "event",
             "name": "wnp.engine3D.dragging",
@@ -27664,7 +26603,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 511,
+            "line": 514,
             "description": "Fired when the user enters the subslope edit mode.",
             "itemtype": "event",
             "name": "wnp.engine2d.onEditSubSlope",
@@ -27673,7 +26612,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 517,
+            "line": 520,
             "description": "Fired when the user changes the camera.",
             "itemtype": "event",
             "name": "wnp.engine3D.cameraChanged",
@@ -27682,7 +26621,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 523,
+            "line": 526,
             "description": "Fired by the Mouse/Pointer handler when the pointer/mouse is moving.",
             "itemtype": "event",
             "name": "wnp.engine3D.mouse-move",
@@ -27691,7 +26630,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 529,
+            "line": 532,
             "description": "Fired to disable the orbit camera.",
             "itemtype": "event",
             "name": "wnp.request.disable-orbit-camera",
@@ -27700,8 +26639,8 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 535,
-            "description": "Fired to unselect the currently selected main menu item.",
+            "line": 538,
+            "description": "Fired when an item from main menu needs to be deselected.",
             "itemtype": "event",
             "name": "wnp.menu.main.deselect",
             "class": "_EVENTS",
@@ -27709,7 +26648,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 541,
+            "line": 544,
             "description": "Fired by the Mouse/Pointer handler when zoom-in is detected.",
             "itemtype": "event",
             "name": "wnp.engine3D.zoom-in",
@@ -27718,7 +26657,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 547,
+            "line": 550,
             "description": "Fired to show/hide the left menu on mobile devices",
             "itemtype": "event",
             "name": "wnp.mobile.toggleMenu",
@@ -27727,7 +26666,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 553,
+            "line": 556,
             "description": "Fired when a local structure has been successfully loaded.",
             "itemtype": "event",
             "name": "wnp.structure.locale.loaded",
@@ -27736,7 +26675,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 559,
+            "line": 562,
             "description": "Fired by the Mouse/Pointer handler when a drag is done.",
             "itemtype": "event",
             "name": "wnp.engine3D.drag-end",
@@ -27745,7 +26684,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 565,
+            "line": 568,
             "description": "Fired by the configurator component when an animation is canceled.",
             "itemtype": "event",
             "name": "wnp.request.configurator.animation.cancel",
@@ -27754,7 +26693,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 571,
+            "line": 574,
             "description": "Fired to change the material of the ground",
             "itemtype": "event",
             "name": "wnp.engine3D.changeGround",
@@ -27763,7 +26702,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 577,
+            "line": 580,
             "description": "Fired when the graphics context has changed.",
             "itemtype": "event",
             "name": "wnp.contextChanged",
@@ -27772,7 +26711,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 583,
+            "line": 586,
             "description": "Fired when a color has been selected.",
             "itemtype": "event",
             "name": "wnp.core.colorSelected",
@@ -27781,15 +26720,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 589,
-            "itemtype": "event",
-            "name": "wnp.editionComponent.removeObject",
-            "class": "_EVENTS",
-            "module": "_EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 595,
+            "line": 592,
             "description": "Fired on key down. Same parameters as the `keydown` standard javascript event.",
             "itemtype": "event",
             "name": "wnp.keyboardManager.keyDown",
@@ -27798,7 +26729,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 601,
+            "line": 598,
             "description": "Fired to dispose of an object.",
             "itemtype": "event",
             "name": "wnp.request.object.dispose",
@@ -27807,7 +26738,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 607,
+            "line": 604,
             "description": "Fired when all floors are ready.",
             "itemtype": "event",
             "name": "wnp.engine3D.allFloorsReady",
@@ -27816,7 +26747,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 613,
+            "line": 610,
             "description": "Fired to close the context menu.",
             "itemtype": "event",
             "name": "wnp.engine2D.contextMenu.close",
@@ -27825,7 +26756,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 619,
+            "line": 616,
             "description": "Fired when a paint texture is chosen in the decoration menu.",
             "itemtype": "event",
             "name": "wnp.engine3D.paint",
@@ -27834,7 +26765,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 625,
+            "line": 622,
             "description": "Fired to hide the main loader which appears during the start process.",
             "itemtype": "event",
             "name": "wnp.core.hideLoader",
@@ -27843,16 +26774,16 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 631,
-            "description": "Fired to clone an object",
+            "line": 628,
+            "description": "Fired to show the 'About' window",
             "itemtype": "event",
-            "name": "wnp.engine3D.object.clone",
+            "name": "wnp.ui.showAboutWindow",
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 637,
+            "line": 634,
             "description": "Fired to delete a menu item from the top menu.",
             "itemtype": "event",
             "name": "wnp.menu.top.delete",
@@ -27861,7 +26792,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 643,
+            "line": 640,
             "description": "Fired when the TransformComponent just translated an object on the scene.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.translate",
@@ -27887,16 +26818,15 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 651,
-            "description": "Fired to change the language on wanaplan",
+            "line": 648,
             "itemtype": "event",
-            "name": "wnp.request.changeLang",
+            "name": "wnp.editionComponent.removeObject",
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 657,
+            "line": 654,
             "description": "Fired when the user requests the add of a subslopeOverture (click on the button)",
             "itemtype": "event",
             "name": "wnp.engine2d.onAddSubSlopeOverture",
@@ -27905,7 +26835,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 662,
+            "line": 659,
             "description": "Fired on key up. Same parameters as the `keyup` standard javascript event.",
             "itemtype": "event",
             "name": "wnp.keyboardManager.keyUp",
@@ -27914,7 +26844,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 668,
+            "line": 665,
             "description": "Fired when a context menu has been closed.",
             "itemtype": "event",
             "name": "wnp.widget.contextMenu..closed",
@@ -27924,7 +26854,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 674,
+            "line": 671,
             "description": "Fired to change the material of the sky",
             "itemtype": "event",
             "name": "wnp.engine3D.changeSky",
@@ -27933,10 +26863,27 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 680,
-            "description": "Fired when a 3D widget is created.",
+            "line": 677,
+            "description": "Fired once the wall overtures are created.",
             "itemtype": "event",
-            "name": "wnp.engine3D.UIobject.create",
+            "name": "wnp.engine3D.overturesReady",
+            "params": [
+                {
+                    "name": "floor",
+                    "description": "The mesh of the floor.",
+                    "type": "BABYLON.Mesh"
+                },
+                {
+                    "name": "structure",
+                    "description": "The current floor structure.",
+                    "type": "FloorStructure"
+                },
+                {
+                    "name": "walls",
+                    "description": "The mesh of the walls.",
+                    "type": "BABYLON.Mesh"
+                }
+            ],
             "class": "_EVENTS",
             "module": "_EVENTS"
         },
@@ -28620,10 +27567,6 @@
             "line": " js\\Components\\GeneralOptionComponent2D.js:1"
         },
         {
-            "message": "Missing item type\n*\n\t\tEVENTS DECLARATION\t\t*\n*",
-            "line": " js\\Components\\extra_docs.js:6"
-        },
-        {
             "message": "Missing item type",
             "line": " js\\Core\\Api\\Api.js:73"
         },
@@ -28761,11 +27704,7 @@
         },
         {
             "message": "Missing item type\n*\n\t SUBMODULES DECLARATION\t   *\n \t\t\t\t\t\t\t   *",
-            "line": " js\\Core\\_extra_docs.js:3"
-        },
-        {
-            "message": "Missing item type\n*\n\t\tEVENTS DECLARATION\t\t*\n*",
-            "line": " js\\Core\\_extra_docs.js:62"
+            "line": " js\\Core\\_extra_docs.js:1"
         },
         {
             "message": "Missing item type\nprends une geometrie stratée et fermée et genere ses faces\ntop et bottom generent la face du dessus et du dessous si mis à true\nnbPoint est le nombre de point par strate",
