@@ -20,6 +20,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "DecorationComponent",
         "DragComponent3D",
         "Dummy",
+        "EVENTS",
         "EditMeasureComponent",
         "EditionComponent3D",
         "ExitComponent",
@@ -84,7 +85,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "WallComponent3D",
         "WallPane3D",
         "WallStructure",
-        "_EVENTS",
         "wnp.AnimationCancelor",
         "wnp.CameraFeatures",
         "wnp.GlassMaterial",
@@ -108,21 +108,16 @@ YUI.add("yuidoc-meta", function(Y) {
         "API",
         "Component",
         "Core",
+        "EVENTS",
         "Events",
         "Helpers",
         "Input",
         "Materials",
         "Programmable",
         "Wanaplan",
-        "Widget",
-        "_EVENTS"
+        "Widget"
     ],
     "allModules": [
-        {
-            "displayName": "_EVENTS",
-            "name": "_EVENTS",
-            "description": "Wanaplan Event List."
-        },
         {
             "displayName": "API",
             "name": "API",
@@ -137,6 +132,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "Core",
             "name": "Core",
             "description": "Wanaplan Core."
+        },
+        {
+            "displayName": "EVENTS",
+            "name": "EVENTS",
+            "description": "Wanaplan Event List."
         },
         {
             "displayName": "Events",
