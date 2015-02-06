@@ -18,7 +18,7 @@
             <h1 class="blue-main-title">WanaPlan</h1>
         </div>
         <div class="yui3-u-1-4 version project-version">
-            API Docs for: 2.3.4
+            API Docs for: 2.4.1
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -56,6 +56,8 @@
             
                 <li><a href="../classes/API.utils.html">API.utils</a></li>
             
+                <li><a href="../classes/AssimpImporter.html">AssimpImporter</a></li>
+            
                 <li><a href="../classes/AvatarComponent3D.html">AvatarComponent3D</a></li>
             
                 <li><a href="../classes/BaseComponent2D.html">BaseComponent2D</a></li>
@@ -73,6 +75,10 @@
                 <li><a href="../classes/Controls.html">Controls</a></li>
             
                 <li><a href="../classes/DecorationComponent.html">DecorationComponent</a></li>
+            
+                <li><a href="../classes/DGM_LoadComponent.html">DGM_LoadComponent</a></li>
+            
+                <li><a href="../classes/DGM_SaveComponent.html">DGM_SaveComponent</a></li>
             
                 <li><a href="../classes/DragComponent3D.html">DragComponent3D</a></li>
             
@@ -113,6 +119,8 @@
                 <li><a href="../classes/HopperComponent3D.html">HopperComponent3D</a></li>
             
                 <li><a href="../classes/HopperStructure.html">HopperStructure</a></li>
+            
+                <li><a href="../classes/Info.html">Info</a></li>
             
                 <li><a href="../classes/LockComponent.html">LockComponent</a></li>
             
@@ -174,6 +182,20 @@
             
                 <li><a href="../classes/RoomStructure.html">RoomStructure</a></li>
             
+                <li><a href="../classes/Rotator.html">Rotator</a></li>
+            
+                <li><a href="../classes/SA_ConnectionStatusDetector.html">SA_ConnectionStatusDetector</a></li>
+            
+                <li><a href="../classes/SA_DatabaseManager.html">SA_DatabaseManager</a></li>
+            
+                <li><a href="../classes/SA_NewComponent.html">SA_NewComponent</a></li>
+            
+                <li><a href="../classes/SA_StorageManager.html">SA_StorageManager</a></li>
+            
+                <li><a href="../classes/SA_Timer.html">SA_Timer</a></li>
+            
+                <li><a href="../classes/SA_WebService.html">SA_WebService</a></li>
+            
                 <li><a href="../classes/ScreenshotMenuComponent.html">ScreenshotMenuComponent</a></li>
             
                 <li><a href="../classes/SpiralStairwayStructure.html">SpiralStairwayStructure</a></li>
@@ -183,6 +205,8 @@
                 <li><a href="../classes/StairwayComponent3D.html">StairwayComponent3D</a></li>
             
                 <li><a href="../classes/StairwayStructure.html">StairwayStructure</a></li>
+            
+                <li><a href="../classes/StandaloneComponent.html">StandaloneComponent</a></li>
             
                 <li><a href="../classes/StraightStairwayStructure.html">StraightStairwayStructure</a></li>
             
@@ -213,6 +237,8 @@
                 <li><a href="../classes/wnp.CameraFeatures.html">wnp.CameraFeatures</a></li>
             
                 <li><a href="../classes/wnp.GlassMaterial.html">wnp.GlassMaterial</a></li>
+            
+                <li><a href="../classes/wnp.ImageProcessor.html">wnp.ImageProcessor</a></li>
             
                 <li><a href="../classes/wnp.Input.TouchManager.html">wnp.Input.TouchManager</a></li>
             
@@ -265,6 +291,8 @@
                 <li><a href="../modules/Materials.html">Materials</a></li>
             
                 <li><a href="../modules/Programmable.html">Programmable</a></li>
+            
+                <li><a href="../modules/Rendering.html">Rendering</a></li>
             
                 <li><a href="../modules/Wanaplan.html">Wanaplan</a></li>
             
@@ -514,6 +542,13 @@ direct children of the root.</p>
                             </li>
                         
                             <li class="index-item method">
+                                <a href="#method_getGlobalData">getGlobalData</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
                                 <a href="#method_getLastPosition">getLastPosition</a>
 
                                 
@@ -683,6 +718,13 @@ direct children of the root.</p>
                         
                             <li class="index-item method">
                                 <a href="#method_setDragged">setDragged</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setGlobalData">setGlobalData</a>
 
                                 
                                 
@@ -1576,6 +1618,147 @@ Do not use this</p>
               
                 <div class="blue-return-desc">
                     <p>The dragged object, as a picking information.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_getGlobalData" class="method item">
+  <h3 class="blue-method-name">getGlobalData</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+          <p>Provided by the <a href="../modules/Wanaplan.html">Wanaplan</a> module.</p>
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getGlobalData</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>key</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[defaultValue]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Returns stored global custom data.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">key</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The key to identify the data.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[defaultValue]</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The default returned value.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns the data if it exists, otherwise it returns <code>defaultValue</code>.</p>
 
                 </div>
               
@@ -3922,6 +4105,124 @@ NB : Warning, the parameter is a picking info !</p>
 
                     <div class="param-description">
                         <p>The new dragged object.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_setGlobalData" class="method item">
+  <h3 class="blue-method-name">setGlobalData</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+          <p>Provided by the <a href="../modules/Wanaplan.html">Wanaplan</a> module.</p>
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>setGlobalData</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>key</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Sets global custom data. The previous data is overriden if the key already exists.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">key</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The key to identify the data.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a> | <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The value to store.</p>
 
                     </div>
 
