@@ -106,6 +106,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "wnp.LeatherMaterial",
         "wnp.LoopTimer",
         "wnp.MetalMaterial",
+        "wnp.Outliner",
         "wnp.PlasticMaterial",
         "wnp.PointerManager",
         "wnp.Programmable",

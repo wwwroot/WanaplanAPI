@@ -2,7 +2,7 @@
 <html lang="en" class="yui-overrride">
 <head>
     <meta charset="utf-8">
-    <title>ObjectHelper.OBB - WanaPlan</title>
+    <title>wnp.Outliner - WanaPlan</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
@@ -335,7 +335,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>ObjectHelper.OBB</h1>
+                        <h1>wnp.Outliner</h1>
 <div class="meta">
     
 
@@ -345,7 +345,7 @@
 
     
         
-            Module: <a href="../modules/Helpers.html">Helpers</a><br>
+            Module: <a href="../modules/Rendering.html">Rendering</a><br>
             Parent Module: <a href="../modules/Wanaplan.html">Wanaplan</a>
         
     
@@ -358,16 +358,15 @@
 
 <h3>Summary</h3>
 <div class="intro">
-    <p>Oriented Bounding Box.</p>
-<p>In order to keep things simple and limit space complexity, this class holds minimal mandatory properties.</p>
+    <p>Outlining effect manager. Renders an outline on mesh/submeshes as an emphasis effect.</p>
 
 </div>
 
 
     <div class="constructor">
         <h2>Constructor</h2>
-        <div id="method_ObjectHelper.OBB" class="method item">
-  <h3 class="blue-method-name">ObjectHelper.OBB</h3>
+        <div id="method_wnp.Outliner" class="method item">
+  <h3 class="blue-method-name">wnp.Outliner</h3>
 
   <div class="meta method-meta">
     
@@ -388,7 +387,7 @@
 
   <h3>Syntax</h3>
   <div class="blue-method-syntax">
-  <h3 class="name"><code>ObjectHelper.OBB</code></h3>
+  <h3 class="name"><code>wnp.Outliner</code></h3>
 
     
         <div class="args">
@@ -396,13 +395,7 @@
             
                 <li class="arg">
                     
-                        <code>dimension</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code>matrix</code>
+                        <code>scene</code>
                     
                 </li>
             
@@ -438,30 +431,14 @@
             
                 <li class="param">
                     
-                        <code class="param-name">dimension</code>
-                        <span class="type">BABYLON.Vector3</span>
+                        <code class="param-name">scene</code>
+                        <span class="type">BABYLON.Scene</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>the vector from the origin to the top corner ( positive vector )</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name">matrix</code>
-                        <span class="type">BABYLON.Matrix</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>the transormation matrix of the box, should be a rotation combined with a translation</p>
+                        <p>The scene.</p>
 
                     </div>
 
@@ -506,14 +483,56 @@
                     <ul class="index-list methods">
                         
                             <li class="index-item method">
-                                <a href="#method_copyFromAABB">copyFromAABB</a>
+                                <a href="#method_getMeshes">getMeshes</a>
 
                                 
                                 
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_copyFromOyBB">copyFromOyBB</a>
+                                <a href="#method_getSubMeshIndexes">getSubMeshIndexes</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_hide">hide</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setColor">setColor</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setMeshes">setMeshes</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setSubMeshesIndexes">setSubMeshesIndexes</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setThickness">setThickness</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_show">show</a>
 
                                 
                                 
@@ -535,8 +554,8 @@
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_copyFromAABB" class="method item">
-  <h3 class="blue-method-name">copyFromAABB</h3>
+                    <div id="method_getMeshes" class="method item">
+  <h3 class="blue-method-name">getMeshes</h3>
 
   <div class="meta method-meta">
     
@@ -557,25 +576,15 @@
 
   <h3>Syntax</h3>
   <div class="blue-method-syntax">
-  <h3 class="name"><code>copyFromAABB</code></h3>
+  <h3 class="name"><code>getMeshes</code></h3>
 
     
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>AABB</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
     
 
     
         <span class="returns-inline">
-            <span class="type"></span>
+            <span class="type">BABYLON.Mesh</span>
         </span>
     
 
@@ -594,35 +603,10 @@
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Sets the OBB in order to define the same volume as the AABB given in argument.
-The resulting OBB fits exactly the volume.</p>
+        <p>Returns an array of currently outlined meshes. See also <code>getSubMeshIndexes</code> for a more detailed understanding of the handled meshes/submeshes.</p>
 
     </div>
 
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">AABB</code>
-                        <span class="type">AABB</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>the Axis Aligned Bounding Box</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
     
 
     
@@ -631,9 +615,11 @@ The resulting OBB fits exactly the volume.</p>
 
             <div class="returns-description">
               
+                <span class="type">BABYLON.Mesh</span>:
+              
               
                 <div class="blue-return-desc">
-                    <p>this</p>
+                    <p>An array of meshes.</p>
 
                 </div>
               
@@ -650,8 +636,8 @@ The resulting OBB fits exactly the volume.</p>
 </div>
 
                 
-                    <div id="method_copyFromOyBB" class="method item">
-  <h3 class="blue-method-name">copyFromOyBB</h3>
+                    <div id="method_getSubMeshIndexes" class="method item">
+  <h3 class="blue-method-name">getSubMeshIndexes</h3>
 
   <div class="meta method-meta">
     
@@ -672,25 +658,15 @@ The resulting OBB fits exactly the volume.</p>
 
   <h3>Syntax</h3>
   <div class="blue-method-syntax">
-  <h3 class="name"><code>copyFromOyBB</code></h3>
+  <h3 class="name"><code>getSubMeshIndexes</code></h3>
 
     
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>OyBB</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
     
 
     
         <span class="returns-inline">
-            <span class="type"></span>
+            <span class="type">Number[]</span>
         </span>
     
 
@@ -709,8 +685,170 @@ The resulting OBB fits exactly the volume.</p>
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Sets the OBB in order to define the same volume as the OBB given in argument.
-The resulting OBB fits exactly the volume.</p>
+        <p>Returns a 2D array of currently outlined subMesh indexes.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type">Number[]</span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>The subMesh indexes.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>   var meshes = outliner.getMeshes();  
+   var indexes = outliner.getSubMeshIndexes();  </code></pre>
+<p>Given this configuration, if <code>meshes[i]</code> is defined, two scenarios are possible :</p>
+<ul>
+<li>Either <code>indexes[i]</code> is an Array of submesh indexes, and only the subMeshes of these indexes will be highlighted (if they exist).</li>
+<li>Either <code>indexes[i]</code> is undefined or an empty Array, and the whole mesh is highlighted.</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_hide" class="method item">
+  <h3 class="blue-method-name">hide</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>hide</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Hides the outline. Must be called when no meshes are outlined, in order to preserve the framerate.</p>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_setColor" class="method item">
+  <h3 class="blue-method-name">setColor</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>setColor</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>color</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Sets the color of the outline. Default is red.</p>
 
     </div>
 
@@ -722,14 +860,14 @@ The resulting OBB fits exactly the volume.</p>
             
                 <li class="param">
                     
-                        <code class="param-name">OyBB</code>
-                        <span class="type">OyBB</span>
+                        <code class="param-name">color</code>
+                        <span class="type">BABYLON.Color4</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>the Bounding Box Oriented along y axis</p>
+                        <p>The requested color.</p>
 
                     </div>
 
@@ -741,21 +879,347 @@ The resulting OBB fits exactly the volume.</p>
     
 
     
-        <div class="returns">
-            <h4>Returns:</h4>
 
-            <div class="returns-description">
-              
-              
-                <div class="blue-return-desc">
-                    <p>this</p>
+    
 
-                </div>
-              
+    
+
+</div>
+
+                
+                    <div id="method_setMeshes" class="method item">
+  <h3 class="blue-method-name">setMeshes</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
 
 
-            </div>
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>setMeshes</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>meshes</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
         </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Sets an array of currently outlined meshes. See also <code>getSubMeshIndexes</code> for a more detailed understanding of the handled meshes/submeshes.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">meshes</code>
+                        <span class="type">BABYLON.Mesh</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An array of meshes.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_setSubMeshesIndexes" class="method item">
+  <h3 class="blue-method-name">setSubMeshesIndexes</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>setSubMeshesIndexes</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>subMeshesIndexes</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Sets a 2D array of currently outlined subMesh indexes. See also <code>getSubMeshIndexes</code> for a more detailed understanding of the handled meshes/submeshes.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">subMeshesIndexes</code>
+                        <span class="type">Number[]</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The subMesh indexes.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_setThickness" class="method item">
+  <h3 class="blue-method-name">setThickness</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>setThickness</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>value</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Sets the thickness of the outline. Default is 1.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Requested thickness.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_show" class="method item">
+  <h3 class="blue-method-name">show</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>show</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Shows the outline.</p>
+
+    </div>
+
+    
+
     
 
     

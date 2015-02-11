@@ -1115,6 +1115,17 @@
                 "wnp": 1
             }
         },
+        "js\\Core\\Rendering\\Outliner.js": {
+            "name": "js\\Core\\Rendering\\Outliner.js",
+            "modules": {},
+            "classes": {
+                "wnp.Outliner": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "wnp": 1
+            }
+        },
         "js\\Core\\Widgets\\Clone.js": {
             "name": "js\\Core\\Widgets\\Clone.js",
             "modules": {
@@ -1504,6 +1515,7 @@
                 "wnp.WhiteMaterial": 1,
                 "wnp.WoodMaterial": 1,
                 "wnp.ImageProcessor": 1,
+                "wnp.Outliner": 1,
                 "Info": 1,
                 "Rotator": 1,
                 "wnp.CameraFeatures": 1,
@@ -1719,7 +1731,8 @@
             "name": "Rendering",
             "submodules": {},
             "classes": {
-                "wnp.ImageProcessor": 1
+                "wnp.ImageProcessor": 1,
+                "wnp.Outliner": 1
             },
             "fors": {},
             "is_submodule": 1,
@@ -1728,7 +1741,7 @@
             },
             "module": "Wanaplan",
             "namespace": "",
-            "file": "js\\Core\\Rendering\\ImageProcessor.js",
+            "file": "js\\Core\\Rendering\\Outliner.js",
             "line": 6,
             "description": "This class provides an easy way to apply a shader on a full screen quad, in order to process pixels in screen-space.  \nIt can be used as static or instanciated."
         },
@@ -4173,6 +4186,29 @@
                     "name": "BABYLON",
                     "description": "Engine.",
                     "type": "BABYLON.Engine"
+                }
+            ]
+        },
+        "wnp.Outliner": {
+            "name": "wnp.Outliner",
+            "shortname": "wnp.Outliner",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp",
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 6,
+            "description": "Outlining effect manager. Renders an outline on mesh/submeshes as an emphasis effect.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "scene",
+                    "description": "The scene.",
+                    "type": "BABYLON.Scene"
                 }
             ]
         },
@@ -18191,7 +18227,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 135,
+            "line": 136,
             "description": "Creates the sky according to parameter URL.\nIf no URL is specified then the default Skybox is created.\nFor compatibility reason, a skysphere can be generated instead of a skybox.",
             "itemtype": "method",
             "name": "createSky",
@@ -18208,7 +18244,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 225,
+            "line": 226,
             "description": "Setups the lights in the scene.",
             "itemtype": "method",
             "name": "setupLights",
@@ -18217,7 +18253,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 260,
+            "line": 261,
             "description": "Fired to request a save of the history.",
             "itemtype": "event",
             "name": "wnp.request.saveHistory",
@@ -18226,7 +18262,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 266,
+            "line": 267,
             "description": "Changes the aspect of the ground.\nTriggered on `wnp.engine3D.changeGround`",
             "itemtype": "method",
             "name": "onChangeGround",
@@ -18242,7 +18278,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 289,
+            "line": 290,
             "description": "Changes the aspect of the sky.\nTriggered on `wnp.engine3D.changeSky`",
             "itemtype": "method",
             "name": "onChangeSky",
@@ -19507,7 +19543,7 @@
         },
         {
             "file": "js\\Components\\StandaloneComponent\\DGM_LoadComponent.js",
-            "line": 32,
+            "line": 33,
             "description": "Try to load a plan by its uuid. The component is destroyed",
             "itemtype": "method",
             "name": "tryLoadPlan",
@@ -19736,8 +19772,8 @@
         },
         {
             "file": "js\\Components\\StandaloneComponent\\SA_DatabaseManager.js",
-            "line": 118,
-            "description": "Loads all plans from the database without their structures (id, name, screenshot). \nIf you want to load structures too then you need to set the `complete` parameter to `true`.\nAn array of plans objects is available in the first callback parameter.",
+            "line": 117,
+            "description": "Loads all plans from the database without their structures (id, name, screenshot).\nIf you want to load structures too then you need to set the `complete` parameter to `true`.\nAn array of plans objects is available in the first callback parameter.",
             "itemtype": "method",
             "name": "loadItems",
             "params": [
@@ -19750,11 +19786,6 @@
                     "name": "error",
                     "description": "A function called when an error occured.",
                     "type": "Function"
-                },
-                {
-                    "name": "complete",
-                    "description": "Sets to `true` to get all objects with their structures.",
-                    "type": "Boolean"
                 }
             ],
             "class": "SA_DatabaseManager",
@@ -21735,7 +21766,17 @@
         {
             "file": "js\\Core\\Api\\Api.js",
             "line": 89,
-            "description": "Indicates whether wanaplan is running in viewer mode.",
+            "description": "Creates a new plan.",
+            "itemtype": "method",
+            "name": "createNewPlan",
+            "static": 1,
+            "class": "API",
+            "module": "Wanaplan",
+            "submodule": "API"
+        },
+        {
+            "file": "js\\Core\\Api\\Api.js",
+            "line": 111,
             "itemtype": "method",
             "name": "isViewer",
             "return": {
@@ -21748,7 +21789,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 99,
+            "line": 122,
             "description": "Sets the context, 2D or 3D",
             "itemtype": "method",
             "name": "setContext",
@@ -21765,7 +21806,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 109,
+            "line": 132,
             "description": "Gets the context, 2D or 3D",
             "itemtype": "method",
             "name": "getContext",
@@ -21779,7 +21820,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 119,
+            "line": 142,
             "description": "Gets the mode for a given context",
             "itemtype": "method",
             "name": "getMode",
@@ -21801,7 +21842,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 135,
+            "line": 158,
             "description": "Returns the version of the currently opened plan.",
             "itemtype": "method",
             "name": "getVersion",
@@ -21815,7 +21856,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 145,
+            "line": 168,
             "description": "Compares two stringified versions.",
             "itemtype": "method",
             "name": "compareVersion",
@@ -21841,7 +21882,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 159,
+            "line": 182,
             "description": "Returns a loaded component",
             "itemtype": "method",
             "name": "getComponent",
@@ -21868,7 +21909,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 185,
+            "line": 208,
             "description": "Returns the keyboard manager",
             "itemtype": "method",
             "name": "getKeyboardManager",
@@ -21882,7 +21923,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 195,
+            "line": 218,
             "description": "Sets the mode for a given context",
             "itemtype": "method",
             "name": "setMode",
@@ -21905,7 +21946,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 218,
+            "line": 241,
             "description": "Resizes the display window.",
             "itemtype": "method",
             "name": "resize",
@@ -21927,7 +21968,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 229,
+            "line": 252,
             "description": "Returns custom data from the storage.\nThis data is serialized along with the plan",
             "itemtype": "method",
             "name": "getData",
@@ -21948,7 +21989,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 241,
+            "line": 264,
             "description": "Pushes custom data to the storage.\nThis data is serialized along with the plan",
             "itemtype": "method",
             "name": "setData",
@@ -21970,7 +22011,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 253,
+            "line": 276,
             "description": "Returns stored global custom data.",
             "itemtype": "method",
             "name": "getGlobalData",
@@ -21997,7 +22038,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 264,
+            "line": 287,
             "description": "Sets global custom data. The previous data is overriden if the key already exists.",
             "itemtype": "method",
             "name": "setGlobalData",
@@ -22019,7 +22060,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 291,
+            "line": 314,
             "description": "Returns the floor currently displayed",
             "itemtype": "method",
             "name": "getCurrentFloor",
@@ -22033,7 +22074,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 301,
+            "line": 324,
             "description": "Returns the floor matching the given id (0 is ground, 1 is first floor etc)",
             "itemtype": "method",
             "name": "getFloorById",
@@ -22054,7 +22095,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 317,
+            "line": 340,
             "description": "Returns all floors",
             "itemtype": "method",
             "name": "getFloors",
@@ -22068,7 +22109,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 327,
+            "line": 350,
             "description": "Returns all wall points for a given floor",
             "itemtype": "method",
             "name": "getPoints",
@@ -22090,7 +22131,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 340,
+            "line": 363,
             "description": "Returns all walls for a given floor.",
             "itemtype": "method",
             "name": "getWalls",
@@ -22112,7 +22153,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 353,
+            "line": 376,
             "description": "Returns all subslopes for a given floor.",
             "itemtype": "method",
             "name": "getSubSlopes",
@@ -22134,7 +22175,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 366,
+            "line": 389,
             "description": "Returns all internal or external rooms for a given floor",
             "itemtype": "method",
             "name": "getRooms",
@@ -22162,7 +22203,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 380,
+            "line": 403,
             "description": "Returns all stairways for a given floor",
             "itemtype": "method",
             "name": "getStairways",
@@ -22184,7 +22225,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 393,
+            "line": 416,
             "description": "Returns all object structures in a given floor",
             "itemtype": "method",
             "name": "getObjects",
@@ -22206,21 +22247,21 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 406,
+            "line": 429,
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 408,
+            "line": 431,
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 410,
+            "line": 433,
             "description": "Registers an action made in a component so it can be undone/redone",
             "itemtype": "method",
             "name": "registerAction",
@@ -22252,7 +22293,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 423,
+            "line": 446,
             "description": "Adds a user's action to the history.",
             "itemtype": "method",
             "name": "addHistory",
@@ -22284,7 +22325,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 436,
+            "line": 459,
             "description": "Recursively serializes an object",
             "itemtype": "method",
             "name": "serializeObject",
@@ -22320,7 +22361,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 450,
+            "line": 473,
             "description": "Recursively deserializes an object",
             "itemtype": "method",
             "name": "deserializeObject",
@@ -22356,21 +22397,21 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 464,
+            "line": 487,
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 466,
+            "line": 489,
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 469,
+            "line": 492,
             "description": "Adds a listener for an event",
             "itemtype": "method",
             "name": "listen",
@@ -22392,7 +22433,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 490,
+            "line": 513,
             "description": "Removes a listener for an event",
             "itemtype": "method",
             "name": "unListen",
@@ -22414,7 +22455,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 512,
+            "line": 535,
             "description": "Returns all API-triggered listeners for an event",
             "itemtype": "method",
             "name": "getListeners",
@@ -23638,6 +23679,133 @@
             "namespace": "wnp"
         },
         {
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 69,
+            "description": "Sets the color of the outline. Default is red.",
+            "itemtype": "method",
+            "name": "setColor",
+            "params": [
+                {
+                    "name": "color",
+                    "description": "The requested color.",
+                    "type": "BABYLON.Color4"
+                }
+            ],
+            "class": "wnp.Outliner",
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp"
+        },
+        {
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 79,
+            "description": "Sets the thickness of the outline. Default is 1.",
+            "itemtype": "method",
+            "name": "setThickness",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "Requested thickness.",
+                    "type": "Number"
+                }
+            ],
+            "class": "wnp.Outliner",
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp"
+        },
+        {
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 88,
+            "description": "Shows the outline.",
+            "itemtype": "method",
+            "name": "show",
+            "class": "wnp.Outliner",
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp"
+        },
+        {
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 99,
+            "description": "Hides the outline. Must be called when no meshes are outlined, in order to preserve the framerate.",
+            "itemtype": "method",
+            "name": "hide",
+            "class": "wnp.Outliner",
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp"
+        },
+        {
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 109,
+            "description": "Returns an array of currently outlined meshes. See also `getSubMeshIndexes` for a more detailed understanding of the handled meshes/submeshes.",
+            "itemtype": "method",
+            "name": "getMeshes",
+            "return": {
+                "description": "An array of meshes.",
+                "type": "BABYLON.Mesh[]"
+            },
+            "class": "wnp.Outliner",
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp"
+        },
+        {
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 118,
+            "description": "Returns a 2D array of currently outlined subMesh indexes.",
+            "example": [
+                "\n\t   var meshes = outliner.getMeshes();  \n\t   var indexes = outliner.getSubMeshIndexes();  \n\n\nGiven this configuration, if `meshes[i]` is defined, two scenarios are possible :\n * Either `indexes[i]` is an Array of submesh indexes, and only the subMeshes of these indexes will be highlighted (if they exist).\n * Either `indexes[i]` is undefined or an empty Array, and the whole mesh is highlighted."
+            ],
+            "itemtype": "method",
+            "name": "getSubMeshIndexes",
+            "return": {
+                "description": "The subMesh indexes.",
+                "type": "Number[][]"
+            },
+            "class": "wnp.Outliner",
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp"
+        },
+        {
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 137,
+            "description": "Sets an array of currently outlined meshes. See also `getSubMeshIndexes` for a more detailed understanding of the handled meshes/submeshes.",
+            "params": [
+                {
+                    "name": "meshes",
+                    "description": "An array of meshes.",
+                    "type": "BABYLON.Mesh[]"
+                }
+            ],
+            "itemtype": "method",
+            "name": "setMeshes",
+            "class": "wnp.Outliner",
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp"
+        },
+        {
+            "file": "js\\Core\\Rendering\\Outliner.js",
+            "line": 147,
+            "description": "Sets a 2D array of currently outlined subMesh indexes. See also `getSubMeshIndexes` for a more detailed understanding of the handled meshes/submeshes.",
+            "params": [
+                {
+                    "name": "subMeshesIndexes",
+                    "description": "The subMesh indexes.",
+                    "type": "Number[][]"
+                }
+            ],
+            "itemtype": "method",
+            "name": "setSubMeshesIndexes",
+            "class": "wnp.Outliner",
+            "module": "Wanaplan",
+            "submodule": "Rendering",
+            "namespace": "wnp"
+        },
+        {
             "file": "js\\Core\\Widgets\\Info.js",
             "line": 43,
             "description": "Set a function for the click callback.",
@@ -23923,7 +24091,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 56,
+            "line": 58,
             "description": "Build all meshes with JSON informations.",
             "itemtype": "method",
             "name": "build",
@@ -23961,7 +24129,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 109,
+            "line": 112,
             "description": "Apply transformation to a mesh and sets its parent.",
             "itemtype": "method",
             "name": "applyTransform",
@@ -23989,7 +24157,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 130,
+            "line": 133,
             "description": "Apply transformations to a set of meshes recursively.",
             "itemtype": "method",
             "name": "applyTransformRecursive",
@@ -24012,7 +24180,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 161,
+            "line": 164,
             "description": "Gets the index of a mesh by its name.",
             "itemtype": "method",
             "name": "indexOf",
@@ -24039,7 +24207,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 179,
+            "line": 182,
             "description": "Generates meshes from json data.",
             "itemtype": "method",
             "name": "generateMeshes",
@@ -24071,7 +24239,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 223,
+            "line": 232,
             "description": "Generate materials from json data.",
             "itemtype": "method",
             "name": "generateMaterials",
@@ -24113,7 +24281,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 337,
+            "line": 346,
             "description": "Generate textures from json data.",
             "itemtype": "method",
             "name": "genreateTextures",
@@ -24135,7 +24303,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 359,
+            "line": 368,
             "description": "Gets the name of a texture by extracting it via its path.",
             "itemtype": "method",
             "name": "_getTextureName",
@@ -24162,7 +24330,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 373,
+            "line": 382,
             "description": "Gets a color from an array.",
             "itemtype": "method",
             "name": "_toColor",
@@ -24184,7 +24352,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 384,
+            "line": 393,
             "description": "Gets an `Array` of indice from an array.",
             "itemtype": "method",
             "name": "_toIndices",
@@ -26038,27 +26206,10 @@
         },
         {
             "file": "js\\Helpers\\GeometryHelper.js",
-            "line": 550,
-            "description": "prends une geometrie stratée et fermée et genere ses faces\ntop et bottom generent la face du dessus et du dessous si mis à true\nnbPoint est le nombre de point par strate",
-            "class": "GlobalHelper",
-            "module": "Wanaplan",
-            "submodule": "Helpers"
-        },
-        {
-            "file": "js\\Helpers\\GeometryHelper.js",
-            "line": 716,
-            "description": "for a mesh with face aligned with x,y,z axis\ndefine and set the UV map",
-            "class": "GlobalHelper",
-            "module": "Wanaplan",
-            "submodule": "Helpers"
-        },
-        {
-            "file": "js\\Helpers\\GeometryHelper.js",
-            "line": 1117,
+            "line": 1258,
             "description": "Representation of the pillow like a cube but with 3*3*3 points\nTODO : uvs",
             "class": "GlobalHelper",
-            "module": "Wanaplan",
-            "submodule": "Helpers"
+            "module": "Wanaplan"
         },
         {
             "file": "js\\Helpers\\GlobalHelper.js",
@@ -27653,125 +27804,6 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 44,
-            "description": "Fired to decorate an object with a material.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.decorate",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 50,
-            "description": "Fired to refresh the 3D renderer.",
-            "deprecated": true,
-            "itemtype": "event",
-            "name": "wnp.engine3D.refreshGL",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 56,
-            "description": "Fired when the configurator is needed for an object.",
-            "itemtype": "event",
-            "name": "wnp.request.configurator.start",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 62,
-            "description": "Fired when a new plan is ready.",
-            "itemtype": "event",
-            "name": "wnp.request.newPlanReady",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 68,
-            "description": "Fired when rooms are ready.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.roomsReady",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 74,
-            "description": "Fired when the user requests a change in wall transparency",
-            "itemtype": "event",
-            "name": "wnp.request.switch-transparency",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 79,
-            "description": "Fired to stop the group configurator component.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.groupConfigurator.stop",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 85,
-            "description": "Fired by the Mouse/Pointer handler when zoom-out is detected.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.zoom-out",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 91,
-            "description": "Fired to add a menu item into the top menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.top.add",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 97,
-            "description": "Fired in the initialization process when the structure is ready.",
-            "itemtype": "event",
-            "name": "wnp.core.initialized",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 103,
-            "description": "Fired when a context menu has been opened.",
-            "itemtype": "event",
-            "name": "wnp.widget.contextMenu..opened",
-            "type": "MENU_NAME",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 109,
-            "description": "Fired to remove a menu item from the main menu.",
-            "itemtype": "event",
-            "name": "wnp.menu.main.remove",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 115,
-            "description": "Fired to show the 'About' window",
-            "itemtype": "event",
-            "name": "wnp.ui.showAboutWindow",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 121,
             "description": "Fired when the subslope are ready and drawn.",
             "itemtype": "event",
             "name": "wnp.engine3D.subslopesReady",
@@ -27792,6 +27824,125 @@
                     "type": "BABYLON.Mesh"
                 }
             ],
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 53,
+            "description": "Fired to refresh the 3D renderer.",
+            "deprecated": true,
+            "itemtype": "event",
+            "name": "wnp.engine3D.refreshGL",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 59,
+            "description": "Fired when the configurator is needed for an object.",
+            "itemtype": "event",
+            "name": "wnp.request.configurator.start",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 65,
+            "description": "Fired when a new plan is ready.",
+            "itemtype": "event",
+            "name": "wnp.request.newPlanReady",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 71,
+            "description": "Fired when rooms are ready.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.roomsReady",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 77,
+            "description": "Fired when the user requests a change in wall transparency",
+            "itemtype": "event",
+            "name": "wnp.request.switch-transparency",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 82,
+            "description": "Fired to cancel the group configurator component.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.groupConfigurator.cancel",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 88,
+            "description": "Fired by the Mouse/Pointer handler when zoom-out is detected.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.zoom-out",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 94,
+            "description": "Fired to add a menu item into the top menu.",
+            "itemtype": "event",
+            "name": "wnp.menu.top.add",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 100,
+            "description": "Fired in the initialization process when the structure is ready.",
+            "itemtype": "event",
+            "name": "wnp.core.initialized",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 106,
+            "description": "Fired when a context menu has been opened.",
+            "itemtype": "event",
+            "name": "wnp.widget.contextMenu..opened",
+            "type": "MENU_NAME",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 112,
+            "description": "Fired to remove a menu item from the main menu.",
+            "itemtype": "event",
+            "name": "wnp.menu.main.remove",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 118,
+            "description": "Fired to clone an object",
+            "itemtype": "event",
+            "name": "wnp.engine3D.object.clone",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 124,
+            "description": "Fired to decorate an object with a material.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.decorate",
             "class": "EVENTS",
             "module": "EVENTS"
         },
@@ -27865,9 +28016,9 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 164,
-            "description": "Fired to clone an object.",
+            "description": "Fired when a context menu has been closed.",
             "itemtype": "event",
-            "name": "wnp.request.object.clone",
+            "name": "wnp.widget.contextMenu.closed",
             "class": "EVENTS",
             "module": "EVENTS"
         },
@@ -27883,15 +28034,22 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 176,
-            "description": "Fired when a floor needs to be deleted.",
+            "description": "Fired when the TransformComponent begins to transform the position/rotation of an object.  \nThis will be followed by a `wnp.engine3D.object.end-transform` event.",
             "itemtype": "event",
-            "name": "wnp.request.floorDeleted",
+            "name": "wnp.engine3D.object.start-transform",
+            "params": [
+                {
+                    "name": "object",
+                    "description": "The involved object.",
+                    "type": "BABYLON.Mesh"
+                }
+            ],
             "class": "EVENTS",
             "module": "EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 182,
+            "line": 184,
             "description": "Fired to remove a menu item from the main menu.",
             "itemtype": "event",
             "name": "\"wnp.menu.main.remove",
@@ -27900,7 +28058,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 188,
+            "line": 190,
             "description": "Fired when the user quits the subslope edit mode.",
             "itemtype": "event",
             "name": "wnp.engine2d.onModeSubSlopeEnd",
@@ -27909,7 +28067,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 194,
+            "line": 196,
             "description": "Fired to request the save of a structure.",
             "itemtype": "event",
             "name": "wnp.request.saveStructure",
@@ -27918,7 +28076,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 200,
+            "line": 202,
             "description": "Fired to unselect the selected item in the top menu.",
             "itemtype": "event",
             "name": "wnp.menu.top.deselect",
@@ -27927,7 +28085,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 206,
+            "line": 208,
             "description": "Fired when enabling wall transparency.",
             "itemtype": "event",
             "name": "wnp.engine3d.wallTransparency.on",
@@ -27936,7 +28094,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 211,
+            "line": 213,
             "description": "Fired once the subslope overtures are created.",
             "itemtype": "event",
             "name": "wnp.engine3D.subslopeOverturesReady",
@@ -27964,7 +28122,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 221,
+            "line": 223,
             "description": "Fired when the user requests the add of a stairway in the menu.",
             "itemtype": "event",
             "name": "wnp.engine2d.onAddStairway",
@@ -27985,7 +28143,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 228,
+            "line": 230,
             "description": "Fired when an object is rebuilt.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.refresh",
@@ -28001,7 +28159,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 235,
+            "line": 237,
             "description": "Fired when a click is made on the scene.",
             "itemtype": "event",
             "name": "wnp.engine3D.click.collided",
@@ -28010,7 +28168,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 241,
+            "line": 243,
             "description": "Fired by the Info widget when the user clicks on it.",
             "itemtype": "event",
             "name": "wnp.engine3D.info",
@@ -28019,7 +28177,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 247,
+            "line": 249,
             "description": "Fired by the Mouse/Pointer handler when a double click is detected.",
             "itemtype": "event",
             "name": "wnp.engine3D.double-click",
@@ -28028,7 +28186,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 253,
+            "line": 255,
             "description": "Fired to close a Frame Window.",
             "itemtype": "event",
             "name": "wnp.ui.frame.close",
@@ -28037,16 +28195,16 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 259,
-            "description": "Fired to cancel the group configurator component.",
+            "line": 261,
+            "description": "Fired to stop the group configurator component.",
             "itemtype": "event",
-            "name": "wnp.engine3D.groupConfigurator.cancel",
+            "name": "wnp.engine3D.groupConfigurator.stop",
             "class": "EVENTS",
             "module": "EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 265,
+            "line": 267,
             "description": "Fired when the 3D camera has moved.",
             "itemtype": "event",
             "name": "wnp.engine3D.camera.move",
@@ -28055,7 +28213,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 271,
+            "line": 273,
             "description": "Fired to start the group configurator component.",
             "itemtype": "event",
             "name": "wnp.engine3D.groupConfigurator.start",
@@ -28064,7 +28222,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 277,
+            "line": 279,
             "description": "Fired by the programmable loader to add a new programmable.",
             "itemtype": "event",
             "name": "wnp.engine3D.addProgrammable",
@@ -28073,16 +28231,16 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 283,
-            "description": "Fired when a context menu has been closed.",
+            "line": 285,
+            "description": "Fired to clone an object.",
             "itemtype": "event",
-            "name": "wnp.widget.contextMenu.closed",
+            "name": "wnp.request.object.clone",
             "class": "EVENTS",
             "module": "EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 289,
+            "line": 291,
             "description": "Fired to replace a sub menu item.",
             "itemtype": "event",
             "name": "wnp.menu.top.sub.replace",
@@ -28091,7 +28249,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 295,
+            "line": 297,
             "description": "Fired to change the background.",
             "itemtype": "event",
             "name": "wnp.engine2d.backgroundChange",
@@ -28100,7 +28258,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 301,
+            "line": 303,
             "description": "Fired when an input has been detected (click, touch, etc.).",
             "itemtype": "event",
             "name": "wnp.input.pointerchanged",
@@ -28116,7 +28274,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 308,
+            "line": 310,
             "description": "Fired when a context menu has been opened.",
             "itemtype": "event",
             "name": "wnp.widget.contextMenu.opened",
@@ -28125,7 +28283,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 314,
+            "line": 316,
             "description": "Fired when the decoration brush is ready.",
             "itemtype": "event",
             "name": "wnp.engine3D.brushReady",
@@ -28134,7 +28292,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 320,
+            "line": 322,
             "description": "Fired to close a popup.",
             "itemtype": "event",
             "name": "wnp.request.closePopup",
@@ -28143,7 +28301,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 326,
+            "line": 328,
             "description": "Fired to create an object.",
             "itemtype": "event",
             "name": "wnp.request.object.create",
@@ -28152,7 +28310,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 332,
+            "line": 334,
             "description": "Fired when a click is made on an instance of `Menu`.",
             "itemtype": "event",
             "name": "wnp.menu.click",
@@ -28161,7 +28319,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 338,
+            "line": 340,
             "description": "Fired when the user stops dragging the subslope.",
             "itemtype": "event",
             "name": "wnp.subslope.drag-end",
@@ -28170,17 +28328,10 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 344,
-            "description": "Fired when the TransformComponent begins to transform the position/rotation of an object.  \nThis will be followed by a `wnp.engine3D.object.end-transform` event.",
+            "line": 346,
+            "description": "Fired when a floor needs to be deleted.",
             "itemtype": "event",
-            "name": "wnp.engine3D.object.start-transform",
-            "params": [
-                {
-                    "name": "object",
-                    "description": "The involved object.",
-                    "type": "BABYLON.Mesh"
-                }
-            ],
+            "name": "wnp.request.floorDeleted",
             "class": "EVENTS",
             "module": "EVENTS"
         },
@@ -28278,6 +28429,15 @@
         {
             "file": "js\\_extracted_events.js",
             "line": 402,
+            "description": "Fired to change the language on wanaplan",
+            "itemtype": "event",
+            "name": "wnp.request.changeLang",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 408,
             "description": "Fired when the delete button is pushed while a mesh is selected.",
             "itemtype": "event",
             "name": "wnp.request.object.remove",
@@ -28298,7 +28458,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 410,
+            "line": 416,
             "description": "Fired when the TransformComponent just rotated an object on the scene.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.rotated",
@@ -28324,7 +28484,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 418,
+            "line": 424,
             "description": "Fired to start the configurator.",
             "itemtype": "event",
             "name": "wnp.engine3D.configurator.start",
@@ -28333,33 +28493,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 424,
-            "description": "Fired once the wall overtures are created.",
-            "itemtype": "event",
-            "name": "wnp.engine3D.overturesReady",
-            "params": [
-                {
-                    "name": "floor",
-                    "description": "The mesh of the floor.",
-                    "type": "BABYLON.Mesh"
-                },
-                {
-                    "name": "structure",
-                    "description": "The current floor structure.",
-                    "type": "FloorStructure"
-                },
-                {
-                    "name": "walls",
-                    "description": "The mesh of the walls.",
-                    "type": "BABYLON.Mesh"
-                }
-            ],
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 433,
+            "line": 430,
             "description": "Fired when a floor is ready.",
             "itemtype": "event",
             "name": "wnp.engine3D.floorReady",
@@ -28368,7 +28502,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 439,
+            "line": 436,
             "description": "Fired when a new plan needs to be created.",
             "itemtype": "event",
             "name": "wnp.request.newPlan",
@@ -28377,7 +28511,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 445,
+            "line": 442,
             "description": "Fired when the message box is opened.",
             "itemtype": "event",
             "name": "wnp.ui.messagebox.opened",
@@ -28386,7 +28520,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 451,
+            "line": 448,
             "description": "Fired when the user clicks on the fullscreen toggle button.",
             "itemtype": "event",
             "name": "wnp.request.toggleFullscreen",
@@ -28395,7 +28529,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 457,
+            "line": 454,
             "description": "Fired when a floor needs to be selected.",
             "itemtype": "event",
             "name": "wnp.request.floorSelected",
@@ -28404,7 +28538,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 463,
+            "line": 460,
             "description": "Fired by the configurator component when an 'Animation-In' begins.",
             "itemtype": "event",
             "name": "wnp.engine3D.configurator.animationIn.begin",
@@ -28413,7 +28547,16 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 469,
+            "line": 466,
+            "description": "Fired when a 3D widget is created.",
+            "itemtype": "event",
+            "name": "wnp.engine3D.UIobject.create",
+            "class": "EVENTS",
+            "module": "EVENTS"
+        },
+        {
+            "file": "js\\_extracted_events.js",
+            "line": 472,
             "description": "Fired when the transform of an object is modified.",
             "itemtype": "event",
             "name": "wnp.engine3D.UIobject.transform",
@@ -28422,7 +28565,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 475,
+            "line": 478,
             "description": "Fired by the configurator panel to update the rotation of the selected object.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.rotate",
@@ -28431,7 +28574,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 481,
+            "line": 484,
             "description": "Fired by the Mouse/Pointer handler when the pointer/mouse is clicked/pressed down.",
             "itemtype": "event",
             "name": "wnp.engine3D.mousedown",
@@ -28440,7 +28583,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 487,
+            "line": 490,
             "description": "Fired when a 3D widget is no longer used and is disposed of.",
             "itemtype": "event",
             "name": "wnp.engine3D.UIobject.dispose",
@@ -28449,7 +28592,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 493,
+            "line": 496,
             "description": "Fired when a floor needs to be added.",
             "itemtype": "event",
             "name": "wnp.request.floorAdded",
@@ -28458,7 +28601,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 499,
+            "line": 502,
             "description": "Fired to request a save of the history.",
             "itemtype": "event",
             "name": "wnp.request.saveHistory",
@@ -28467,7 +28610,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 505,
+            "line": 508,
             "description": "Fired by the Mouse/Pointer handler when a drag occurred (aka move).",
             "itemtype": "event",
             "name": "wnp.engine3D.dragging",
@@ -28476,7 +28619,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 511,
+            "line": 514,
             "description": "Fired when the user enters the subslope edit mode.",
             "itemtype": "event",
             "name": "wnp.engine2d.onEditSubSlope",
@@ -28485,7 +28628,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 517,
+            "line": 520,
             "description": "Fired when the user changes the camera.",
             "itemtype": "event",
             "name": "wnp.engine3D.cameraChanged",
@@ -28494,7 +28637,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 523,
+            "line": 526,
             "description": "Fired by the Mouse/Pointer handler when the pointer/mouse is moving.",
             "itemtype": "event",
             "name": "wnp.engine3D.mouse-move",
@@ -28503,7 +28646,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 529,
+            "line": 532,
             "description": "Fired to disable the orbit camera.",
             "itemtype": "event",
             "name": "wnp.request.disable-orbit-camera",
@@ -28512,7 +28655,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 535,
+            "line": 538,
             "description": "Fired when an item from main menu needs to be deselected.",
             "itemtype": "event",
             "name": "wnp.menu.main.deselect",
@@ -28521,7 +28664,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 541,
+            "line": 544,
             "description": "Fired by the Mouse/Pointer handler when zoom-in is detected.",
             "itemtype": "event",
             "name": "wnp.engine3D.zoom-in",
@@ -28530,7 +28673,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 547,
+            "line": 550,
             "description": "Fired to show/hide the left menu on mobile devices",
             "itemtype": "event",
             "name": "wnp.mobile.toggleMenu",
@@ -28539,7 +28682,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 553,
+            "line": 556,
             "description": "Fired when a local structure has been successfully loaded.",
             "itemtype": "event",
             "name": "wnp.structure.locale.loaded",
@@ -28548,7 +28691,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 559,
+            "line": 562,
             "description": "Fired by the Mouse/Pointer handler when a drag is done.",
             "itemtype": "event",
             "name": "wnp.engine3D.drag-end",
@@ -28557,7 +28700,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 565,
+            "line": 568,
             "description": "Fired by the configurator component when an animation is canceled.",
             "itemtype": "event",
             "name": "wnp.request.configurator.animation.cancel",
@@ -28566,7 +28709,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 571,
+            "line": 574,
             "description": "Fired to change the material of the ground",
             "itemtype": "event",
             "name": "wnp.engine3D.changeGround",
@@ -28575,7 +28718,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 577,
+            "line": 580,
             "description": "Fired when the graphics context has changed.",
             "itemtype": "event",
             "name": "wnp.contextChanged",
@@ -28584,7 +28727,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 583,
+            "line": 586,
             "description": "Fired when a color has been selected.",
             "itemtype": "event",
             "name": "wnp.core.colorSelected",
@@ -28593,15 +28736,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 589,
-            "itemtype": "event",
-            "name": "wnp.editionComponent.removeObject",
-            "class": "EVENTS",
-            "module": "EVENTS"
-        },
-        {
-            "file": "js\\_extracted_events.js",
-            "line": 595,
+            "line": 592,
             "description": "Fired on key down. Same parameters as the `keydown` standard javascript event.",
             "itemtype": "event",
             "name": "wnp.keyboardManager.keyDown",
@@ -28610,7 +28745,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 601,
+            "line": 598,
             "description": "Fired to dispose of an object.",
             "itemtype": "event",
             "name": "wnp.request.object.dispose",
@@ -28619,7 +28754,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 607,
+            "line": 604,
             "description": "Fired when all floors are ready.",
             "itemtype": "event",
             "name": "wnp.engine3D.allFloorsReady",
@@ -28628,7 +28763,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 613,
+            "line": 610,
             "description": "Fired to close the context menu.",
             "itemtype": "event",
             "name": "wnp.engine2D.contextMenu.close",
@@ -28637,7 +28772,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 619,
+            "line": 616,
             "description": "Fired when a paint texture is chosen in the decoration menu.",
             "itemtype": "event",
             "name": "wnp.engine3D.paint",
@@ -28646,7 +28781,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 625,
+            "line": 622,
             "description": "Fired to hide the main loader which appears during the start process.",
             "itemtype": "event",
             "name": "wnp.core.hideLoader",
@@ -28655,16 +28790,16 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 631,
-            "description": "Fired to clone an object",
+            "line": 628,
+            "description": "Fired to show the 'About' window",
             "itemtype": "event",
-            "name": "wnp.engine3D.object.clone",
+            "name": "wnp.ui.showAboutWindow",
             "class": "EVENTS",
             "module": "EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 637,
+            "line": 634,
             "description": "Fired to delete a menu item from the top menu.",
             "itemtype": "event",
             "name": "wnp.menu.top.delete",
@@ -28673,7 +28808,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 643,
+            "line": 640,
             "description": "Fired when the TransformComponent just translated an object on the scene.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.translate",
@@ -28699,16 +28834,15 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 651,
-            "description": "Fired to change the language on wanaplan",
+            "line": 648,
             "itemtype": "event",
-            "name": "wnp.request.changeLang",
+            "name": "wnp.editionComponent.removeObject",
             "class": "EVENTS",
             "module": "EVENTS"
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 657,
+            "line": 654,
             "description": "Fired when the user requests the add of a subslopeOverture (click on the button)",
             "itemtype": "event",
             "name": "wnp.engine2d.onAddSubSlopeOverture",
@@ -28717,7 +28851,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 662,
+            "line": 659,
             "description": "Fired on key up. Same parameters as the `keyup` standard javascript event.",
             "itemtype": "event",
             "name": "wnp.keyboardManager.keyUp",
@@ -28726,7 +28860,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 668,
+            "line": 665,
             "description": "Fired when a context menu has been closed.",
             "itemtype": "event",
             "name": "wnp.widget.contextMenu..closed",
@@ -28736,7 +28870,7 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 674,
+            "line": 671,
             "description": "Fired to change the material of the sky",
             "itemtype": "event",
             "name": "wnp.engine3D.changeSky",
@@ -28745,10 +28879,27 @@
         },
         {
             "file": "js\\_extracted_events.js",
-            "line": 680,
-            "description": "Fired when a 3D widget is created.",
+            "line": 677,
+            "description": "Fired once the wall overtures are created.",
             "itemtype": "event",
-            "name": "wnp.engine3D.UIobject.create",
+            "name": "wnp.engine3D.overturesReady",
+            "params": [
+                {
+                    "name": "floor",
+                    "description": "The mesh of the floor.",
+                    "type": "BABYLON.Mesh"
+                },
+                {
+                    "name": "structure",
+                    "description": "The current floor structure.",
+                    "type": "FloorStructure"
+                },
+                {
+                    "name": "walls",
+                    "description": "The mesh of the walls.",
+                    "type": "BABYLON.Mesh"
+                }
+            ],
             "class": "EVENTS",
             "module": "EVENTS"
         },
@@ -29473,19 +29624,19 @@
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:406"
+            "line": " js\\Core\\Api\\Api.js:429"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:408"
+            "line": " js\\Core\\Api\\Api.js:431"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:464"
+            "line": " js\\Core\\Api\\Api.js:487"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:466"
+            "line": " js\\Core\\Api\\Api.js:489"
         },
         {
             "message": "Missing item type",
@@ -29604,16 +29755,8 @@
             "line": " js\\Core\\_extra_docs.js:1"
         },
         {
-            "message": "Missing item type\nprends une geometrie stratée et fermée et genere ses faces\ntop et bottom generent la face du dessus et du dessous si mis à true\nnbPoint est le nombre de point par strate",
-            "line": " js\\Helpers\\GeometryHelper.js:550"
-        },
-        {
-            "message": "Missing item type\nfor a mesh with face aligned with x,y,z axis\ndefine and set the UV map",
-            "line": " js\\Helpers\\GeometryHelper.js:716"
-        },
-        {
             "message": "Missing item type\nRepresentation of the pillow like a cube but with 3*3*3 points\nTODO : uvs",
-            "line": " js\\Helpers\\GeometryHelper.js:1117"
+            "line": " js\\Helpers\\GeometryHelper.js:1258"
         },
         {
             "message": "Missing item type\nStarting with version 2.0, this file \"boots\" Jasmine, performing all of the necessary initialization before executing the loaded environment and all of a project's specs. This file should be loaded after `jasmine.js`, but before any project source files or spec files are loaded. Thus this file can also be used to customize Jasmine for a project.\n\nIf a project is using Jasmine via the standalone distribution, this file can be customized directly. If a project is using Jasmine via the [Ruby gem][jasmine-gem], this file can be copied into the support directory via `jasmine copy_boot_js`. Other environments (e.g., Python) will have different mechanisms.\n\nThe location of `boot.js` can be specified and/or overridden in `jasmine.yml`.\n\n[jasmine-gem]: http://github.com/pivotal/jasmine-gem",
