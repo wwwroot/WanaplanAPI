@@ -2,7 +2,7 @@
 <html lang="en" class="yui-overrride">
 <head>
     <meta charset="utf-8">
-    <title>DragComponent3D - WanaPlan</title>
+    <title>DGM_ZoomComponent - WanaPlan</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
@@ -337,13 +337,13 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>DragComponent3D</h1>
+                        <h1>DGM_ZoomComponent</h1>
 <div class="meta">
     
 
     
         <div class="extends">
-            Extends <a href="../classes/BaseComponent3D.html" class="crosslink">BaseComponent3D</a>
+            Extends <a href="../classes/BaseComponent2D.html" class="crosslink">BaseComponent2D</a>
         </div>
     
 
@@ -351,8 +351,7 @@
 
     
         
-            Module: <a href="../modules/Component.html">Component</a><br>
-            Parent Module: <a href="../modules/Wanaplan.html">Wanaplan</a>
+            Module: <a href="../modules/Wanaplan.html">Wanaplan</a>
         
     
 
@@ -364,18 +363,17 @@
 
 <h3>Summary</h3>
 <div class="intro">
-    <p>This component is responsible for handling the object moving by drag an drop.
-Listens to the drag event, solves it by detecting the object under the cursor.
-When a draggable object is dragged, solve the new position computation using the projection of the cursor on the scene.
-Then apply the move using the TransformComponent3D.</p>
+    <p>This component is used to zoom or dezoom the 2D canvas with a double tap on the screen.
+Double tap on the left of the screen for a dezoom and on the right of the screen for a zoom.
+The zoom factor can be modified. It&#39;s possible to use this feature with a the double click mouse event.</p>
 
 </div>
 
 
     <div class="constructor">
         <h2>Constructor</h2>
-        <div id="method_DragComponent3D" class="method item">
-  <h3 class="blue-method-name">DragComponent3D</h3>
+        <div id="method_DGM_ZoomComponent" class="method item">
+  <h3 class="blue-method-name">DGM_ZoomComponent</h3>
 
   <div class="meta method-meta">
     
@@ -396,7 +394,7 @@ Then apply the move using the TransformComponent3D.</p>
 
   <h3>Syntax</h3>
   <div class="blue-method-syntax">
-  <h3 class="name"><code>DragComponent3D</code></h3>
+  <h3 class="name"><code>DGM_ZoomComponent</code></h3>
 
     
         <div class="args">
@@ -481,8 +479,6 @@ Then apply the move using the TransformComponent3D.</p>
         
         
         
-            <li class="api-class-tab events"><a href="#events">Events</a></li>
-        
     </ul>
 
     <div>
@@ -495,8 +491,8 @@ Then apply the move using the TransformComponent3D.</p>
 
                     <ul class="index-list methods extends">
                         
-                            <li class="index-item method private inherited">
-                                <a href="#method_compute">compute</a>
+                            <li class="index-item method private">
+                                <a href="#method__onDoubleTap">_onDoubleTap</a>
 
                                 
                                 
@@ -524,7 +520,14 @@ Then apply the move using the TransformComponent3D.</p>
                             </li>
                         
                             <li class="index-item method inherited">
-                                <a href="#method_getFloor">getFloor</a>
+                                <a href="#method_getTargeted">getTargeted</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_getZoomFactor">getZoomFactor</a>
 
                                 
                                 
@@ -539,6 +542,20 @@ Then apply the move using the TransformComponent3D.</p>
                         
                             <li class="index-item method inherited">
                                 <a href="#method_onContextChanged">onContextChanged</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setMouseEnabled">setMouseEnabled</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method">
+                                <a href="#method_setZoomFactor">setZoomFactor</a>
 
                                 
                                 
@@ -576,14 +593,14 @@ Then apply the move using the TransformComponent3D.</p>
                     <ul class="index-list properties extends">
                         
                             <li class="index-item property inherited">
-                                <a href="#property_keyboardManager">keyboardManager</a>
+                                <a href="#property_name">name</a>
 
                                 
                                 
                             </li>
                         
                             <li class="index-item property inherited">
-                                <a href="#property_name">name</a>
+                                <a href="#property_priority">priority</a>
 
                                 
                                 
@@ -603,28 +620,6 @@ Then apply the move using the TransformComponent3D.</p>
             
 
             
-                <div class="index-section events">
-                    <h3>Events</h3>
-
-                    <ul class="index-list events extends">
-                        
-                            <li class="index-item event">
-                                <a href="#event_wnp.request.disable-orbit-camera">wnp.request.disable-orbit-camera</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item event">
-                                <a href="#event_wnp.request.enable-orbit-camera">wnp.request.enable-orbit-camera</a>
-
-                                
-                                
-                            </li>
-                        
-                    </ul>
-                </div>
-            
         </div>
 
         
@@ -632,14 +627,15 @@ Then apply the move using the TransformComponent3D.</p>
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_compute" class="method item private inherited">
-  <h3 class="blue-method-name">compute</h3>
+                    <div id="method__onDoubleTap" class="method item private">
+  <h3 class="blue-method-name">_onDoubleTap</h3>
 
   <div class="meta method-meta">
     
       
-      <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_compute">BaseComponent3D</a>:
+        
+      <p>
+        
       
     
     
@@ -653,10 +649,20 @@ Then apply the move using the TransformComponent3D.</p>
 
   <h3>Syntax</h3>
   <div class="blue-method-syntax">
-  <h3 class="name"><code>compute</code></h3>
+  <h3 class="name"><code>_onDoubleTap</code></h3>
 
     
-        <span class="paren">()</span>
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>event</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
     
 
     
@@ -678,10 +684,34 @@ Then apply the move using the TransformComponent3D.</p>
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Recompute of the component.</p>
+        <p>Called on a double tap/dougle click event. It increases or decreases the zoom.</p>
 
     </div>
 
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">event</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The event.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
     
 
     
@@ -700,7 +730,7 @@ Then apply the move using the TransformComponent3D.</p>
     
       
       <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_destroy">BaseComponent3D</a>:
+        <a href="../classes/BaseComponent2D.html#method_destroy">BaseComponent2D</a>:
       
     
     
@@ -737,7 +767,7 @@ Then apply the move using the TransformComponent3D.</p>
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Destructor.</p>
+        <p>Method called when the component is destroyed</p>
 
     </div>
 
@@ -759,7 +789,7 @@ Then apply the move using the TransformComponent3D.</p>
     
       
       <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_disable">BaseComponent3D</a>:
+        <a href="../classes/BaseComponent2D.html#method_disable">BaseComponent2D</a>:
       
     
     
@@ -818,7 +848,7 @@ Then apply the move using the TransformComponent3D.</p>
     
       
       <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_enable">BaseComponent3D</a>:
+        <a href="../classes/BaseComponent2D.html#method_enable">BaseComponent2D</a>:
       
     
     
@@ -870,14 +900,14 @@ Then apply the move using the TransformComponent3D.</p>
 </div>
 
                 
-                    <div id="method_getFloor" class="method item inherited">
-  <h3 class="blue-method-name">getFloor</h3>
+                    <div id="method_getTargeted" class="method item inherited">
+  <h3 class="blue-method-name">getTargeted</h3>
 
   <div class="meta method-meta">
     
       
       <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_getFloor">BaseComponent3D</a>:
+        <a href="../classes/BaseComponent2D.html#method_getTargeted">BaseComponent2D</a>:
       
     
     
@@ -891,7 +921,7 @@ Then apply the move using the TransformComponent3D.</p>
 
   <h3>Syntax</h3>
   <div class="blue-method-syntax">
-  <h3 class="name"><code>getFloor</code></h3>
+  <h3 class="name"><code>getTargeted</code></h3>
 
     
         <div class="args">
@@ -899,7 +929,7 @@ Then apply the move using the TransformComponent3D.</p>
             
                 <li class="arg">
                     
-                        <code class="optional">[structure]</code>
+                        <code>vector</code>
                     
                 </li>
             
@@ -909,7 +939,7 @@ Then apply the move using the TransformComponent3D.</p>
 
     
         <span class="returns-inline">
-            <span class="type">BABYLON.Mesh</span>
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
         </span>
     
 
@@ -928,7 +958,7 @@ Then apply the move using the TransformComponent3D.</p>
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Gets the 3D mesh of the floor structure in parameter (by default current floor).</p>
+        <p>Finds out if the given position is over an element handled by the component</p>
 
     </div>
 
@@ -940,15 +970,14 @@ Then apply the move using the TransformComponent3D.</p>
             
                 <li class="param">
                     
-                        <code class="param-name optional">[structure]</code>
-                        <span class="type"><a href="../classes/FloorStructure.html" class="crosslink">FloorStructure</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                        <code class="param-name">vector</code>
+                        <span class="type">Vector</span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>The floor structure.</p>
+                        <p>A position, usually the cursor&#39;s one.</p>
 
                     </div>
 
@@ -965,11 +994,11 @@ Then apply the move using the TransformComponent3D.</p>
 
             <div class="returns-description">
               
-                <span class="type">BABYLON.Mesh</span>:
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
               
               
                 <div class="blue-return-desc">
-                    <p>The floor mesh in 3D.</p>
+                    <p>The targeted element, or null if nothing is found.</p>
 
                 </div>
               
@@ -986,14 +1015,97 @@ Then apply the move using the TransformComponent3D.</p>
 </div>
 
                 
-                    <div id="method_initialize" class="method item inherited">
-  <h3 class="blue-method-name">initialize</h3>
+                    <div id="method_getZoomFactor" class="method item">
+  <h3 class="blue-method-name">getZoomFactor</h3>
 
   <div class="meta method-meta">
     
       
-      <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_initialize">BaseComponent3D</a>:
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>getZoomFactor</code></h3>
+
+    
+        <span class="paren">()</span>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Gets the zoom factor.</p>
+
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns the zoom factor.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_initialize" class="method item">
+  <h3 class="blue-method-name">initialize</h3>
+
+  <div class="meta method-meta">
+    
+    <p>Inherited from
+      <a href="../classes/BaseComponent2D.html#method_initialize">
+        BaseComponent2D
+      </a>
       
     
     
@@ -1030,8 +1142,7 @@ Then apply the move using the TransformComponent3D.</p>
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Method called when Wanaplan is initialized.
-You don&#39;t need to call this method manually.</p>
+        <p>Initializes the component.</p>
 
     </div>
 
@@ -1053,7 +1164,7 @@ You don&#39;t need to call this method manually.</p>
     
       
       <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_onContextChanged">BaseComponent3D</a>:
+        <a href="../classes/BaseComponent2D.html#method_onContextChanged">BaseComponent2D</a>:
       
     
     
@@ -1139,14 +1250,203 @@ You don&#39;t need to call this method manually.</p>
 </div>
 
                 
-                    <div id="method_startListening" class="method item inherited">
-  <h3 class="blue-method-name">startListening</h3>
+                    <div id="method_setMouseEnabled" class="method item">
+  <h3 class="blue-method-name">setMouseEnabled</h3>
 
   <div class="meta method-meta">
     
       
-      <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_startListening">BaseComponent3D</a>:
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>setMouseEnabled</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>enabled</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Enabled or disable the mouse support.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">enabled</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Set to <code>true</code> to enable the mouse support, otherwise set it to <code>false</code>.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_setZoomFactor" class="method item">
+  <h3 class="blue-method-name">setZoomFactor</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>setZoomFactor</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>zoomFactor</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Sets the zoom factor.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">zoomFactor</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The desired zoom factor.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_startListening" class="method item">
+  <h3 class="blue-method-name">startListening</h3>
+
+  <div class="meta method-meta">
+    
+    <p>Inherited from
+      <a href="../classes/BaseComponent2D.html#method_startListening">
+        BaseComponent2D
+      </a>
       
     
     
@@ -1183,7 +1483,7 @@ You don&#39;t need to call this method manually.</p>
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Calls all the event listeners.</p>
+        <p>Starts the event listeners.</p>
 
     </div>
 
@@ -1198,14 +1498,15 @@ You don&#39;t need to call this method manually.</p>
 </div>
 
                 
-                    <div id="method_stopListening" class="method item inherited">
+                    <div id="method_stopListening" class="method item">
   <h3 class="blue-method-name">stopListening</h3>
 
   <div class="meta method-meta">
     
-      
-      <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_stopListening">BaseComponent3D</a>:
+    <p>Inherited from
+      <a href="../classes/BaseComponent2D.html#method_stopListening">
+        BaseComponent2D
+      </a>
       
     
     
@@ -1242,7 +1543,7 @@ You don&#39;t need to call this method manually.</p>
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Removes all the event listeners.</p>
+        <p>Stop the event listeners.</p>
 
     </div>
 
@@ -1264,7 +1565,7 @@ You don&#39;t need to call this method manually.</p>
     
       
       <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#method_update">BaseComponent3D</a>:
+        <a href="../classes/BaseComponent2D.html#method_update">BaseComponent2D</a>:
       
     
     
@@ -1281,17 +1582,7 @@ You don&#39;t need to call this method manually.</p>
   <h3 class="name"><code>update</code></h3>
 
     
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>deltaTime</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
     
 
     
@@ -1311,34 +1602,10 @@ You don&#39;t need to call this method manually.</p>
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Updates the dynamic part of the component.</p>
+        <p>Generic update method, called on every frame</p>
 
     </div>
 
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">deltaTime</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The time interval.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
     
 
     
@@ -1358,56 +1625,6 @@ You don&#39;t need to call this method manually.</p>
                 <h2 class="off-left">Properties</h2>
 
                 
-                    <div id="property_keyboardManager" class="property item inherited">
-
-  <h3 class="blue-method-name">keyboardManager</h3>
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#property_keyboardManager">BaseComponent3D</a>:
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>keyboardManager</code></h3>
-    <span class="type"><a href="../classes/wnp.KeyboardManager.html" class="crosslink">wnp.KeyboardManager</a></span>
-
-    
-
-    
-
-    
-
-    
-
-    </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Instance of the Keyboard Manager (shortcut to wanaplan.keyboardManager).</p>
-
-    </div>
-
-    
-
-    
-
-  
-
-  
-
-</div>
-
-                
                     <div id="property_name" class="property item inherited">
 
   <h3 class="blue-method-name">name</h3>
@@ -1415,7 +1632,7 @@ You don&#39;t need to call this method manually.</p>
     
       
       <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#property_name">BaseComponent3D</a>:
+        <a href="../classes/BaseComponent2D.html#property_name">BaseComponent2D</a>:
       
     
     
@@ -1443,7 +1660,57 @@ You don&#39;t need to call this method manually.</p>
 
     <div class="description">
       <h3>Summary</h3>
-        <p>Name of the component.</p>
+        <p>Component name</p>
+
+    </div>
+
+    
+
+    
+
+  
+
+  
+
+</div>
+
+                
+                    <div id="property_priority" class="property item inherited">
+
+  <h3 class="blue-method-name">priority</h3>
+  <div class="meta method-meta">
+    
+      
+      <p>Inherited from
+        <a href="../classes/BaseComponent2D.html#property_priority">BaseComponent2D</a>:
+      
+    
+    
+  </p>
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+    <h3 class="name"><code>priority</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    </div>
+
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Priority of the component in the &quot;update&quot; and &quot;draw&quot; routines</p>
 
     </div>
 
@@ -1465,7 +1732,7 @@ You don&#39;t need to call this method manually.</p>
     
       
       <p>Inherited from
-        <a href="../classes/BaseComponent3D.html#property_structure">BaseComponent3D</a>:
+        <a href="../classes/BaseComponent2D.html#property_structure">BaseComponent2D</a>:
       
     
     
@@ -1493,7 +1760,8 @@ You don&#39;t need to call this method manually.</p>
 
     <div class="description">
       <h3>Summary</h3>
-        <p>Instance of the structure (shortcut to wanaplan.structure).</p>
+        <p>Structure file instance (shortcut to wanaplan.structure).
+This is the base object where the whole plan is saved</p>
 
     </div>
 
@@ -1513,110 +1781,6 @@ You don&#39;t need to call this method manually.</p>
 
         
 
-        
-            <div id="events" class="api-class-tabpanel">
-                <h2 class="off-left">Events</h2>
-
-                
-                    <div id="event_wnp.request.disable-orbit-camera" class="events item">
-    <h3 class="blue-method-name">wnp.request.disable-orbit-camera</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>wnp.request.disable-orbit-camera</code></h3>
-    <span class="type"></span>
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Fired to disable the orbit camera.</p>
-
-    </div>
-
-    
-
-
-    
-
-  
-
-</div>
-
-                
-                    <div id="event_wnp.request.enable-orbit-camera" class="events item">
-    <h3 class="blue-method-name">wnp.request.enable-orbit-camera</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>wnp.request.enable-orbit-camera</code></h3>
-    <span class="type"></span>
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Fired to enable the orbit camera.</p>
-
-    </div>
-
-    
-
-
-    
-
-  
-
-</div>
-
-                
-            </div>
         
     </div>
 </div>

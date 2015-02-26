@@ -18,7 +18,7 @@
             <h1 class="blue-main-title">WanaPlan</h1>
         </div>
         <div class="yui3-u-1-4 version project-version">
-            API Docs for: 2.4.2
+            API Docs for: 2.4.3
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -79,6 +79,8 @@
                 <li><a href="../classes/DGM_LoadComponent.html">DGM_LoadComponent</a></li>
             
                 <li><a href="../classes/DGM_SaveComponent.html">DGM_SaveComponent</a></li>
+            
+                <li><a href="../classes/DGM_ZoomComponent.html">DGM_ZoomComponent</a></li>
             
                 <li><a href="../classes/DragComponent3D.html">DragComponent3D</a></li>
             
@@ -930,7 +932,7 @@
             
                 <li class="arg">
                     
-                        <code class="optional">[options]</code>
+                        <code>options</code>
                     
                 </li>
             
@@ -972,7 +974,7 @@
                 <li class="param">
                     
                         <code class="param-name">a</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type">BABYLON.Vector2</span>
                     
 
                     
@@ -988,7 +990,7 @@
                 <li class="param">
                     
                         <code class="param-name">b</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type">BABYLON.Vector2</span>
                     
 
                     
@@ -1003,9 +1005,8 @@
             
                 <li class="param">
                     
-                        <code class="param-name optional">[options]</code>
+                        <code class="param-name">options</code>
                         <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
                     
 
                     
@@ -1020,9 +1021,8 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[height=250]</code>
+                                    <code class="param-name">height</code>
                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
@@ -1035,9 +1035,8 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[tickness=25]</code>
+                                    <code class="param-name">tickness</code>
                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
@@ -1119,7 +1118,7 @@
             
                 <li class="arg">
                     
-                        <code class="optional">[options]</code>
+                        <code>options</code>
                     
                 </li>
             
@@ -1161,7 +1160,7 @@
                 <li class="param">
                     
                         <code class="param-name">polygon</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object[]</a></span>
+                        <span class="type">BABYLON.Vector2</span>
                     
 
                     
@@ -1176,9 +1175,8 @@
             
                 <li class="param">
                     
-                        <code class="param-name optional">[options]</code>
+                        <code class="param-name">options</code>
                         <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
                     
 
                     
@@ -1193,9 +1191,8 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[height=250]</code>
+                                    <code class="param-name">height</code>
                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
@@ -1208,9 +1205,8 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[tickness=25]</code>
+                                    <code class="param-name">tickness</code>
                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
@@ -1223,9 +1219,8 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[line=false]</code>
+                                    <code class="param-name">line</code>
                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
@@ -1254,7 +1249,7 @@
               
               
                 <div class="blue-return-desc">
-                    <p>The added walls</p>
+                    <p>The added walls.</p>
 
                 </div>
               
@@ -2264,7 +2259,7 @@
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Checks if the floor geometry has been dirtied</p>
+        <p>Checks if the floor geometry has been dirtied.</p>
 
     </div>
 
@@ -2339,7 +2334,7 @@
             
                 <li class="arg">
                     
-                        <code class="optional">[options]</code>
+                        <code>options</code>
                     
                 </li>
             
@@ -2383,7 +2378,7 @@
                 <li class="param">
                     
                         <code class="param-name">a</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type">BABYLON.Vector2</span>
                     
 
                     
@@ -2399,7 +2394,7 @@
                 <li class="param">
                     
                         <code class="param-name">b</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type">BABYLON.Vector2</span>
                     
 
                     
@@ -2414,9 +2409,8 @@
             
                 <li class="param">
                     
-                        <code class="param-name optional">[options]</code>
+                        <code class="param-name">options</code>
                         <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
                     
 
                     
@@ -2431,9 +2425,8 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[height=250]</code>
+                                    <code class="param-name">height</code>
                                     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-                                    <span class="flag optional" title="This parameter is optional.">optional</span>
                                 
 
                                 <div class="param-description">
@@ -2446,9 +2439,8 @@
                             
                             <li class="param">
                                 
-                                    <code class="param-name optional">[tickness=25]</code>
-                                    <span class="type">Numebr</span>
-                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+                                    <code class="param-name">tickness</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
                                 
 
                                 <div class="param-description">

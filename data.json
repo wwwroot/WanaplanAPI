@@ -2,7 +2,7 @@
     "project": {
         "name": "WanaPlan",
         "description": "",
-        "version": "2.4.2",
+        "version": "2.4.3",
         "url": "http://www.wanaplan.com/"
     },
     "files": {
@@ -779,8 +779,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "js\\Components\\StandaloneComponent\\DGM_LoadComponent.js": {
-            "name": "js\\Components\\StandaloneComponent\\DGM_LoadComponent.js",
+        "js\\Components\\StandaloneComponent\\Assets\\DGMLoadComponent.js": {
+            "name": "js\\Components\\StandaloneComponent\\Assets\\DGMLoadComponent.js",
             "modules": {},
             "classes": {
                 "DGM_LoadComponent": 1
@@ -788,11 +788,20 @@
             "fors": {},
             "namespaces": {}
         },
-        "js\\Components\\StandaloneComponent\\DGM_SaveComponent.js": {
-            "name": "js\\Components\\StandaloneComponent\\DGM_SaveComponent.js",
+        "js\\Components\\StandaloneComponent\\Assets\\DGMSaveComponent.js": {
+            "name": "js\\Components\\StandaloneComponent\\Assets\\DGMSaveComponent.js",
             "modules": {},
             "classes": {
                 "DGM_SaveComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js": {
+            "name": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "modules": {},
+            "classes": {
+                "DGM_ZoomComponent": 1
             },
             "fors": {},
             "namespaces": {}
@@ -1486,6 +1495,7 @@
                 "HardwareScalingComponent3D": 1,
                 "DGM_LoadComponent": 1,
                 "DGM_SaveComponent": 1,
+                "DGM_ZoomComponent": 1,
                 "SA_ConnectionStatusDetector": 1,
                 "SA_Timer": 1,
                 "SA_DatabaseManager": 1,
@@ -3339,7 +3349,7 @@
             "extension_for": [],
             "module": "Wanaplan",
             "namespace": "",
-            "file": "js\\Components\\StandaloneComponent\\DGM_LoadComponent.js",
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMLoadComponent.js",
             "line": 2,
             "description": "A component used to load a stored plan in IndexedDB by its uuid.",
             "is_constructor": 1,
@@ -3362,9 +3372,32 @@
             "extension_for": [],
             "module": "Wanaplan",
             "namespace": "",
-            "file": "js\\Components\\StandaloneComponent\\DGM_SaveComponent.js",
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMSaveComponent.js",
             "line": 4,
             "description": "A component that send some informations about a plan when it's saved using the `WebSocket` API.",
+            "is_constructor": 1,
+            "extends": "BaseComponent2D",
+            "params": [
+                {
+                    "name": "core",
+                    "description": "The main engine.",
+                    "type": "Core"
+                }
+            ]
+        },
+        "DGM_ZoomComponent": {
+            "name": "DGM_ZoomComponent",
+            "shortname": "DGM_ZoomComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Wanaplan",
+            "namespace": "",
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "line": 2,
+            "description": "This component is used to zoom or dezoom the 2D canvas with a double tap on the screen.\nDouble tap on the left of the screen for a dezoom and on the right of the screen for a zoom.\nThe zoom factor can be modified. It's possible to use this feature with a the double click mouse event.",
             "is_constructor": 1,
             "extends": "BaseComponent2D",
             "params": [
@@ -4285,7 +4318,7 @@
             "submodule": "Helpers",
             "namespace": "wnp",
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 541,
+            "line": 535,
             "description": "Is relative to an animation started with computeAnimation.\nExposes functions which control the animation.\nAn `AnimationCancelor` object is returned by computed animation, and this class should not be instanciated in any another way."
         },
         "Controls": {
@@ -5761,7 +5794,7 @@
         {
             "file": "js\\Components\\CoreComponents\\Floor\\FloorStructure.js",
             "line": 161,
-            "description": "Checks if the floor geometry has been dirtied",
+            "description": "Checks if the floor geometry has been dirtied.",
             "itemtype": "method",
             "name": "isDirty",
             "return": {
@@ -5961,40 +5994,33 @@
                 {
                     "name": "polygon",
                     "description": "The 2D polygon, is an array of point objects which must have x and y attribute ( BABYLON.Vector2 for example ). The polygon does not need to repeat the first and last elements, it's already considered closed.",
-                    "type": "Object[]"
+                    "type": "BABYLON.Vector2[]"
                 },
                 {
                     "name": "options",
                     "description": "Set of options",
                     "type": "Object",
-                    "optional": true,
                     "props": [
                         {
                             "name": "height",
                             "description": "The height of the walls",
-                            "type": "Number",
-                            "optional": true,
-                            "optdefault": "250"
+                            "type": "Number"
                         },
                         {
                             "name": "tickness",
                             "description": "The thickness of the walls",
-                            "type": "Number",
-                            "optional": true,
-                            "optdefault": "25"
+                            "type": "Number"
                         },
                         {
                             "name": "line",
                             "description": "true if the polygon is a line, will connect the last and first point if left to false",
-                            "type": "Boolean",
-                            "optional": true,
-                            "optdefault": "false"
+                            "type": "Boolean"
                         }
                     ]
                 }
             ],
             "return": {
-                "description": "The added walls",
+                "description": "The added walls.",
                 "type": "WallStructure[]"
             },
             "class": "FloorStructure",
@@ -6003,7 +6029,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Floor\\FloorStructure.js",
-            "line": 445,
+            "line": 444,
             "description": "Adds one wall to the floor. The wall will be merged with the existing walls of the floor if needed.",
             "itemtype": "method",
             "name": "addOneWall",
@@ -6011,32 +6037,27 @@
                 {
                     "name": "a",
                     "description": "The first point, must have x and y attribute ( BABYLON.Vector2 for example ).",
-                    "type": "Object"
+                    "type": "BABYLON.Vector2"
                 },
                 {
                     "name": "b",
                     "description": "The second point, must have x and y attribute ( BABYLON.Vector2 for example ).",
-                    "type": "Object"
+                    "type": "BABYLON.Vector2"
                 },
                 {
                     "name": "options",
                     "description": "Set of options",
                     "type": "Object",
-                    "optional": true,
                     "props": [
                         {
                             "name": "height",
                             "description": "The height of the wall",
-                            "type": "Number",
-                            "optional": true,
-                            "optdefault": "250"
+                            "type": "Number"
                         },
                         {
                             "name": "tickness",
                             "description": "The thickness of the wall",
-                            "type": "Number",
-                            "optional": true,
-                            "optdefault": "25"
+                            "type": "Number"
                         }
                     ]
                 }
@@ -6051,7 +6072,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Floor\\FloorStructure.js",
-            "line": 498,
+            "line": 497,
             "description": "Instanciates a WallStructure with the desired parameters",
             "access": "private",
             "tagname": "",
@@ -6061,32 +6082,27 @@
                 {
                     "name": "a",
                     "description": "The first point, must have x and y attribute ( BABYLON.Vector2 for exemple ).",
-                    "type": "Object"
+                    "type": "BABYLON.Vector2"
                 },
                 {
                     "name": "b",
                     "description": "The second point, must have x and y attribute ( BABYLON.Vector2 for exemple ).",
-                    "type": "Object"
+                    "type": "BABYLON.Vector2"
                 },
                 {
                     "name": "options",
                     "description": "Set of options",
                     "type": "Object",
-                    "optional": true,
                     "props": [
                         {
                             "name": "height",
                             "description": "The height of the walls",
-                            "type": "Number",
-                            "optional": true,
-                            "optdefault": "250"
+                            "type": "Number"
                         },
                         {
                             "name": "tickness",
                             "description": "The thickness of the walls",
-                            "type": "Numebr",
-                            "optional": true,
-                            "optdefault": "25"
+                            "type": "Number"
                         }
                     ]
                 }
@@ -18227,7 +18243,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 136,
+            "line": 139,
             "description": "Creates the sky according to parameter URL.\nIf no URL is specified then the default Skybox is created.\nFor compatibility reason, a skysphere can be generated instead of a skybox.",
             "itemtype": "method",
             "name": "createSky",
@@ -18244,7 +18260,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 226,
+            "line": 229,
             "description": "Setups the lights in the scene.",
             "itemtype": "method",
             "name": "setupLights",
@@ -18253,7 +18269,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 261,
+            "line": 264,
             "description": "Fired to request a save of the history.",
             "itemtype": "event",
             "name": "wnp.request.saveHistory",
@@ -18262,7 +18278,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 267,
+            "line": 270,
             "description": "Changes the aspect of the ground.\nTriggered on `wnp.engine3D.changeGround`",
             "itemtype": "method",
             "name": "onChangeGround",
@@ -18278,7 +18294,7 @@
         },
         {
             "file": "js\\Components\\GridComponent\\GridComponent3D.js",
-            "line": 290,
+            "line": 293,
             "description": "Changes the aspect of the sky.\nTriggered on `wnp.engine3D.changeSky`",
             "itemtype": "method",
             "name": "onChangeSky",
@@ -19533,7 +19549,7 @@
             "submodule": "Component"
         },
         {
-            "file": "js\\Components\\StandaloneComponent\\DGM_LoadComponent.js",
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMLoadComponent.js",
             "line": 17,
             "description": "Initialize the component by trying to load a plan by its uuid.",
             "itemtype": "method",
@@ -19542,7 +19558,7 @@
             "module": "Wanaplan"
         },
         {
-            "file": "js\\Components\\StandaloneComponent\\DGM_LoadComponent.js",
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMLoadComponent.js",
             "line": 33,
             "description": "Try to load a plan by its uuid. The component is destroyed",
             "itemtype": "method",
@@ -19558,7 +19574,7 @@
             "module": "Wanaplan"
         },
         {
-            "file": "js\\Components\\StandaloneComponent\\DGM_SaveComponent.js",
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMSaveComponent.js",
             "line": 18,
             "description": "Initialize the component.",
             "itemtype": "method",
@@ -19567,7 +19583,7 @@
             "module": "Wanaplan"
         },
         {
-            "file": "js\\Components\\StandaloneComponent\\DGM_SaveComponent.js",
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMSaveComponent.js",
             "line": 26,
             "description": "Send informations to the application using a WebSocket.",
             "itemtype": "method",
@@ -19580,6 +19596,96 @@
                 }
             ],
             "class": "DGM_SaveComponent",
+            "module": "Wanaplan"
+        },
+        {
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "line": 22,
+            "description": "Initializes the component.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "DGM_ZoomComponent",
+            "module": "Wanaplan"
+        },
+        {
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "line": 36,
+            "description": "Starts the event listeners.",
+            "itemtype": "method",
+            "name": "startListening",
+            "class": "DGM_ZoomComponent",
+            "module": "Wanaplan"
+        },
+        {
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "line": 52,
+            "description": "Stop the event listeners.",
+            "itemtype": "method",
+            "name": "stopListening",
+            "class": "DGM_ZoomComponent",
+            "module": "Wanaplan"
+        },
+        {
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "line": 68,
+            "description": "Enabled or disable the mouse support.",
+            "itemtype": "method",
+            "name": "setMouseEnabled",
+            "params": [
+                {
+                    "name": "enabled",
+                    "description": "Set to `true` to enable the mouse support, otherwise set it to `false`.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "DGM_ZoomComponent",
+            "module": "Wanaplan"
+        },
+        {
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "line": 86,
+            "description": "Sets the zoom factor.",
+            "itemtype": "method",
+            "name": "setZoomFactor",
+            "params": [
+                {
+                    "name": "zoomFactor",
+                    "description": "The desired zoom factor.",
+                    "type": "Number"
+                }
+            ],
+            "class": "DGM_ZoomComponent",
+            "module": "Wanaplan"
+        },
+        {
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "line": 97,
+            "description": "Gets the zoom factor.",
+            "itemtype": "method",
+            "name": "getZoomFactor",
+            "return": {
+                "description": "Returns the zoom factor.",
+                "type": "Number"
+            },
+            "class": "DGM_ZoomComponent",
+            "module": "Wanaplan"
+        },
+        {
+            "file": "js\\Components\\StandaloneComponent\\Assets\\DGMZoomComponent.js",
+            "line": 106,
+            "description": "Called on a double tap/dougle click event. It increases or decreases the zoom.",
+            "itemtype": "method",
+            "name": "_onDoubleTap",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The event.",
+                    "type": "Object"
+                }
+            ],
+            "class": "DGM_ZoomComponent",
             "module": "Wanaplan"
         },
         {
@@ -24129,7 +24235,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 112,
+            "line": 118,
             "description": "Apply transformation to a mesh and sets its parent.",
             "itemtype": "method",
             "name": "applyTransform",
@@ -24157,7 +24263,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 133,
+            "line": 139,
             "description": "Apply transformations to a set of meshes recursively.",
             "itemtype": "method",
             "name": "applyTransformRecursive",
@@ -24180,7 +24286,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 164,
+            "line": 170,
             "description": "Gets the index of a mesh by its name.",
             "itemtype": "method",
             "name": "indexOf",
@@ -24207,7 +24313,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 182,
+            "line": 188,
             "description": "Generates meshes from json data.",
             "itemtype": "method",
             "name": "generateMeshes",
@@ -24239,7 +24345,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 232,
+            "line": 238,
             "description": "Generate materials from json data.",
             "itemtype": "method",
             "name": "generateMaterials",
@@ -24281,7 +24387,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 346,
+            "line": 348,
             "description": "Generate textures from json data.",
             "itemtype": "method",
             "name": "genreateTextures",
@@ -24303,7 +24409,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 368,
+            "line": 370,
             "description": "Gets the name of a texture by extracting it via its path.",
             "itemtype": "method",
             "name": "_getTextureName",
@@ -24330,7 +24436,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 382,
+            "line": 384,
             "description": "Gets a color from an array.",
             "itemtype": "method",
             "name": "_toColor",
@@ -24352,7 +24458,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 393,
+            "line": 395,
             "description": "Gets an `Array` of indice from an array.",
             "itemtype": "method",
             "name": "_toIndices",
@@ -24524,7 +24630,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 195,
+            "line": 194,
             "description": "Applies transparency to wall materials based on the position and target of the camera.\nUsed to see through walls and roofs.",
             "itemtype": "method",
             "name": "dynamicWallTransparency",
@@ -24535,7 +24641,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 234,
+            "line": 228,
             "description": "Sets all walls to opaque for a given floor.",
             "itemtype": "method",
             "name": "makeWallsOpaque",
@@ -24554,7 +24660,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 267,
+            "line": 261,
             "description": "Sets all walls to opaque when the 3D mode is enabled.\nTriggered on `wnp.contextChanged`",
             "itemtype": "method",
             "name": "onContextChanged",
@@ -24574,7 +24680,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 280,
+            "line": 274,
             "description": "Handler which will apply transparency only on walls at the current floor.\nTriggered on `wnp.engine3D.allFloorsReady`",
             "itemtype": "method",
             "name": "onGlobaleFloorReady",
@@ -24594,7 +24700,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 296,
+            "line": 290,
             "description": "Gets the best focus radius for the camera to be in the best setup, in order to see the whole mesh.  \n_N.B_ : The current position and target of the camera is irrelevant, this function will work anyway.",
             "itemtype": "method",
             "name": "getBestFocusRadius",
@@ -24626,7 +24732,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 321,
+            "line": 315,
             "description": "Computes the best camera state to focus on an object. Only works with an `OrbitCamera`.",
             "itemtype": "method",
             "name": "computeCameraStateLooking",
@@ -24659,7 +24765,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 431,
+            "line": 425,
             "description": "Fired when the 3D camera has moved.",
             "itemtype": "event",
             "name": "wnp.engine3D.camera.move",
@@ -24670,7 +24776,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 437,
+            "line": 431,
             "description": "Computes an animation by given an amnimatable object , source state and destination state, compute the animations babylon way and start play it",
             "params": [
                 {
@@ -24750,7 +24856,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 558,
+            "line": 552,
             "description": "Cancels the animation.",
             "itemtype": "method",
             "name": "cancel",
@@ -24761,7 +24867,7 @@
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
-            "line": 572,
+            "line": 566,
             "description": "Handler called when an animation is done.",
             "itemtype": "method",
             "name": "_onAnimationEnd",
@@ -26556,7 +26662,7 @@
         },
         {
             "file": "js\\Helpers\\HTMLHelper.js",
-            "line": 70,
+            "line": 71,
             "description": "Load a collection of scripts. Here are two methods to load scripts.\n1. A simple array with urls [ \"script.js\", \"script2.js\" ] \n2. An array of dictionary [ { MyObject: \"myObjectScript.js\" } ]. In this case the function will test if the script is already loaded \n   by using the key of the dictionary as object name.",
             "itemtype": "method",
             "name": "addScripts",
@@ -26593,7 +26699,7 @@
         },
         {
             "file": "js\\Helpers\\HTMLHelper.js",
-            "line": 131,
+            "line": 132,
             "description": "Add a CSS file to the page.",
             "itemtype": "method",
             "name": "addStylesheet",
@@ -26626,7 +26732,7 @@
         },
         {
             "file": "js\\Helpers\\HTMLHelper.js",
-            "line": 170,
+            "line": 171,
             "description": "This method simulate a key event. It's used for testing purpose.",
             "itemtype": "method",
             "name": "simulateKey",
@@ -26654,7 +26760,7 @@
         },
         {
             "file": "js\\Helpers\\HTMLHelper.js",
-            "line": 190,
+            "line": 191,
             "description": "This method simulate a mouse event. It's used for testing purpose.",
             "itemtype": "method",
             "name": "simulateClick",

@@ -20,6 +20,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Controls",
         "DGM_LoadComponent",
         "DGM_SaveComponent",
+        "DGM_ZoomComponent",
         "DecorationComponent",
         "DragComponent3D",
         "Dummy",
