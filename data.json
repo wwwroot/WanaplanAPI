@@ -2,7 +2,7 @@
     "project": {
         "name": "WanaPlan",
         "description": "",
-        "version": "2.4.3",
+        "version": "2.4.4",
         "url": "http://www.wanaplan.com/"
     },
     "files": {
@@ -182,7 +182,9 @@
         "js\\Components\\CoreComponents\\Object\\Programmable\\AssimpImporter.js": {
             "name": "js\\Components\\CoreComponents\\Object\\Programmable\\AssimpImporter.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "AssimpImporter": 1
+            },
             "fors": {},
             "namespaces": {}
         },
@@ -1192,12 +1194,16 @@
         },
         "js\\Core\\Assimp2jsonImporter.js": {
             "name": "js\\Core\\Assimp2jsonImporter.js",
-            "modules": {},
+            "modules": {
+                "Helpers": 1
+            },
             "classes": {
-                "AssimpImporter": 1
+                "wnp.Assimp2jsonImporter": 1
             },
             "fors": {},
-            "namespaces": {}
+            "namespaces": {
+                "wnp": 1
+            }
         },
         "js\\Core\\Box3.js": {
             "name": "js\\Core\\Box3.js",
@@ -1208,9 +1214,7 @@
         },
         "js\\Core\\CameraFeatures.js": {
             "name": "js\\Core\\CameraFeatures.js",
-            "modules": {
-                "Helpers": 1
-            },
+            "modules": {},
             "classes": {
                 "wnp.CameraFeatures": 1,
                 "wnp.AnimationCancelor": 1
@@ -1528,6 +1532,7 @@
                 "wnp.Outliner": 1,
                 "Info": 1,
                 "Rotator": 1,
+                "wnp.Assimp2jsonImporter": 1,
                 "wnp.CameraFeatures": 1,
                 "wnp.AnimationCancelor": 1,
                 "Controls": 1,
@@ -1775,6 +1780,7 @@
             "name": "Helpers",
             "submodules": {},
             "classes": {
+                "wnp.Assimp2jsonImporter": 1,
                 "wnp.CameraFeatures": 1,
                 "wnp.AnimationCancelor": 1,
                 "GlobalHelper": 1,
@@ -2114,9 +2120,9 @@
             "extension_for": [],
             "module": "Wanaplan",
             "namespace": "",
-            "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 3,
-            "description": "An importer for assimp2json export.",
+            "file": "js\\Components\\CoreComponents\\Object\\Programmable\\AssimpImporter.js",
+            "line": 5,
+            "description": "A programmable responsible to load and build a mesh using the Assimp2jsonImporter.",
             "is_constructor": 1,
             "extends": "Programmable",
             "params": [
@@ -2135,8 +2141,7 @@
                     "description": "A set of custom parameters.",
                     "type": "Object"
                 }
-            ],
-            "static": 1
+            ]
         },
         "wnp.Programmable": {
             "name": "wnp.Programmable",
@@ -4291,6 +4296,22 @@
                 }
             ]
         },
+        "wnp.Assimp2jsonImporter": {
+            "name": "wnp.Assimp2jsonImporter",
+            "shortname": "wnp.Assimp2jsonImporter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp",
+            "file": "js\\Core\\Assimp2jsonImporter.js",
+            "line": 8,
+            "description": "An importer for assimp2json export.",
+            "static": 1
+        },
         "wnp.CameraFeatures": {
             "name": "wnp.CameraFeatures",
             "shortname": "wnp.CameraFeatures",
@@ -6072,7 +6093,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Floor\\FloorStructure.js",
-            "line": 497,
+            "line": 500,
             "description": "Instanciates a WallStructure with the desired parameters",
             "access": "private",
             "tagname": "",
@@ -7509,7 +7530,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\Programmable\\Programmable.js",
-            "line": 476,
+            "line": 510,
             "description": "Generates a HTML form for the provided parameters.",
             "itemtype": "method",
             "name": "generateFormForObject",
@@ -7536,7 +7557,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\Programmable\\Programmable.js",
-            "line": 553,
+            "line": 587,
             "description": "Get the width parameter.",
             "access": "private",
             "tagname": "",
@@ -7549,7 +7570,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\Programmable\\Programmable.js",
-            "line": 566,
+            "line": 600,
             "description": "Get the height parameter.",
             "access": "private",
             "tagname": "",
@@ -7562,7 +7583,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\Programmable\\Programmable.js",
-            "line": 580,
+            "line": 614,
             "description": "Get the depth parameter.",
             "access": "private",
             "tagname": "",
@@ -8092,7 +8113,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 324,
+            "line": 325,
             "description": "Triggered on Controls event `mousedown`.",
             "itemtype": "method",
             "name": "onMouseDownDerived",
@@ -8109,7 +8130,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 332,
+            "line": 333,
             "description": "Triggered on Controls event `mouseup`.",
             "itemtype": "method",
             "name": "onMouseUpDerived",
@@ -8126,7 +8147,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 340,
+            "line": 341,
             "description": "Triggered on Controls event `mousemove`.",
             "itemtype": "method",
             "name": "onMouseMoveDerived",
@@ -8143,7 +8164,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 348,
+            "line": 349,
             "description": "Triggered on Controls event `before-dragstart`.\nTests if the object is locked before starting to drag.",
             "itemtype": "method",
             "name": "onBeforeDragStart",
@@ -8153,7 +8174,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 362,
+            "line": 363,
             "description": "Triggered on event `wnp.engine3D.click.collided`.\nBehavior : if ctrl is pressed, the object is added to the current group, if the right button is pressed,\nthe `special` event is sent to the widgets.",
             "itemtype": "method",
             "name": "onClickDerived",
@@ -8170,7 +8191,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 388,
+            "line": 389,
             "description": "Triggered on event `wnp.engine3D.dblclick.collided`.\nBehavior : triggers the function `animate` on the underlying mesh.",
             "itemtype": "method",
             "name": "onDoubleClickDerived",
@@ -8187,7 +8208,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 404,
+            "line": 405,
             "description": "Fired when the delete button is pushed while a mesh is selected.",
             "itemtype": "event",
             "name": "wnp.request.object.remove",
@@ -8209,7 +8230,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 412,
+            "line": 413,
             "description": "Triggered on event `wnp.keyboardManager.keyDown`.\nBehavior : When the user uses ctrl-d (duplicates the object) and\nthe delete key (removes the object).",
             "itemtype": "method",
             "name": "onKeyDown",
@@ -8226,7 +8247,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 439,
+            "line": 440,
             "description": "Triggered on event `wnp.request.object.remove`.\nRemoves an object.",
             "itemtype": "method",
             "name": "onRemoveObject",
@@ -8243,7 +8264,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 450,
+            "line": 451,
             "description": "Triggered on event `wnp.request.newPlanReady`.\nCalled when the user clicks on the new plan button.",
             "itemtype": "method",
             "name": "onNewPlan",
@@ -8260,7 +8281,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 461,
+            "line": 462,
             "description": "Triggered on event `wnp.engine3D.object.create`.\nCalled when a mesh is added to the scene.",
             "itemtype": "method",
             "name": "onCreateObject",
@@ -8277,7 +8298,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 490,
+            "line": 491,
             "description": "Triggered on event `wnp.engine3D.object.refresh`.\nCalled when an object is refreshed",
             "itemtype": "method",
             "name": "onRefreshObject",
@@ -8294,7 +8315,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 502,
+            "line": 503,
             "description": "Triggered on event `wnp.engine3D.object.dispose`.\nCalled when an object is removed from the scene.",
             "itemtype": "method",
             "name": "onDispose",
@@ -8311,7 +8332,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 515,
+            "line": 516,
             "description": "Triggered on event `wnp.engine3D.allFloorsReady`.\nCalled when the floor id changes.",
             "itemtype": "method",
             "name": "onDispose",
@@ -8328,7 +8349,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 526,
+            "line": 527,
             "description": "Disables the widgets for an object.",
             "itemtype": "method",
             "name": "disableWidget",
@@ -8338,7 +8359,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 535,
+            "line": 536,
             "description": "Enables the widgets for an object.",
             "itemtype": "method",
             "name": "EnableWidget",
@@ -8348,7 +8369,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 558,
+            "line": 559,
             "description": "Checks if a mesh is selectable.",
             "itemtype": "method",
             "name": "isSelectableObject",
@@ -8369,7 +8390,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 569,
+            "line": 570,
             "description": "Checks if an overture is selectable.",
             "itemtype": "method",
             "name": "isSelectableOverture",
@@ -8390,7 +8411,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 580,
+            "line": 581,
             "description": "Checks if a stairway is selectable.",
             "itemtype": "method",
             "name": "isSelectableStairway",
@@ -8411,7 +8432,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 591,
+            "line": 592,
             "description": "Gets the currently selected object.",
             "itemtype": "method",
             "name": "getSelectedObject",
@@ -8425,7 +8446,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 601,
+            "line": 602,
             "description": "Triggered on Controls event `select`.",
             "itemtype": "method",
             "name": "onSelectObject",
@@ -8442,7 +8463,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 647,
+            "line": 648,
             "description": "Triggered on Controls event `deselect`.",
             "itemtype": "method",
             "name": "onSelectObject",
@@ -8459,7 +8480,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 659,
+            "line": 660,
             "description": "Fired when the history is needed on an action.",
             "itemtype": "event",
             "name": "wnp.request.historyAction",
@@ -8491,7 +8512,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 669,
+            "line": 670,
             "description": "Refreshes an object. Rebuilds the entire 3D object, given the programmable instance it is linked to.",
             "itemtype": "method",
             "name": "refreshObject",
@@ -8513,7 +8534,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 702,
+            "line": 703,
             "description": "Fired to request a save of the history.",
             "itemtype": "event",
             "name": "wnp.request.saveHistory",
@@ -8523,7 +8544,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 708,
+            "line": 709,
             "description": "Fired to clone an object",
             "itemtype": "event",
             "name": "wnp.engine3D.object.clone",
@@ -8533,7 +8554,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 714,
+            "line": 715,
             "description": "Triggered on event `wnp.request.object.clone`.\nCalled when the user clones an object or a group.",
             "itemtype": "method",
             "name": "onCloneObject",
@@ -8543,7 +8564,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 749,
+            "line": 750,
             "itemtype": "event",
             "name": "wnp.editionComponent.removeObject",
             "class": "EditionComponent3D",
@@ -8552,7 +8573,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 755,
+            "line": 756,
             "description": "Removes an object or a group.",
             "itemtype": "method",
             "name": "onCloneObject",
@@ -8574,7 +8595,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 804,
+            "line": 805,
             "description": "TODO",
             "itemtype": "method",
             "name": "onAddToProducts",
@@ -8593,7 +8614,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 878,
+            "line": 884,
             "description": "Adds a history action.",
             "itemtype": "method",
             "name": "addHistory",
@@ -8620,7 +8641,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 901,
+            "line": 907,
             "description": "The undo function for the refresh action.",
             "itemtype": "method",
             "name": "undoRefresh",
@@ -8644,7 +8665,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 913,
+            "line": 919,
             "description": "The redo function for the refresh action.",
             "itemtype": "method",
             "name": "redoRefresh",
@@ -8668,7 +8689,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 925,
+            "line": 931,
             "description": "The function called when undoing/redoing a refresh.",
             "itemtype": "method",
             "name": "historyRefresh",
@@ -8697,7 +8718,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 992,
+            "line": 998,
             "description": "The undo function for the delete action.",
             "itemtype": "method",
             "name": "undoDelete",
@@ -8721,7 +8742,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 1004,
+            "line": 1010,
             "description": "The redo function for the delete action.",
             "itemtype": "method",
             "name": "redoDelete",
@@ -8745,7 +8766,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 1016,
+            "line": 1022,
             "description": "The undo function for the add action.",
             "itemtype": "method",
             "name": "undoAdd",
@@ -8769,7 +8790,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 1025,
+            "line": 1031,
             "description": "The redo function for the add action.",
             "itemtype": "method",
             "name": "redoAdd",
@@ -8793,7 +8814,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 1035,
+            "line": 1041,
             "description": "The function called when undoing/redoing a deletion.",
             "itemtype": "method",
             "name": "historyDelete",
@@ -8822,7 +8843,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 1067,
+            "line": 1073,
             "description": "Setupps the history for the edition actions.",
             "itemtype": "method",
             "name": "setupHistory",
@@ -8832,7 +8853,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 1085,
+            "line": 1091,
             "description": "Returns true if an object or group is locked.\nA group is locked if one of its children is locked.",
             "itemtype": "method",
             "name": "isLocked",
@@ -8853,7 +8874,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 1152,
+            "line": 1158,
             "description": "Disables some behaviors. Registers a key so that the action can only be re-enabled with the same key.\nActions to lock must be passed in parameter as their corresponding flag.\nSupports multi-lock :\n\n  A lock the action ------------------------------------------------------------------- A unlock the action.\n  --------------------- B lock the same action ----------------- B unlock the action -----------------------.\n\n  <-------------------------------action is locked -------------------------------------------------------->.\n\n\n  --------time--------->.",
             "itemtype": "method",
             "name": "lock",
@@ -8876,7 +8897,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\EditionComponent3D.js",
-            "line": 1202,
+            "line": 1208,
             "description": "Re-enables locked behaviors.",
             "itemtype": "method",
             "name": "unlock",
@@ -9297,13 +9318,17 @@
                     "type": "Event"
                 }
             ],
+            "return": {
+                "description": "The created object structure.",
+                "type": "ObjectStructure"
+            },
             "class": "ObjectComponent3D",
             "module": "Wanaplan",
             "submodule": "Component"
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 198,
+            "line": 206,
             "description": "Removes a 3D object from the scene.\nTriggered on event `wnp.engine3D.object.remove`.",
             "itemtype": "method",
             "name": "onRemoveObject",
@@ -9320,7 +9345,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 215,
+            "line": 223,
             "description": "Fired when an object is rebuilt.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.refresh",
@@ -9337,7 +9362,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 222,
+            "line": 230,
             "description": "Rebuilds the object, assuming the structure object has changed (not necessarily the case).\nThe object reference will be kept.\nThis function is asynchronous.",
             "itemtype": "method",
             "name": "refreshObject",
@@ -9360,7 +9385,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 310,
+            "line": 318,
             "description": "Builds a new object, given the object structure and the object params.\nAs this may require to load scripts, the function is asynchronous.\nAppends the object to the floor when it is ready.",
             "itemtype": "method",
             "name": "buildObject",
@@ -9409,7 +9434,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 364,
+            "line": 373,
             "description": "Fired when an object is created.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.create",
@@ -9431,7 +9456,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 372,
+            "line": 381,
             "description": "Prepares the 3D object to be added to the scene, according to its ObjectStructure",
             "itemtype": "method",
             "name": "addObjectToScene",
@@ -9473,7 +9498,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 398,
+            "line": 407,
             "description": "Fired when a mesh is disposed of.",
             "itemtype": "event",
             "name": "wnp.engine3D.object.dispose",
@@ -9490,7 +9515,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 405,
+            "line": 414,
             "description": "Adds several mandatory properties to the object3D.",
             "methode": "prepareObject3D",
             "access": "private",
@@ -9518,7 +9543,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 445,
+            "line": 454,
             "description": "cas d'un rechargement à chaud depuis clic sur etage ou passage 2D 3D\n=> on repositionne les objets groupés dans leur reperes de floor pour eviter que ca pete",
             "class": "ObjectComponent3D",
             "module": "Wanaplan",
@@ -9526,7 +9551,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 488,
+            "line": 497,
             "description": "Gets a value from the parameter. If parameter is undefined then returns the default value.",
             "itemtype": "method",
             "name": "getValue",
@@ -9555,7 +9580,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 502,
+            "line": 511,
             "description": "Gets a type Vector3 object from a litteral JavaScript object with 3 components x, y, z.",
             "itemtype": "method",
             "name": "getVector3",
@@ -9579,7 +9604,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js",
-            "line": 516,
+            "line": 525,
             "description": "Applies shadows to the object and all of its children",
             "itemtype": "method",
             "name": "applyShadow",
@@ -9599,7 +9624,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 47,
+            "line": 50,
             "description": "The path to the programmable file, such as /js/Programmables/ .\nThis supports http requests such as : http://github.com/wanadev/Programmables/",
             "itemtype": "property",
             "name": "baseUrl",
@@ -9610,7 +9635,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 57,
+            "line": 60,
             "description": "The name of the programmable file, such as MyProgrammable.js",
             "itemtype": "property",
             "name": "filename",
@@ -9621,7 +9646,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 66,
+            "line": 69,
             "description": "Defines an optimal angle for the object.\nThe object is well positioned when the angle between its x axis and a wall is equals to this value.\nThis value is used by the magnetism algorithm to make the objects face the right direction.\nAngle must be k * Pi/2, else it will probably give unwanted result.",
             "itemtype": "property",
             "name": "preferredYAngle",
@@ -9632,7 +9657,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 78,
+            "line": 81,
             "description": "A reference to the mesh.",
             "itemtype": "property",
             "name": "objectInstance",
@@ -9643,7 +9668,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 87,
+            "line": 90,
             "description": "A reference to the programmable.",
             "itemtype": "property",
             "name": "programmableInstance",
@@ -9654,7 +9679,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 96,
+            "line": 99,
             "description": "A reference to the mesh position.\n\n/!\\ This is a reference to `this.objectInstance.position` and not a copy, \nbreaking the reference will result in hard failure in serialization.",
             "itemtype": "property",
             "name": "position",
@@ -9665,7 +9690,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 108,
+            "line": 111,
             "description": "A reference to the mesh rotation.\n\n/!\\ This is a reference to `this.objectInstance.rotation` and not a copy, \nbreaking the reference will result in hard failure in serialization.",
             "itemtype": "property",
             "name": "rotation",
@@ -9676,7 +9701,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 120,
+            "line": 123,
             "description": "A reference to the mesh scaling\n\n/!\\ This is a reference to `this.objectInstance.scaling` and not a copy, \nbreaking the reference will result in hard failure in serialization.",
             "itemtype": "property",
             "name": "scaling",
@@ -9687,7 +9712,19 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 186,
+            "line": 134,
+            "description": "Flag to indicate if the object is fully loaded.",
+            "itemtype": "property",
+            "name": "ready",
+            "type": "{Boolean}",
+            "default": "false",
+            "class": "ObjectStructure",
+            "module": "Wanaplan",
+            "submodule": "Component"
+        },
+        {
+            "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
+            "line": 198,
             "description": "Checks if the object structure contains errors, and if so removes it",
             "itemtype": "method",
             "name": "checkCoherence",
@@ -9704,7 +9741,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 201,
+            "line": 213,
             "description": "Clones the object, making a deep copy.",
             "itemtype": "method",
             "name": "clone",
@@ -9718,7 +9755,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 213,
+            "line": 225,
             "description": "Get the available properties of the programmable instance.\n> NB : This is a shortcut to `Programmable.getAvailableProperties`.",
             "itemtype": "method",
             "name": "getAvailableProperties",
@@ -9732,7 +9769,28 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 228,
+            "line": 240,
+            "description": "Check if a property is locked or not, based on backoffice directives",
+            "itemtype": "method",
+            "name": "isPropertyLocked",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "the property key",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "ObjectStructure",
+            "module": "Wanaplan",
+            "submodule": "Component"
+        },
+        {
+            "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
+            "line": 260,
             "description": "Animates an animatable object.\nSince objects can have multiple animations for their multiple meshes, pass the targeted mesh in parameter.\n> NB : This is a shortcut to `Programmable.animate`.",
             "itemtype": "method",
             "name": "animate",
@@ -9754,7 +9812,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 243,
+            "line": 275,
             "description": "Sets the material of a named mesh.",
             "itemtype": "method",
             "name": "setMaterial",
@@ -9776,7 +9834,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Object\\ObjectStructure.js",
-            "line": 253,
+            "line": 285,
             "description": "Gets the material of a given mesh or child mesh.",
             "itemtype": "method",
             "name": "getMaterial",
@@ -11900,7 +11958,19 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 103,
+            "line": 76,
+            "description": "Flag to display/hide room measures.",
+            "itemtype": "property",
+            "name": "displayRoomMesure",
+            "type": "{Boolean}",
+            "default": "true",
+            "class": "RoomComponent2D",
+            "module": "Wanaplan",
+            "submodule": "Component"
+        },
+        {
+            "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
+            "line": 112,
             "description": "Returns a subslope list based on the rooms.\nWarning : the subslopes returned are not usable as is, they must be processed by \"getSubSlope\" from subSlopeComponent2D !",
             "itemtype": "method",
             "name": "getAllSubSlopes",
@@ -11919,7 +11989,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 165,
+            "line": 174,
             "description": "Returns the current computed internal rooms.",
             "itemtype": "method",
             "name": "getInternalRooms",
@@ -11935,7 +12005,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 176,
+            "line": 185,
             "description": "Returns the current computed external rooms.",
             "itemtype": "method",
             "name": "getInternalRooms",
@@ -11951,7 +12021,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 188,
+            "line": 197,
             "description": "Matches two sets of RoomStructure to pair those which look alike the most.\nThis uses a custom (yet perfectible) matching algorithm based on overlapping areas.",
             "itemtype": "method",
             "name": "identifyRooms",
@@ -11977,7 +12047,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 238,
+            "line": 247,
             "description": "Copies the properties of another room collection to the current room collection.",
             "itemtype": "method",
             "name": "dispatchRooms",
@@ -12001,7 +12071,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 265,
+            "line": 274,
             "description": "Computes the rooms from the 2D geometry of the house.\nBased on the ```polygonMerger``` method.",
             "itemtype": "method",
             "name": "computeRooms",
@@ -12028,7 +12098,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 446,
+            "line": 455,
             "description": "Draws all rooms for the current active floor.",
             "itemtype": "method",
             "name": "drawRooms",
@@ -12055,7 +12125,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 463,
+            "line": 472,
             "description": "Determines if a point is inside the polygon of one of the currently displayed rooms.",
             "itemtype": "method",
             "name": "isPointInRooms",
@@ -12076,7 +12146,7 @@
         },
         {
             "file": "js\\Components\\CoreComponents\\Room\\RoomComponent2D.js",
-            "line": 480,
+            "line": 489,
             "description": "Draws a room.",
             "itemtype": "method",
             "name": "drawRoom",
@@ -19550,7 +19620,7 @@
         },
         {
             "file": "js\\Components\\StandaloneComponent\\Assets\\DGMLoadComponent.js",
-            "line": 17,
+            "line": 41,
             "description": "Initialize the component by trying to load a plan by its uuid.",
             "itemtype": "method",
             "name": "initialize",
@@ -19559,7 +19629,7 @@
         },
         {
             "file": "js\\Components\\StandaloneComponent\\Assets\\DGMLoadComponent.js",
-            "line": 33,
+            "line": 61,
             "description": "Try to load a plan by its uuid. The component is destroyed",
             "itemtype": "method",
             "name": "tryLoadPlan",
@@ -21566,6 +21636,106 @@
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
             "line": 462,
+            "description": "Builds a 3D programmable object on the scene.",
+            "itemtype": "method",
+            "name": "addProgrammable",
+            "params": [
+                {
+                    "name": "filename",
+                    "description": "The file name of the programmable.",
+                    "type": "String"
+                },
+                {
+                    "name": "params",
+                    "description": "A set of parameters for this programmable",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "materials",
+                            "description": "A set of serialized materials for this programmable object, that will override default materials.  \n See `getDefaultMaterials` documentation in the `Programmable` class.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "params",
+                            "description": "A set of serialized parameters to build the geometry of this programmable object, that will override default params.\n See `getDefaultParams` documentation in the `Programmable` class.",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "floor",
+                            "description": "Floor that will contain the object. Default is the current floor.",
+                            "type": "FloorStructure",
+                            "optional": true
+                        },
+                        {
+                            "name": "position",
+                            "description": "Position of the object. Default is the avatar position.",
+                            "type": "BABYLON.Vector3",
+                            "optional": true
+                        },
+                        {
+                            "name": "rotation",
+                            "description": "Rotation of the object. Default is none.",
+                            "type": "BABYLON.Vector3",
+                            "optional": true
+                        },
+                        {
+                            "name": "customData",
+                            "description": "Custom data that will be serialized along with the programmable.",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "The resulting object structure, watch for the `ready` flag.",
+                "type": "ObjectStructure"
+            },
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
+        },
+        {
+            "file": "js\\Core\\Api\\Api.e3D.js",
+            "line": 495,
+            "description": "Imports a 3D model from an URL, using ASSIMP library.\nFor supported formats, see ![assimp project](http://assimp.sourceforge.net/).",
+            "itemtype": "method",
+            "name": "import3DModel",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "The URL where the 3D model can be found, it can be an URL to a raw model or an URL to a zip file. Notice that if you use a zip file, the model and\n       the textures must be added to the root of the archive.",
+                    "type": "String"
+                },
+                {
+                    "name": "params",
+                    "description": "A set of parameters for this programmable. See {{#crossLink \"API.e3D/addProgrammable:method\"}}{{/crossLink}} For the available nested parameters.",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "successCallback",
+                    "description": "A function called when the structure is ready. This function will take one parameter, which is the created `ObjectStructure`.",
+                    "type": "Function"
+                },
+                {
+                    "name": "errorCallback",
+                    "description": "A function called if the process fail.",
+                    "type": "Function"
+                }
+            ],
+            "class": "API.e3D",
+            "module": "Wanaplan",
+            "submodule": "API",
+            "namespace": "API"
+        },
+        {
+            "file": "js\\Core\\Api\\Api.e3D.js",
+            "line": 643,
             "description": "Disables behaviors.",
             "itemtype": "method",
             "name": "lock",
@@ -21589,7 +21759,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.e3D.js",
-            "line": 473,
+            "line": 654,
             "description": "Re-enables locked behaviors.",
             "itemtype": "method",
             "name": "unlock",
@@ -21876,13 +22046,21 @@
             "itemtype": "method",
             "name": "createNewPlan",
             "static": 1,
+            "params": [
+                {
+                    "name": "isEmpty",
+                    "description": "Indicates if the new plan is empty or not.",
+                    "type": "Boolean",
+                    "optional": true
+                }
+            ],
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 111,
+            "line": 119,
             "itemtype": "method",
             "name": "isViewer",
             "return": {
@@ -21895,7 +22073,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 122,
+            "line": 130,
             "description": "Sets the context, 2D or 3D",
             "itemtype": "method",
             "name": "setContext",
@@ -21912,7 +22090,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 132,
+            "line": 140,
             "description": "Gets the context, 2D or 3D",
             "itemtype": "method",
             "name": "getContext",
@@ -21926,7 +22104,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 142,
+            "line": 150,
             "description": "Gets the mode for a given context",
             "itemtype": "method",
             "name": "getMode",
@@ -21948,7 +22126,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 158,
+            "line": 166,
             "description": "Returns the version of the currently opened plan.",
             "itemtype": "method",
             "name": "getVersion",
@@ -21962,7 +22140,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 168,
+            "line": 176,
             "description": "Compares two stringified versions.",
             "itemtype": "method",
             "name": "compareVersion",
@@ -21988,7 +22166,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 182,
+            "line": 190,
             "description": "Returns a loaded component",
             "itemtype": "method",
             "name": "getComponent",
@@ -22015,7 +22193,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 208,
+            "line": 216,
             "description": "Returns the keyboard manager",
             "itemtype": "method",
             "name": "getKeyboardManager",
@@ -22029,7 +22207,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 218,
+            "line": 226,
             "description": "Sets the mode for a given context",
             "itemtype": "method",
             "name": "setMode",
@@ -22052,7 +22230,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 241,
+            "line": 249,
             "description": "Resizes the display window.",
             "itemtype": "method",
             "name": "resize",
@@ -22074,7 +22252,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 252,
+            "line": 260,
             "description": "Returns custom data from the storage.\nThis data is serialized along with the plan",
             "itemtype": "method",
             "name": "getData",
@@ -22095,7 +22273,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 264,
+            "line": 272,
             "description": "Pushes custom data to the storage.\nThis data is serialized along with the plan",
             "itemtype": "method",
             "name": "setData",
@@ -22117,7 +22295,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 276,
+            "line": 284,
             "description": "Returns stored global custom data.",
             "itemtype": "method",
             "name": "getGlobalData",
@@ -22144,7 +22322,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 287,
+            "line": 295,
             "description": "Sets global custom data. The previous data is overriden if the key already exists.",
             "itemtype": "method",
             "name": "setGlobalData",
@@ -22166,7 +22344,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 314,
+            "line": 322,
             "description": "Returns the floor currently displayed",
             "itemtype": "method",
             "name": "getCurrentFloor",
@@ -22180,7 +22358,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 324,
+            "line": 332,
             "description": "Returns the floor matching the given id (0 is ground, 1 is first floor etc)",
             "itemtype": "method",
             "name": "getFloorById",
@@ -22201,7 +22379,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 340,
+            "line": 348,
             "description": "Returns all floors",
             "itemtype": "method",
             "name": "getFloors",
@@ -22215,7 +22393,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 350,
+            "line": 358,
             "description": "Returns all wall points for a given floor",
             "itemtype": "method",
             "name": "getPoints",
@@ -22237,7 +22415,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 363,
+            "line": 371,
             "description": "Returns all walls for a given floor.",
             "itemtype": "method",
             "name": "getWalls",
@@ -22259,7 +22437,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 376,
+            "line": 384,
             "description": "Returns all subslopes for a given floor.",
             "itemtype": "method",
             "name": "getSubSlopes",
@@ -22281,7 +22459,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 389,
+            "line": 397,
             "description": "Returns all internal or external rooms for a given floor",
             "itemtype": "method",
             "name": "getRooms",
@@ -22309,7 +22487,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 403,
+            "line": 411,
             "description": "Returns all stairways for a given floor",
             "itemtype": "method",
             "name": "getStairways",
@@ -22331,7 +22509,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 416,
+            "line": 424,
             "description": "Returns all object structures in a given floor",
             "itemtype": "method",
             "name": "getObjects",
@@ -22353,21 +22531,21 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 429,
+            "line": 437,
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 431,
+            "line": 439,
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 433,
+            "line": 441,
             "description": "Registers an action made in a component so it can be undone/redone",
             "itemtype": "method",
             "name": "registerAction",
@@ -22399,7 +22577,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 446,
+            "line": 454,
             "description": "Adds a user's action to the history.",
             "itemtype": "method",
             "name": "addHistory",
@@ -22431,7 +22609,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 459,
+            "line": 467,
             "description": "Recursively serializes an object",
             "itemtype": "method",
             "name": "serializeObject",
@@ -22467,7 +22645,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 473,
+            "line": 481,
             "description": "Recursively deserializes an object",
             "itemtype": "method",
             "name": "deserializeObject",
@@ -22503,21 +22681,21 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 487,
+            "line": 495,
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 489,
+            "line": 497,
             "class": "API",
             "module": "Wanaplan",
             "submodule": "API"
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 492,
+            "line": 500,
             "description": "Adds a listener for an event",
             "itemtype": "method",
             "name": "listen",
@@ -22539,7 +22717,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 513,
+            "line": 521,
             "description": "Removes a listener for an event",
             "itemtype": "method",
             "name": "unListen",
@@ -22561,7 +22739,7 @@
         },
         {
             "file": "js\\Core\\Api\\Api.js",
-            "line": 535,
+            "line": 543,
             "description": "Returns all API-triggered listeners for an event",
             "itemtype": "method",
             "name": "getListeners",
@@ -24161,7 +24339,7 @@
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 9,
+            "line": 15,
             "description": "Load a model in JSON format.",
             "itemtype": "method",
             "name": "load",
@@ -24174,7 +24352,7 @@
                 },
                 {
                     "name": "options",
-                    "description": "A set of options:\n\t\t\t\t\t- position => `BAYLON.Vector3`\n\t\t\t\t\t- rotation => `BAYLON.Vector3`\n\t\t\t\t\t- scaling => `BAYLON.Vector3` or `Number`\n\t\t\t\t\t- backFaceCulling => `Boolean`\n\t\t\t\t\t- centerGeometry => `Boolean`",
+                    "description": "A set of options:\n\t\t\t\t\t- position => `BAYLON.Vector3`\n\t\t\t\t\t- rotation => `BAYLON.Vector3`\n\t\t\t\t\t- scaling => `BAYLON.Vector3` or `Number`\n\t\t\t\t\t- backFaceCulling => `Boolean`\n\t\t\t\t\t- centerGeometry => `Boolean`\n\t\t\t\t\t- path => `String` A path to use for texture (by default all textures have a relative path to the model).\n\t\t\t\t\t- importedTexture => `Object` An dictionary which as the name of the texture as name and a base64 encoded image as value.\n\t\t\t\t\t- noTexture => `Boolean` Force the loader to not use texture but only colors.",
                     "type": "Object"
                 },
                 {
@@ -24192,12 +24370,14 @@
                 "description": "Returns the root mesh which contains all submeshes.",
                 "type": "BABYLON.Mesh"
             },
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 58,
+            "line": 83,
             "description": "Build all meshes with JSON informations.",
             "itemtype": "method",
             "name": "build",
@@ -24230,12 +24410,14 @@
                     "type": "Function"
                 }
             ],
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 118,
+            "line": 159,
             "description": "Apply transformation to a mesh and sets its parent.",
             "itemtype": "method",
             "name": "applyTransform",
@@ -24258,12 +24440,14 @@
                     "type": "BABYLON.Mesh"
                 }
             ],
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 139,
+            "line": 180,
             "description": "Apply transformations to a set of meshes recursively.",
             "itemtype": "method",
             "name": "applyTransformRecursive",
@@ -24281,12 +24465,14 @@
                     "type": "Object"
                 }
             ],
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 170,
+            "line": 211,
             "description": "Gets the index of a mesh by its name.",
             "itemtype": "method",
             "name": "indexOf",
@@ -24308,12 +24494,14 @@
                 "description": "Returns the index of the mesh in the collection if it exits, otherwise it returns -1.",
                 "type": "Number"
             },
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 188,
+            "line": 229,
             "description": "Generates meshes from json data.",
             "itemtype": "method",
             "name": "generateMeshes",
@@ -24334,18 +24522,26 @@
                     "name": "parent",
                     "description": "The parent used by default for all meshes.",
                     "type": "BABYLON.Mesh"
+                },
+                {
+                    "name": "userUniqueName",
+                    "description": "Sets to `true` to use a unique name for each meshes which haven't name.",
+                    "type": "Boolean",
+                    "optional": true
                 }
             ],
             "return": {
                 "description": "Returns an array of meshes.",
                 "type": "Array"
             },
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 238,
+            "line": 280,
             "description": "Generate materials from json data.",
             "itemtype": "method",
             "name": "generateMaterials",
@@ -24376,21 +24572,28 @@
                     "name": "noTexture",
                     "description": "A flag to bypass all textures.",
                     "type": "Boolean"
+                },
+                {
+                    "name": "importedTextures",
+                    "description": "An object which contains imported textures from the API.",
+                    "type": "Object"
                 }
             ],
             "return": {
                 "description": "Returns an array of materials.",
                 "type": "Array"
             },
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 348,
+            "line": 400,
             "description": "Generate textures from json data.",
             "itemtype": "method",
-            "name": "genreateTextures",
+            "name": "generateTextures",
             "access": "private",
             "tagname": "",
             "params": [
@@ -24404,12 +24607,14 @@
                 "description": "Returns an array of textures.",
                 "type": "Array"
             },
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 370,
+            "line": 422,
             "description": "Gets the name of a texture by extracting it via its path.",
             "itemtype": "method",
             "name": "_getTextureName",
@@ -24431,12 +24636,14 @@
                 "description": "Returns the name of the texture.",
                 "type": "String"
             },
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 384,
+            "line": 436,
             "description": "Gets a color from an array.",
             "itemtype": "method",
             "name": "_toColor",
@@ -24453,12 +24660,14 @@
                 "description": "Returns a color object which can be used on a `BABYLON.Mesh`.",
                 "type": "BABYLON.Color3"
             },
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Assimp2jsonImporter.js",
-            "line": 395,
+            "line": 447,
             "description": "Gets an `Array` of indice from an array.",
             "itemtype": "method",
             "name": "_toIndices",
@@ -24475,14 +24684,47 @@
                 "description": "Returns an array of indices.",
                 "type": "Array"
             },
-            "class": "AssimpImporter",
-            "module": "Wanaplan"
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
+        },
+        {
+            "file": "js\\Core\\Assimp2jsonImporter.js",
+            "line": 468,
+            "description": "Creates a WebGL texture.",
+            "itemtype": "method",
+            "name": "_createWebGLTexture",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "image",
+                    "description": "The image to convert into WebGLTexture",
+                    "type": "Image"
+                },
+                {
+                    "name": "invertY",
+                    "description": "Sets to `true` to invert Y axis.",
+                    "type": "Boolean",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns a `WebGLTexture`.",
+                "type": "WebGLTexture"
+            },
+            "class": "wnp.Assimp2jsonImporter",
+            "module": "Wanaplan",
+            "submodule": "Helpers",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\Box3.js",
             "line": 3,
             "class": "wnp.CameraFeatures",
-            "module": "Wanaplan"
+            "module": "Wanaplan",
+            "namespace": "wnp"
         },
         {
             "file": "js\\Core\\CameraFeatures.js",
@@ -29290,11 +29532,15 @@
         },
         {
             "message": "unknown tag: methode",
-            "line": " js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js:405"
+            "line": " js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js:414"
         },
         {
             "message": "param name missing: {Object3d}",
-            "line": " js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js:516"
+            "line": " js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js:525"
+        },
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " js\\Components\\CoreComponents\\Object\\ObjectStructure.js:240"
         },
         {
             "message": "unknown tag: abstract",
@@ -29478,11 +29724,11 @@
         },
         {
             "message": "Missing item type\nAdds several mandatory properties to the object3D.",
-            "line": " js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js:405"
+            "line": " js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js:414"
         },
         {
             "message": "Missing item type\ncas d'un rechargement à chaud depuis clic sur etage ou passage 2D 3D\n=> on repositionne les objets groupés dans leur reperes de floor pour eviter que ca pete",
-            "line": " js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js:445"
+            "line": " js\\Components\\CoreComponents\\Object\\ObjectComponent3D.js:454"
         },
         {
             "message": "Missing item type\noptions\n  default   - default value if the value cannot be cast\n  round     - round the value : true to round to the closest unit, x to round to the closest x ( 2 for returning only peer value for exemple )\n  min       - the minimum\n  max       - the maximum",
@@ -29730,19 +29976,19 @@
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:429"
+            "line": " js\\Core\\Api\\Api.js:437"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:431"
+            "line": " js\\Core\\Api\\Api.js:439"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:487"
+            "line": " js\\Core\\Api\\Api.js:495"
         },
         {
             "message": "Missing item type",
-            "line": " js\\Core\\Api\\Api.js:489"
+            "line": " js\\Core\\Api\\Api.js:497"
         },
         {
             "message": "Missing item type",

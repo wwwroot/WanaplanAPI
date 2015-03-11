@@ -2,7 +2,7 @@
 <html lang="en" class="yui-overrride">
 <head>
     <meta charset="utf-8">
-    <title>PointStructure - WanaPlan</title>
+    <title>wnp.Assimp2jsonImporter - WanaPlan</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
@@ -339,26 +339,24 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>PointStructure</h1>
+                        <h1>wnp.Assimp2jsonImporter</h1>
 <div class="meta">
     
 
-    
-        <div class="extends">
-            Extends <a href="../classes/BaseStructure.html" class="crosslink">BaseStructure</a>
-        </div>
     
 
     
 
     
         
-            Module: <a href="../modules/Component.html">Component</a><br>
+            Module: <a href="../modules/Helpers.html">Helpers</a><br>
             Parent Module: <a href="../modules/Wanaplan.html">Wanaplan</a>
         
     
 
     
+    
+        <p><span class="flag static">static</span></p>
     
 </div>
 
@@ -366,72 +364,10 @@
 
 <h3>Summary</h3>
 <div class="intro">
-    <p>Class representing wall points.</p>
+    <p>An importer for assimp2json export.</p>
 
 </div>
 
-
-    <div class="constructor">
-        <h2>Constructor</h2>
-        <div id="method_PointStructure" class="method item">
-  <h3 class="blue-method-name">PointStructure</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>PointStructure</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-</div>
-
-    </div>
 
 
 <div id="classdocs" class="tabview">
@@ -441,8 +377,6 @@
         
             <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
         
-        
-            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
         
         
         
@@ -456,123 +390,90 @@
                 <div class="index-section methods">
                     <h3>Methods</h3>
 
-                    <ul class="index-list methods extends">
+                    <ul class="index-list methods">
                         
-                            <li class="index-item method private inherited">
-                                <a href="#method_add">add</a>
+                            <li class="index-item method private">
+                                <a href="#method__createWebGLTexture">_createWebGLTexture</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method inherited">
-                                <a href="#method_deserialize">deserialize</a>
+                            <li class="index-item method private">
+                                <a href="#method__getTextureName">_getTextureName</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
-                                <a href="#method_forceMerge">forceMerge</a>
+                            <li class="index-item method private">
+                                <a href="#method__toColor">_toColor</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method private inherited">
-                                <a href="#method_getElementByName">getElementByName</a>
+                            <li class="index-item method private">
+                                <a href="#method__toIndices">_toIndices</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method inherited">
-                                <a href="#method_getFloor">getFloor</a>
+                            <li class="index-item method private">
+                                <a href="#method_applyTransform">applyTransform</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method private inherited">
-                                <a href="#method_initialize">initialize</a>
+                            <li class="index-item method private">
+                                <a href="#method_applyTransformRecursive">applyTransformRecursive</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
-                                <a href="#method_isAttached">isAttached</a>
+                            <li class="index-item method private">
+                                <a href="#method_build">build</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
-                                <a href="#method_remove">remove</a>
+                            <li class="index-item method private">
+                                <a href="#method_generateMaterials">generateMaterials</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
-                                <a href="#method_replaceParent">replaceParent</a>
+                            <li class="index-item method private">
+                                <a href="#method_generateMeshes">generateMeshes</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method inherited">
-                                <a href="#method_serialize">serialize</a>
+                            <li class="index-item method private">
+                                <a href="#method_generateTextures">generateTextures</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
-                                <a href="#method_translate">translate</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method">
-                                <a href="#method_tryAttach">tryAttach</a>
+                            <li class="index-item method private">
+                                <a href="#method_indexOf">indexOf</a>
 
                                 
                                 
                             </li>
                         
                             <li class="index-item method">
-                                <a href="#method_tryMerge">tryMerge</a>
+                                <a href="#method_load">load</a>
 
                                 
-                                
-                            </li>
-                        
-                            <li class="index-item method">
-                                <a href="#method_unAttach">unAttach</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method inherited">
-                                <a href="#method_update">update</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method inherited">
-                                <a href="#method_updateReferences">updateReferences</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item method">
-                                <a href="#method_wallAttached">wallAttached</a>
-
+                                    <span class="flag static">static</span>
                                 
                                 
                             </li>
@@ -581,63 +482,6 @@
                 </div>
             
 
-            
-                <div class="index-section properties">
-                    <h3>Properties</h3>
-
-                    <ul class="index-list properties extends">
-                        
-                            <li class="index-item property private">
-                                <a href="#property__parentIds">_parentIds</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item property">
-                                <a href="#property_attachedTo">attachedTo</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item property inherited">
-                                <a href="#property_id">id</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item property inherited">
-                                <a href="#property_name">name</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item property">
-                                <a href="#property_needsUpdate">needsUpdate</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item property">
-                                <a href="#property_parents">parents</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item property">
-                                <a href="#property_position">position</a>
-
-                                
-                                
-                            </li>
-                        
-                    </ul>
-                </div>
             
 
             
@@ -650,14 +494,15 @@
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_add" class="method item private inherited">
-  <h3 class="blue-method-name">add</h3>
+                    <div id="method__createWebGLTexture" class="method item private">
+  <h3 class="blue-method-name">_createWebGLTexture</h3>
 
   <div class="meta method-meta">
     
       
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#method_add">BaseStructure</a>:
+        
+      <p>
+        
       
     
     
@@ -671,7 +516,7 @@
 
   <h3>Syntax</h3>
   <div class="blue-method-syntax">
-  <h3 class="name"><code>add</code></h3>
+  <h3 class="name"><code>_createWebGLTexture</code></h3>
 
     
         <div class="args">
@@ -679,9 +524,284 @@
             
                 <li class="arg">
                     
-                        <code>propertyName</code>
+                        <code>image</code>
                     
                 </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[invertY]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">WebGLTexture</span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Creates a WebGL texture.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">image</code>
+                        <span class="type">Image</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The image to convert into WebGLTexture</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[invertY]</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Sets to <code>true</code> to invert Y axis.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type">WebGLTexture</span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns a <code>WebGLTexture</code>.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method__getTextureName" class="method item private">
+  <h3 class="blue-method-name">_getTextureName</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>_getTextureName</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>delimiter</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>textureName</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Gets the name of a texture by extracting it via its path.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">delimiter</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The delimiter to use in the <code>split</code> method.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">textureName</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The absolute path of the texture.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns the name of the texture.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method__toColor" class="method item private">
+  <h3 class="blue-method-name">_toColor</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>_toColor</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
             
                 <li class="arg">
                     
@@ -695,7 +815,7 @@
 
     
         <span class="returns-inline">
-            <span class="type"></span>
+            <span class="type">BABYLON.Color3</span>
         </span>
     
 
@@ -716,7 +836,7 @@
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Adds an element to the collection in parameter.</p>
+        <p>Gets a color from an array.</p>
 
     </div>
 
@@ -725,33 +845,17 @@
             <h4>Parameters:</h4>
 
             <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">propertyName</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Name of the dictionnary.</p>
-
-                    </div>
-
-                    
-                </li>
             
                 <li class="param">
                     
                         <code class="param-name">value</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>Value to distribute.</p>
+                        <p>An array with three elements that represents a color (RGB).</p>
 
                     </div>
 
@@ -768,9 +872,11 @@
 
             <div class="returns-description">
               
+                <span class="type">BABYLON.Color3</span>:
+              
               
                 <div class="blue-return-desc">
-                    <p>Returns true if the value is added else returns false.</p>
+                    <p>Returns a color object which can be used on a <code>BABYLON.Mesh</code>.</p>
 
                 </div>
               
@@ -787,123 +893,8 @@
 </div>
 
                 
-                    <div id="method_deserialize" class="method item inherited">
-  <h3 class="blue-method-name">deserialize</h3>
-
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#method_deserialize">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>deserialize</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>hybrid</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Deserializes the object (from JSON).</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">hybrid</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>JSON describing the object, built with the method serialize.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-              
-                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
-              
-              
-                <div class="blue-return-desc">
-                    <p>The Structure object built from the deserialization</p>
-
-                </div>
-              
-
-
-            </div>
-        </div>
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_forceMerge" class="method item">
-  <h3 class="blue-method-name">forceMerge</h3>
+                    <div id="method__toIndices" class="method item private">
+  <h3 class="blue-method-name">_toIndices</h3>
 
   <div class="meta method-meta">
     
@@ -924,7 +915,7 @@
 
   <h3>Syntax</h3>
   <div class="blue-method-syntax">
-  <h3 class="name"><code>forceMerge</code></h3>
+  <h3 class="name"><code>_toIndices</code></h3>
 
     
         <div class="args">
@@ -932,128 +923,7 @@
             
                 <li class="arg">
                     
-                        <code>point</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code>fs</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Forces merging with another point.</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">point</code>
-                        <span class="type"><a href="../classes/PointStructure.html" class="crosslink">PointStructure</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Other point to merge with. It will be deleted from the floor structure.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name">fs</code>
-                        <span class="type"><a href="../classes/FloorStructure.html" class="crosslink">FloorStructure</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The floor structure containing this point.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_getElementByName" class="method item private inherited">
-  <h3 class="blue-method-name">getElementByName</h3>
-
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#method_getElementByName">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>getElementByName</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>name</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code>collection</code>
+                        <code>value</code>
                     
                 </li>
             
@@ -1063,7 +933,7 @@
 
     
         <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
         </span>
     
 
@@ -1084,7 +954,7 @@
   </div>
     <div class="description">
       <h3>Summary</h3>
-        <p>Gets an element of the collection by its name.</p>
+        <p>Gets an <code>Array</code> of indice from an array.</p>
 
     </div>
 
@@ -1093,6 +963,1119 @@
             <h4>Parameters:</h4>
 
             <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">value</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An array of array which contains three elements that represents faces.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns an array of indices.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_applyTransform" class="method item private">
+  <h3 class="blue-method-name">applyTransform</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>applyTransform</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>mesh</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>transformation</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>parent</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Apply transformation to a mesh and sets its parent.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">mesh</code>
+                        <span class="type">BABYLON.Mesh</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The mesh to use.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">transformation</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An array used as a transform matrix (right handed).</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">parent</code>
+                        <span class="type">BABYLON.Mesh</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The parent of the mesh.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_applyTransformRecursive" class="method item private">
+  <h3 class="blue-method-name">applyTransformRecursive</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>applyTransformRecursive</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>meshes</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>data</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Apply transformations to a set of meshes recursively.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">meshes</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An array of meshes.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">data</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An object that contains informations about transformations.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_build" class="method item private">
+  <h3 class="blue-method-name">build</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>build</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>json</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>rootMesh</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>options</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>success</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fail</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Build all meshes with JSON informations.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">json</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A paresed JSON that contains informations about the model.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">rootMesh</code>
+                        <span class="type">BABYLON.Mesh</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The root mesh used as parent for all submeshes.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">options</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>See the docs in the <code>load</code> method.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">success</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>See the docs in the <code>Load</code> method.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fail</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>See the docs in the <code>Load</code> method.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_generateMaterials" class="method item private">
+  <h3 class="blue-method-name">generateMaterials</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>generateMaterials</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>json</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>textures</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>path</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>backFaceCulling</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>noTexture</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>importedTextures</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Generate materials from json data.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">json</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A paresed JSON that contains informations about materials.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">textures</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An array of textures.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">path</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The path used for textures.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">backFaceCulling</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A flag for enable or disable the backFaceCulling.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">noTexture</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A flag to bypass all textures.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">importedTextures</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An object which contains imported textures from the API.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns an array of materials.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_generateMeshes" class="method item private">
+  <h3 class="blue-method-name">generateMeshes</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>generateMeshes</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>json</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>material</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>parent</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code class="optional">[userUniqueName]</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Generates meshes from json data.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">json</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A paresed JSON that contains informations about meshes.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">material</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An array of materials.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">parent</code>
+                        <span class="type">BABYLON.Mesh</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The parent used by default for all meshes.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name optional">[userUniqueName]</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Sets to <code>true</code> to use a unique name for each meshes which haven&#39;t name.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns an array of meshes.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_generateTextures" class="method item private">
+  <h3 class="blue-method-name">generateTextures</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>generateTextures</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>json</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Generate textures from json data.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">json</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A paresed JSON that contains informations about textures.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns an array of textures.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_indexOf" class="method item private">
+  <h3 class="blue-method-name">indexOf</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>indexOf</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>meshes</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>name</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
+        </span>
+    
+
+    
+
+    
+        <span class="flag private">private</span>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Gets the index of a mesh by its name.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">meshes</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>An array of meshes.</p>
+
+                    </div>
+
+                    
+                </li>
             
                 <li class="param">
                     
@@ -1103,24 +2086,200 @@
                     
 
                     <div class="param-description">
-                        <p>The name of the element to search.</p>
+                        <p>The name of the desired mesh.</p>
 
                     </div>
 
                     
                 </li>
             
+            </ul>
+        </div>
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+              
+                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>:
+              
+              
+                <div class="blue-return-desc">
+                    <p>Returns the index of the mesh in the collection if it exits, otherwise it returns -1.</p>
+
+                </div>
+              
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+                
+                    <div id="method_load" class="method item">
+  <h3 class="blue-method-name">load</h3>
+
+  <div class="meta method-meta">
+    
+      
+        
+      <p>
+        
+      
+    
+    
+  </p>
+
+
+    
+
+    
+  </div>
+
+  <h3>Syntax</h3>
+  <div class="blue-method-syntax">
+  <h3 class="name"><code>load</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>path</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>options</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>success</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>fail</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+        <span class="returns-inline">
+            <span class="type">BABYLON.Mesh</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+        <span class="flag static">static</span>
+    
+
+    
+
+    
+
+  </div>
+    <div class="description">
+      <h3>Summary</h3>
+        <p>Load a model in JSON format.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
                 <li class="param">
                     
-                        <code class="param-name">collection</code>
+                        <code class="param-name">path</code>
                         <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
                     
 
                     
 
                     <div class="param-description">
-                        <p>The name of the collection in which we want to search. If this parameter is not defined,
-                the search is done in all the collection of type array.</p>
+                        <p>The path of the model.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">options</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A set of options:</p>
+<pre><code>                - position =&gt; <code>BAYLON.Vector3</code>
+                - rotation =&gt; <code>BAYLON.Vector3</code>
+                - scaling =&gt; <code>BAYLON.Vector3</code> or <code>Number</code>
+                - backFaceCulling =&gt; <code>Boolean</code>
+                - centerGeometry =&gt; <code>Boolean</code>
+                - path =&gt; <code>String</code> A path to use for texture (by default all textures have a relative path to the model).
+                - importedTexture =&gt; <code>Object</code> An dictionary which as the name of the texture as name and a base64 encoded image as value.
+                - noTexture =&gt; <code>Boolean</code> Force the loader to not use texture but only colors.</code></pre>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">success</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A function called when the model is fully loaded and ready to use.
+                     the model is passed as parameter of the function.</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">fail</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>A function called if the loading fails.</p>
 
                     </div>
 
@@ -1137,1227 +2296,11 @@
 
             <div class="returns-description">
               
-                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
+                <span class="type">BABYLON.Mesh</span>:
               
               
                 <div class="blue-return-desc">
-                    <p>Returns the needed element if it exists, else returns null.</p>
-
-                </div>
-              
-
-
-            </div>
-        </div>
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_getFloor" class="method item inherited">
-  <h3 class="blue-method-name">getFloor</h3>
-
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#method_getFloor">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>getFloor</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>collection</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type"><a href="../classes/FloorStructure.html" class="crosslink">FloorStructure</a></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Gets the floor referencing this object</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">collection</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Collection to search within.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-              
-                <span class="type"><a href="../classes/FloorStructure.html" class="crosslink">FloorStructure</a></span>:
-              
-              
-                <div class="blue-return-desc">
-                    <p>The floor containing this structure, -1 if the object has not been added to any floor collection.</p>
-
-                </div>
-              
-
-
-            </div>
-        </div>
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_initialize" class="method item private inherited">
-  <h3 class="blue-method-name">initialize</h3>
-
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#method_initialize">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>initialize</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-
-    
-
-    
-        <span class="flag private">private</span>
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Method called after the loading of the component</p>
-
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_isAttached" class="method item">
-  <h3 class="blue-method-name">isAttached</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>isAttached</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Returns the current attached status.</p>
-
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-              
-                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
-              
-              
-                <div class="blue-return-desc">
-                    <p>True if the point is attached.</p>
-
-                </div>
-              
-
-
-            </div>
-        </div>
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_remove" class="method item">
-  <h3 class="blue-method-name">remove</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>remove</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>fs</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Removes the point from the floor structure.</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">fs</code>
-                        <span class="type"><a href="../classes/FloorStructure.html" class="crosslink">FloorStructure</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The floor structure referencing this point.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_replaceParent" class="method item">
-  <h3 class="blue-method-name">replaceParent</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>replaceParent</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>oldWall</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code>newWall</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Replaces a parent wall with another parent wall.</p>
-<p>NB: The order of the parents list can change.</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">oldWall</code>
-                        <span class="type"><a href="../classes/WallStructure.html" class="crosslink">WallStructure</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The old parent.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name">newWall</code>
-                        <span class="type"><a href="../classes/WallStructure.html" class="crosslink">WallStructure</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The new parent, can be undefined if you just want to delete a parent.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_serialize" class="method item inherited">
-  <h3 class="blue-method-name">serialize</h3>
-
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#method_serialize">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>serialize</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Serializes the object (to JSON)</p>
-
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-              
-                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>:
-              
-              
-                <div class="blue-return-desc">
-                    <p>The serialization result, null if nothing is serialized</p>
-
-                </div>
-              
-
-
-            </div>
-        </div>
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_translate" class="method item">
-  <h3 class="blue-method-name">translate</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>translate</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>vector</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Moves the point by a given offset vector.</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">vector</code>
-                        <span class="type">BABYLON.Vector2</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Offset vector.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_tryAttach" class="method item">
-  <h3 class="blue-method-name">tryAttach</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>tryAttach</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>fs</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code class="optional">[blacklist]</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Tries to attach the point to the surrounding walls, if possible.</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">fs</code>
-                        <span class="type"><a href="../classes/FloorStructure.html" class="crosslink">FloorStructure</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The floor structure containing this point.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name optional">[blacklist]</code>
-                        <span class="type"><a href="../classes/WallStructure.html" class="crosslink">WallStructure</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Wall to ignore while searching for candidates.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-              
-                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
-              
-              
-                <div class="blue-return-desc">
-                    <p>False if nothing has been attached, true otherwise.</p>
-
-                </div>
-              
-
-
-            </div>
-        </div>
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_tryMerge" class="method item">
-  <h3 class="blue-method-name">tryMerge</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>tryMerge</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>fs</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type"><a href="../classes/PointStructure.html" class="crosslink">PointStructure</a></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Tries to merge the point with the other surrounding points, if possible.</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">fs</code>
-                        <span class="type"><a href="../classes/FloorStructure.html" class="crosslink">FloorStructure</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The floor structure containing this point.</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-              
-                <span class="type"><a href="../classes/PointStructure.html" class="crosslink">PointStructure</a></span>:
-              
-              
-                <div class="blue-return-desc">
-                    <p>The merged point. Returns this point if nothing has been merged.</p>
-
-                </div>
-              
-
-
-            </div>
-        </div>
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_unAttach" class="method item">
-  <h3 class="blue-method-name">unAttach</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>unAttach</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Unattaches a point from a wall.</p>
-
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-              
-                <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
-              
-              
-                <div class="blue-return-desc">
-                    <p>False if the point wasn&#39;t previously attached, true otherwise.</p>
-
-                </div>
-              
-
-
-            </div>
-        </div>
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_update" class="method item inherited">
-  <h3 class="blue-method-name">update</h3>
-
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#method_update">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>update</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Generic update method, must be overridden.</p>
-
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_updateReferences" class="method item inherited">
-  <h3 class="blue-method-name">updateReferences</h3>
-
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#method_updateReferences">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>updateReferences</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>structure</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Generic method for rebuilding references after the deserialization.
-For example : restoring the link between a PointStructure and its parent WallStructure</p>
-
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">structure</code>
-                        <span class="type">wnp.Structure</span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Floor Structure to work with</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-
-    
-
-</div>
-
-                
-                    <div id="method_wallAttached" class="method item">
-  <h3 class="blue-method-name">wallAttached</h3>
-
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-  <h3 class="name"><code>wallAttached</code></h3>
-
-    
-        <span class="paren">()</span>
-    
-
-    
-        <span class="returns-inline">
-            <span class="type"><a href="../classes/WallStructure.html" class="crosslink">WallStructure</a></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-  </div>
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Returns the wall to which the point is attached.</p>
-
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-              
-                <span class="type"><a href="../classes/WallStructure.html" class="crosslink">WallStructure</a></span>:
-              
-              
-                <div class="blue-return-desc">
-                    <p>A wall, or undefined/null if the point is not attached.</p>
+                    <p>Returns the root mesh which contains all submeshes.</p>
 
                 </div>
               
@@ -2377,370 +2320,6 @@ For example : restoring the link between a PointStructure and its parent WallStr
             </div>
         
 
-        
-            <div id="properties" class="api-class-tabpanel">
-                <h2 class="off-left">Properties</h2>
-
-                
-                    <div id="property__parentIds" class="property item private">
-
-  <h3 class="blue-method-name">_parentIds</h3>
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>_parentIds</code></h3>
-    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number[]</a></span>
-
-    
-
-    
-        <span class="flag private">private</span>
-    
-
-    
-
-    
-
-    </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Internal, for deserialization.</p>
-
-    </div>
-
-    
-
-    
-
-  
-
-  
-
-</div>
-
-                
-                    <div id="property_attachedTo" class="property item">
-
-  <h3 class="blue-method-name">attachedTo</h3>
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>attachedTo</code></h3>
-    <span class="type"><a href="../classes/WallStructure.html" class="crosslink">WallStructure</a></span>
-
-    
-
-    
-
-    
-
-    
-
-    </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Wall to which the point is attached. Can be null.</p>
-
-    </div>
-
-    
-
-    
-
-  
-
-  
-
-</div>
-
-                
-                    <div id="property_id" class="property item inherited">
-
-  <h3 class="blue-method-name">id</h3>
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#property_id">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>id</code></h3>
-    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-
-    
-
-    
-
-    
-
-    
-
-    </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Unique ID for the structure set up automatically</p>
-
-    </div>
-
-    
-
-    
-
-  
-
-  
-
-</div>
-
-                
-                    <div id="property_name" class="property item inherited">
-
-  <h3 class="blue-method-name">name</h3>
-  <div class="meta method-meta">
-    
-      
-      <p>Inherited from
-        <a href="../classes/BaseStructure.html#property_name">BaseStructure</a>:
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>name</code></h3>
-    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-
-    
-
-    
-
-    
-
-    
-
-    </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Structure name</p>
-
-    </div>
-
-    
-
-    
-
-  
-
-  
-
-</div>
-
-                
-                    <div id="property_needsUpdate" class="property item">
-
-  <h3 class="blue-method-name">needsUpdate</h3>
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>needsUpdate</code></h3>
-    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-
-    
-
-    
-
-    
-
-    
-
-    </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>Flag that indicates if the points needs to be updated
-(attached or merged).</p>
-
-    </div>
-
-    
-
-    
-
-  
-
-  
-
-</div>
-
-                
-                    <div id="property_parents" class="property item">
-
-  <h3 class="blue-method-name">parents</h3>
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>parents</code></h3>
-    <span class="type"><a href="../classes/WallStructure.html" class="crosslink">WallStructure[]</a></span>
-
-    
-
-    
-
-    
-
-    
-
-    </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>The parent walls of the point. The length can be 1 or 2.</p>
-
-    </div>
-
-    
-
-    
-
-  
-
-  
-
-</div>
-
-                
-                    <div id="property_position" class="property item">
-
-  <h3 class="blue-method-name">position</h3>
-  <div class="meta method-meta">
-    
-      
-        
-      <p>
-        
-      
-    
-    
-  </p>
-
-    
-
-    
-  </div>
-
-  <h3>Syntax</h3>
-  <div class="blue-method-syntax">
-    <h3 class="name"><code>position</code></h3>
-    <span class="type">BABYLON.Vector2</span>
-
-    
-
-    
-
-    
-
-    
-
-    </div>
-
-    <div class="description">
-      <h3>Summary</h3>
-        <p>2D position of the point.</p>
-
-    </div>
-
-    
-
-    
-
-  
-
-  
-
-</div>
-
-                
-            </div>
         
 
         

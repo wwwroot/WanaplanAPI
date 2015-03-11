@@ -99,6 +99,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "WallPane3D",
         "WallStructure",
         "wnp.AnimationCancelor",
+        "wnp.Assimp2jsonImporter",
         "wnp.CameraFeatures",
         "wnp.GlassMaterial",
         "wnp.ImageProcessor",
